@@ -28,7 +28,7 @@ const handleChange = (e, index) => {
 };
 
 const handleRegistrationUser = () => {
-        dispatch(postAuthRegistration(otp.join("")));
+        dispatch(postAuthRegistration(otp.join("")));  //4598
 };
 
     return (

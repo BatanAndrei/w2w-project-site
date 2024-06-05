@@ -6,6 +6,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { signInSchema } from "../../validatorSchemas/validationSchema";
 import Logo from '../../components/Svg/LogoSvg';
 import { Link } from 'react-router-dom';
+import { postSignIn } from '../../api/postSignIn';
+import { useSelector, useDispatch } from 'react-redux';
 
 
 const defaultValues = {
@@ -14,6 +16,8 @@ const defaultValues = {
 };
 
 const SignIn = () => {
+
+    const dispatch = useDispatch();
     
     const {
         register,
@@ -24,8 +28,8 @@ const SignIn = () => {
     });
 
 
-    const handleSignIn = async (data) => {
-        console.log(data);
+    const handleSignIn = async (data) => {  //password: "pass" //phoneNumberOrEmail: "+71231231214"
+        dispatch(postSignIn(data))
     };
 
     return (
@@ -33,8 +37,6 @@ const SignIn = () => {
             <div className={styles.logo}>
                 <Logo/>
             </div>
-
-            
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Вход</h2>
             </div>
@@ -61,7 +63,6 @@ const SignIn = () => {
                 </div>
                 <Button className={styles.button} name={'Вход'} type="submit"/>
             </form>
-
             <div className={styles.wrapperQuestinText}>
                 <h3 className={styles.questionText}>Нет профиля? <Link to="/signUp-create" className={styles.link}>Зарегистрируйтесь</Link></h3>
             </div>

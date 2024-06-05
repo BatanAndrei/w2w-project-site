@@ -3,6 +3,7 @@ import storage from 'redux-persist/lib/storage';
 import { authCreateSlice } from '../slices/authCreateSlice';
 import { informationSlice } from '../slices/informationSlice';
 import { authRegistrationSlice } from '../slices/authRegistrationSlice';
+import { signInSlice } from '../slices/signInSlice';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
 
@@ -18,6 +19,7 @@ const reducer = combineReducers({
     statusLoadNullReducer: authCreateSlice.reducer,
     modalPersonalDatalReducer: informationSlice.reducer,
     authRegistrationExtraReducer: authRegistrationSlice.reducer,
+    signInExtraReducer: signInSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

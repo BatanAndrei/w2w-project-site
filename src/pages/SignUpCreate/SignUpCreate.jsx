@@ -37,7 +37,7 @@ const SignUpCreate = () => {
     const handleCreateUser = async (data) => {
         dispatch(postAuthCreate(data));
     };
-                                                                                //4598
+                                                                                
     useEffect(() => {
         if(statusCreateUser === 200 && statusLoadCreate === 'resolved') {
             navigate("/signUp-create/confirm-phone");
