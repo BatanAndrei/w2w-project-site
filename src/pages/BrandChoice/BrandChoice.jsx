@@ -19,7 +19,7 @@ const BrandQuestionnaire = () => {
             </div>
             <div className={styles.wrapperButton}>
                 <Button click={() => navigate("/")} name={nameButtonFillLeter} className={styles.button+' '+styles.buttonMargin} />
-                <Button click={() => navigate("/")} name={nameButtonFillQuestionnaire} className={styles.button} />
+                <Button click={() => navigate("/choose-role/blogger-choice/brand-questionnire")} name={nameButtonFillQuestionnaire} className={styles.button} />
             </div>
         </>
     )

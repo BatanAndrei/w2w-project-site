@@ -19,6 +19,9 @@ import OnboardingEnd from '../src/pages/Onboarding/OnboardingEnd';
 import ChooseRole from '../src/pages/ChooseRole/ChooseRole';
 import BrandChoice from './pages/BrandChoice/BrandChoice';
 import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
+import TheBloggerQuestionnire from './pages/TheBloggerQuestionnire/TheBloggerQuestionnire';
+import TheBrandQuestionnire from './pages/TheBrandQuestionnire/TheBrandQuestionnire';
+
 
 
 function App() {
@@ -41,7 +44,9 @@ function App() {
         onboardingEnd: "/onboarding-end",
         chooseRole: "/choose-role",
         brandChoice: "/choose-role/brand-choice",
-        bloggerChoice: "/choose-role/blogger-choice", 
+        bloggerChoice: "/choose-role/blogger-choice",
+        theBloggerQuestionnire: "/choose-role/blogger-choice/blogger-questionnire",
+        theBrandQuestionnire: "/choose-role/blogger-choice/brand-questionnire",
         home: "/",
         //card: "/card",
         //chat: "/websocket"
@@ -60,6 +65,8 @@ function App() {
         { path: paths.home, element: <Home /> },
         { path: paths.brandChoice, element: <BrandChoice /> },
         { path: paths.bloggerChoice, element: <BloggerChoice /> },
+        { path: paths.theBloggerQuestionnire, element: <TheBloggerQuestionnire /> },
+        { path: paths.theBrandQuestionnire, element: <TheBrandQuestionnire /> },
         //{ path: paths.card, element: <Card /> },
         //{ path: paths.chat, element: <Chat /> },
     ];
