@@ -1,0 +1,14 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .headWrapper {
+        width: 88.29vw;
+        height: 4.2vh;
+        border: 1px solid;
+    }
+
+    .footerWrapper {
+        width: 88.29vw;
+    }
+}
