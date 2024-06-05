@@ -17,8 +17,8 @@ import OnboardingStart from '../src/pages/Onboarding/OnboardingStart';
 import OnboardingSecond from '../src/pages/Onboarding/OnboardingSecond';
 import OnboardingEnd from '../src/pages/Onboarding/OnboardingEnd';
 import ChooseRole from '../src/pages/ChooseRole/ChooseRole';
-import BrandQuestionnaire from './pages/BrandQuestionnaire/BrandQuestionnaire';
-import BloggerQuestionnaire from './pages/BloggerQuestionnaire/BloggerQuestionnaire';
+import BrandChoice from './pages/BrandChoice/BrandChoice';
+import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
 
 
 function App() {
@@ -40,10 +40,9 @@ function App() {
         onboardingSecond: "/onboarding-second",
         onboardingEnd: "/onboarding-end",
         chooseRole: "/choose-role",
-        brandQuestionnaire: "/brand-questionnaire",
-        bloggerQuestionnaire: "/blogger-questionnaire", 
+        brandChoice: "/choose-role/brand-choice",
+        bloggerChoice: "/choose-role/blogger-choice", 
         home: "/",
-
         //card: "/card",
         //chat: "/websocket"
     };
@@ -59,8 +58,8 @@ function App() {
         { path: paths.onboardingEnd, element: <OnboardingEnd /> },
         { path: paths.chooseRole, element: <ChooseRole /> },
         { path: paths.home, element: <Home /> },
-        { path: paths.brandQuestionnaire, element: <BrandQuestionnaire /> },
-        { path: paths.bloggerQuestionnaire, element: <BloggerQuestionnaire /> },
+        { path: paths.brandChoice, element: <BrandChoice /> },
+        { path: paths.bloggerChoice, element: <BloggerChoice /> },
         //{ path: paths.card, element: <Card /> },
         //{ path: paths.chat, element: <Chat /> },
     ];

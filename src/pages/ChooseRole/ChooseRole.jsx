@@ -15,11 +15,11 @@ const ChooseRole = () => {
                 <p className={styles.decription}>От выбранной роли будут зависеть обязательные вопросы анкеты и совпадения</p>
                 <div className={styles.wrapperRole}>
                     <div className={styles.brendContainer}>
-                        <Link to="/brand-questionnaire"><div className={styles.brend}></div></Link>
+                        <Link to="/choose-role/brand-choice"><div className={styles.brend}></div></Link>
                         <h3 className={styles.titleBrend}>Бренд</h3>
                     </div>
                     <div className={styles.bloggerContainer}>
-                        <Link to="/blogger-questionnaire"><div className={styles.blogger}></div></Link>
+                        <Link to="/choose-role/blogger-choice"><div className={styles.blogger}></div></Link>
                         <h3 className={styles.titleBlogger}>Блогер</h3>
                     </div>
                 </div>

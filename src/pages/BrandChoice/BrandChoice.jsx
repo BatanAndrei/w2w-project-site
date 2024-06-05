@@ -1,9 +1,9 @@
-import styles from './bloggerQuestionnaire.module.scss';
+import styles from './brandChoice.module.scss';
 import Button from '../../components/Button/Button';
 import { nameButtonFillLeter, nameButtonFillQuestionnaire } from '../../datas/datas';
 import { Link, useNavigate } from "react-router-dom";
 
-const BloggerQuestionnaire = () => {
+const BrandQuestionnaire = () => {
 
     const navigate = useNavigate();
 
@@ -11,10 +11,10 @@ const BloggerQuestionnaire = () => {
     return (
         <>
             <div className={styles.wrapperBody}>
-                <h2 className={styles.title}>Анкета блогера</h2>
-                <p className={styles.decription}>Пришло время заполнить анкету. Вы пожете приступить к этому этапу позже, зайдя в Профиль пользователя, но рекомендуем заполнить сейчас, чтобы иметь возможность</p>
+                <h2 className={styles.title}>Анкета бренда</h2>
+                <p className={styles.decription}>Ответь на вопросы, чтобы начать пользоваться сервисом и создавать коллаборации. Вы пожете приступить к этому этапу позже, зайдя в Профиль пользователя.</p>
                 <div className={styles.wrapperRole}>
-                    <div className={styles.blogger}></div>
+                    <div className={styles.brand}></div>
                 </div>
             </div>
             <div className={styles.wrapperButton}>
@@ -25,4 +25,4 @@ const BloggerQuestionnaire = () => {
     )
 };
 
-export default BloggerQuestionnaire;
+export default BrandQuestionnaire;
