@@ -3,12 +3,62 @@
 @media (min-width: 359px) and (max-width: 1235px) {
 
     .headWrapper {
+        margin-top: 21px;
         width: 88.29vw;
         height: 4.2vh;
         border: 1px solid;
     }
 
+    .trackerWrapper {
+        width: 88.29vw;
+        height: 12.88vh;
+        border: 1px solid;
+    }
+
+    .sliderWrapper {
+        width: 88.29vw;
+        height: 21.28vh;
+        border: 1px solid;
+    }
+
+    .sliderPartnersWrapper {
+        width: 88.29vw;
+        height: 15.12vh;
+        border: 1px solid;
+    }
+
+    .wrapperTitlePartners {
+        width: 88.29vw;
+
+        .titlePartners {
+            margin: 20px 0px 8px 0px;
+            font-family: $regular;
+            font-weight: $font-700;
+            font-size: 16px;
+        }       
+    }
+
+    .collabsWrapper{
+        width: 88.29vw;
+        height: 7.84vh;
+        border: 1px solid;
+    }
+
+    .wrapperTitleCollaba {
+        width: 88.29vw;
+
+        .titleCollaba {
+            margin: 20px 0px 8px 0px;
+            font-family: $regular;
+            font-weight: $font-700;
+            font-size: 16px;
+        }
+    }
+
     .footerWrapper {
         width: 88.29vw;
+        height: 18.34vh;
+        margin-bottom: 30px;
+        border: 1px solid;
     }
 }
