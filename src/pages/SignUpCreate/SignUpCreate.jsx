@@ -54,9 +54,11 @@ const SignUpCreate = () => {
             <div className={styles.logo}>
                 <Logo/>
             </div>
+            
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Регистрация</h2>
             </div>
+
             <form className={styles.form} onSubmit={handleSubmit(handleCreateUser)}>
                 <h2 className={styles.lable}>Телефон</h2>
                 <Field 
@@ -92,6 +94,7 @@ const SignUpCreate = () => {
                 </div>
                 <Button className={styles.button} name={nameButtonRegistration} type="submit"/>
             </form>
+
             <div className={styles.wrapperQuestinText}>
                 <h3 className={styles.questionText}>Уже есть профиль? <Link to="/signIn" className={styles.link}>Войти</Link></h3>
             </div>

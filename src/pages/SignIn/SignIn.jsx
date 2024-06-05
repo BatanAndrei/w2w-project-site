@@ -8,6 +8,7 @@ import Logo from '../../components/Svg/LogoSvg';
 import { Link } from 'react-router-dom';
 import { postSignIn } from '../../api/postSignIn';
 import { useSelector, useDispatch } from 'react-redux';
+import { nameButtonEnter } from '../../datas/datas';
 
 
 const defaultValues = {
@@ -34,12 +35,15 @@ const SignIn = () => {
 
     return (
         <>
+            <div className={styles.psevdoModal}></div>
             <div className={styles.logo}>
                 <Logo/>
             </div>
+
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Вход</h2>
             </div>
+
             <form className={styles.form} onSubmit={handleSubmit(handleSignIn)}>
                 <h2 className={styles.lable}>Телефон/Email</h2>
                 <Field 
@@ -61,8 +65,9 @@ const SignIn = () => {
                 <div className={styles.linkWrapper}>
                     <Link className={styles.link}>Не помню пароль</Link>
                 </div>
-                <Button className={styles.button} name={'Вход'} type="submit"/>
+                <Button className={styles.button} name={nameButtonEnter} type="submit"/>
             </form>
+
             <div className={styles.wrapperQuestinText}>
                 <h3 className={styles.questionText}>Нет профиля? <Link to="/signUp-create" className={styles.link}>Зарегистрируйтесь</Link></h3>
             </div>
