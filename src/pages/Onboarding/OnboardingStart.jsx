@@ -10,7 +10,6 @@ const OnboardingStart = () => {
 
     const navigate = useNavigate();
 
-
     return (
         <>
             <div className={styles.wrapperHead}>

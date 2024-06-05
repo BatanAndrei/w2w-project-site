@@ -39,11 +39,9 @@ const SignIn = () => {
             <div className={styles.logo}>
                 <Logo/>
             </div>
-
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Вход</h2>
             </div>
-
             <form className={styles.form} onSubmit={handleSubmit(handleSignIn)}>
                 <h2 className={styles.lable}>Телефон/Email</h2>
                 <Field 
@@ -67,7 +65,6 @@ const SignIn = () => {
                 </div>
                 <Button className={styles.button} name={nameButtonEnter} type="submit"/>
             </form>
-
             <div className={styles.wrapperQuestinText}>
                 <h3 className={styles.questionText}>Нет профиля? <Link to="/signUp-create" className={styles.link}>Зарегистрируйтесь</Link></h3>
             </div>
