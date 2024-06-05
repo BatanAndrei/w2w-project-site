@@ -4,17 +4,21 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import { nameButtonEnter } from '../../datas/datas';
 import { useState } from 'react';
-import { selectStatusRegistrationUser } from '../../redux/selectors/selectors';
+import { selectStatusRegistrationUser, selectStatusLoadRegistration } from '../../redux/selectors/selectors';
 import { postAuthRegistration } from '../../api/postAuthRegistration';
 import { useSelector, useDispatch } from 'react-redux';
 import { statusLoadNullReducer } from '../../redux/slices/authCreateSlice';
+import { useNavigate } from "react-router-dom";
 
 const ConfirmPhone = () => {
+
+const navigate = useNavigate();
 
 const [otp, setOtp] = useState(new Array(4).fill(""));
 
 const dispatch = useDispatch();
 const statusRegistrationUser = useSelector(selectStatusRegistrationUser);
+const statusLoadRegistration = useSelector(selectStatusLoadRegistration);
 
 const handleChange = (e, index) => {
 
@@ -29,7 +33,14 @@ const handleChange = (e, index) => {
 
 const handleRegistrationUser = () => {
         dispatch(postAuthRegistration(otp.join("")));  //4598
+        navigate("/onboarding-start");
 };
+
+/* useEffect(() => {
+    if(statusRegistrationUser === 200 && statusLoadRegistration === 'resolved') {
+        navigate("/signUp-create/confirm-phone");
+    }
+    }, [statusLoadRegistration]); */
 
     return (
         <>

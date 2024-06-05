@@ -14,6 +14,10 @@ import PolicyProcessingPersonalDataDocument from './pages/PolicyProcessingPerson
 import ConfirmPhone from './pages/ConfirmPhone/ConfirmPhone';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import OnboardingStart from '../src/pages/Onboarding/OnboardingStart';
+import OnboardingSecond from '../src/pages/Onboarding/OnboardingSecond';
+import OnboardingEnd from '../src/pages/Onboarding/OnboardingEnd';
+import ChooseRole from '../src/pages/ChooseRole/ChooseRole';
 
 
 function App() {
@@ -21,7 +25,7 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(true)
+        if(false)
         navigate('/signUp-create');
     }, [])
 
@@ -31,6 +35,10 @@ function App() {
         policyPersonalData: "/signUp-create/policy-personalData",
         confirmPhone: "/signUp-create/confirm-phone",
         signIn: "/signIn",
+        onboardingStart: "/onboarding-start",
+        onboardingSecond: "/onboarding-second",
+        onboardingEnd: "/onboarding-end",
+        chooseRole: "/choose-role",
         //home: "/",
         //card: "/card",
         //quiz: "/quiz",
@@ -43,6 +51,10 @@ function App() {
         { path: paths.policyPersonalData, element: <PolicyProcessingPersonalDataDocument /> },
         { path: paths.confirmPhone, element: <ConfirmPhone /> },
         { path: paths.signIn, element: <SignIn /> },
+        { path: paths.onboardingStart, element: <OnboardingStart /> },
+        { path: paths.onboardingSecond, element: <OnboardingSecond /> },
+        { path: paths.onboardingEnd, element: <OnboardingEnd /> },
+        { path: paths.chooseRole, element: <ChooseRole /> },
         //{ path: paths.home, element: <Home /> },
         //{ path: paths.card, element: <Card /> },
         //{ path: paths.quiz, element: <Quiz /> },
