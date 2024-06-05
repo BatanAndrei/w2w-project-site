@@ -24,8 +24,8 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(false)
-        navigate('/signUp-create');
+        if(true)
+        navigate('/signUp-create/confirm-phone');
     }, [])
 
     const paths = {
