@@ -53,6 +53,7 @@ const SignIn = () => {
                     autoComplete="off"
                     placeholder="пароль..."
                     className={styles.input}
+                    type={'password'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.password) && <p className={styles.error}>{errors.password?.message}</p>}</div>
                 <div className={styles.linkWrapper}>
