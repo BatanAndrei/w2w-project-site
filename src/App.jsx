@@ -7,7 +7,6 @@ import Home from '../src/pages/Home/Home';
 import Card from '../src/pages/Card/Card';
 import SignUpCreate from './pages/SignUpCreate/SignUpCreate';
 import SignIn from './pages/SignIn/SignIn';
-import  Quiz from './pages/Quiz/Quiz';
 import Chat from './pages/Chat/Chat';
 import UserAgreements from './pages/UserAgreements/UserAgreements';
 import PolicyProcessingPersonalDataDocument from './pages/PolicyProcessingPersonalDataDocument/PolicyProcessingPersonalDataDocument';
@@ -39,9 +38,10 @@ function App() {
         onboardingSecond: "/onboarding-second",
         onboardingEnd: "/onboarding-end",
         chooseRole: "/choose-role",
+        brandQuestionnaire: "/brand-questionnaire",
+        bloggerQuestionnaire: "/blogger-questionnaire", 
         //home: "/",
         //card: "/card",
-        //quiz: "/quiz",
         //chat: "/websocket"
     };
 
@@ -57,7 +57,6 @@ function App() {
         { path: paths.chooseRole, element: <ChooseRole /> },
         //{ path: paths.home, element: <Home /> },
         //{ path: paths.card, element: <Card /> },
-        //{ path: paths.quiz, element: <Quiz /> },
         //{ path: paths.chat, element: <Chat /> },
     ];
 
