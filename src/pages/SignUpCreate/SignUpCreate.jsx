@@ -38,15 +38,14 @@ const SignUpCreate = () => {
         dispatch(postAuthCreate(data));
     };
                                                                                 
-    /* useEffect(() => {
+    useEffect(() => {
         if(statusCreateUser === 200 && statusLoadCreate === 'resolved') {
             navigate("/signUp-create/confirm-phone");
         }
-        }, [statusLoadCreate]); */
+        }, [statusLoadCreate]);
 
     const openModal = () => {
         dispatch(modalPersonalDatalReducer(true));
-        navigate("/signUp-create/confirm-phone");
     };
 
     return (

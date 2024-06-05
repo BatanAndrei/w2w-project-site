@@ -1,12 +1,11 @@
 import styles from './bloggerChoice.module.scss';
 import Button from '../../components/Button/Button';
 import { nameButtonFillLeter, nameButtonFillQuestionnaire } from '../../datas/datas';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const BloggerChoice = () => {
 
     const navigate = useNavigate();
-
 
     return (
         <>

@@ -9,6 +9,7 @@ import { postAuthRegistration } from '../../api/postAuthRegistration';
 import { useSelector, useDispatch } from 'react-redux';
 import { statusLoadNullReducer } from '../../redux/slices/authCreateSlice';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 const ConfirmPhone = () => {
 
@@ -36,11 +37,11 @@ const handleRegistrationUser = () => {
         navigate("/onboarding-start");
 };
 
-/* useEffect(() => {
-    if(statusRegistrationUser === 200 && statusLoadRegistration === 'resolved') {
-        navigate("/signUp-create/confirm-phone");
-    }
-    }, [statusLoadRegistration]); */
+//useEffect(() => {
+    //if(statusRegistrationUser === 200 && statusLoadRegistration === 'resolved') {
+        //navigate("/onboarding-start");
+    //}
+    //}, [statusLoadRegistration]);
 
     return (
         <>

@@ -2,5 +2,10 @@
 
 @media (min-width: 359px) and (max-width: 1235px) {
 
-
+    .container {
+        margin-top: 100px;
+        font-family: $regular;
+        font-weight: $font-600;
+        font-size: 20px;
+    }
 }
