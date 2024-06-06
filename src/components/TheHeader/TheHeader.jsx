@@ -1,4 +1,4 @@
-import styles from './theheader.module.scss';
+/* import styles from './theheader.module.scss';
 import { Link } from 'react-router-dom';
 
 const TheHeader = () => {
@@ -14,4 +14,4 @@ const TheHeader = () => {
     )
 };
 
-export default TheHeader;
+export default TheHeader; */

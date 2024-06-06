@@ -1,4 +1,4 @@
-const Card = () => {
+/* const Card = () => {
     return (
         <>
             <h1>Карточка</h1>
@@ -6,4 +6,4 @@ const Card = () => {
     )
 };
 
-export default Card;
+export default Card; */

@@ -1,4 +1,4 @@
-import Button from "../../components/Button/Button";
+/* import Button from "../../components/Button/Button";
 import styles from './chat.module.scss';
 import { useState } from "react";
 
@@ -54,4 +54,4 @@ const handlChangr = (e) => {
     )
 };
 
-export default Chat;
+export default Chat; */
