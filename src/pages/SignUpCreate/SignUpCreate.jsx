@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectActiveModal, selectStatusCreateUser, selectStatusLoadCreate } from '../../redux/selectors/selectors';
 import { modalPersonalDatalReducer } from '../../redux/slices/informationSlice';
 import { postAuthCreate } from '../../api/postAuthCreate';
-import Logo from '../../components/Svg/LogoSvg'; 
+import LogoSvg from '../../components/Svg/LogoSvg'; 
 import { nameButtonRegistration } from '../../datas/datas';
 import { Link } from 'react-router-dom';
 import BasicModalPersonalDataDocument from '../../components/ModalPersonalDataDocument/ModalPersonalDataDocument';
@@ -53,7 +53,7 @@ const SignUpCreate = () => {
         <>
             <BasicModalPersonalDataDocument open={isActiveModal} />
             <div className={styles.logo}>
-                <Logo colorBlack={true}/>
+                <LogoSvg colorBlack={true}/>
             </div>
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Регистрация</h2>

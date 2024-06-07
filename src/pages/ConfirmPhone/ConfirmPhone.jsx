@@ -1,5 +1,5 @@
 import styles from './confirmPhone.module.scss';
-import ArrowBack from '../../components/Svg/ArrowBack';
+import ArrowBackSvg from '../../components/Svg/ArrowBackSvg';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import { nameButtonEnter } from '../../datas/datas';
@@ -46,7 +46,7 @@ const handleRegistrationUser = () => {
     return (
         <>
             <div className={styles.wrapperArrow}>
-                <Link to='/signUp-create'><ArrowBack onClick={dispatch(statusLoadNullReducer())} className={styles.buttonArrow}/></Link>
+                <Link to='/signUp-create'><ArrowBackSvg onClick={dispatch(statusLoadNullReducer())} className={styles.buttonArrow}/></Link>
             </div>
             <div className={styles.functionalArea}>
                 <div>

@@ -1,5 +1,5 @@
 import styles from './policyPersonalData.module.scss';
-import ArrowBack from '../../components/Svg/ArrowBack';
+import ArrowBack from '../../components/Svg/ArrowBackSvg';
 import { Link } from 'react-router-dom';
 
 

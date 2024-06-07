@@ -15,6 +15,10 @@
         src: url('./fonts/InterTight-Regular.ttf');
     }
 
+    @font-face {
+        font-family: 'ManropeRegular';
+        src: url('./fonts/Manrope-Regular.ttf');
+    }
 
     html, body {
         margin: 0;

@@ -1,4 +1,4 @@
-const Logo = ({ colorWhite, colorBlack }) => {
+const LogoSvg = ({ colorWhite, colorBlack }) => {
     return (
         <>
         {colorBlack &&
@@ -61,4 +61,4 @@ const Logo = ({ colorWhite, colorBlack }) => {
     )
 };
 
-export default Logo;
+export default LogoSvg;

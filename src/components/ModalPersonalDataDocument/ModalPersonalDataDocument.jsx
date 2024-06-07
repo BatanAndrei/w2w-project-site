@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import Cross from '../Svg/Cross';
+import CrossSvg from '../Svg/CrossSvg';
 import styles from './modal.module.scss';
 import { useDispatch } from 'react-redux';
 import { modalPersonalDatalReducer } from '../../redux/slices/informationSlice';
@@ -44,7 +44,7 @@ export default function ModalPersonalDataDocument({ open }) {
                 <p id="modal-modal-description" className={styles.text}>
                 Персона́льные данные (сокр. ПД) или личностные данные — сведения, относящиеся к прямо или косвенно определённому или определяемому физическому лицу (субъекту персональных данных), которые могут быть предоставлены другим лицам.
                 </p>
-                <div className={styles.cross}><Cross className={styles.button} click={closeModal}/></div>
+                <div className={styles.cross}><CrossSvg className={styles.button} click={closeModal}/></div>
             </Box>
         </Modal>
         </div>

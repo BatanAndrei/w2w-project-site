@@ -1,0 +1,7 @@
+const PlanetsAndWomen = () => {
+    return (
+        <>
+        </>
+    )
+};
+

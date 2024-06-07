@@ -4,7 +4,7 @@ import styles from './signIn.module.scss';
 import Field from '../../components/Field/Field';
 import { yupResolver } from "@hookform/resolvers/yup"; 
 import { signInSchema } from "../../validatorSchemas/validationSchema";
-import Logo from '../../components/Svg/LogoSvg';
+import LogoSvg from '../../components/Svg/LogoSvg';
 import { Link } from 'react-router-dom';
 import { postSignIn } from '../../api/postSignIn';
 import { useSelector, useDispatch } from 'react-redux';
@@ -37,7 +37,7 @@ const SignIn = () => {
         <>
             <div className={styles.psevdoModal}></div>
             <div className={styles.logo}>
-                <Logo colorBlack={true}/>
+                <LogoSvg colorBlack={true}/>
             </div>
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Вход</h2>

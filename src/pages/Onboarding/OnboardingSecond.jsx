@@ -1,6 +1,6 @@
 import styles from './onboardingSecond.module.scss';
 import Button from '../../components/Button/Button';
-import Cross from '../../components/Svg/Cross';
+import CrossSvg from '../../components/Svg/CrossSvg';
 import { nameButtonNext } from '../../datas/datas';
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const OnboardingSecond = () => {
     return (
         <>
             <div className={styles.wrapperHead}>
-                <Cross click={() => navigate("/choose-role")} className={styles.cross} />
+                <CrossSvg click={() => navigate("/choose-role")} className={styles.cross} />
             </div>
             <div className={styles.wrapperBody}>
                 <div className={styles.body}>Онбординг SECOND</div>

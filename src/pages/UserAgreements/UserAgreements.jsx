@@ -1,5 +1,5 @@
 import styles from './userAgreements.module.scss';
-import ArrowBack from '../../components/Svg/ArrowBack';
+import ArrowBackSvg from '../../components/Svg/ArrowBackSvg';
 import { Link } from 'react-router-dom';
 
 
@@ -7,7 +7,7 @@ const UserAgreements = () => {
     return (
         <>
             <div className={styles.wrapperArrow}>
-                <Link to='/signUp-create'><ArrowBack className={styles.button}/></Link>
+                <Link to='/signUp-create'><ArrowBackSvg className={styles.button}/></Link>
             </div>
             <div className={styles.titleWrapper}>
                 <h2 className={styles.title}>Договор возмездного оказания услуг (публичная оферта)</h2>
