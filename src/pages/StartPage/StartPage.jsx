@@ -13,16 +13,20 @@ import { nameButtonNeedCollab } from '../../datas/datas';
 import BriliantSvg from '../../components/Svg/BriliantSvg';
 import MoonStartPageSvg from '../../components/Svg/MoonStartPage';
 import GlasSvg from '../../components/Svg/GlasSvg';
+import { useNavigate } from "react-router-dom";
 
 const StartPage = () => {
 
+    const navigate = useNavigate();
+
     return (
+
         <div className={styles.container}>
             <div className={styles.psevdoModal}></div>
             <div className={styles.logoWrapper}>
                 <BurgerMunuSvg className={styles.button} />
                 <LogoSvg colorWhite={true}/>
-                <Button className={styles.button+' '+styles.colorButton} name={nameButtonEnter} />
+                <Button click={() => navigate('/signIn')} className={styles.button+' '+styles.colorButton} name={nameButtonEnter} />
             </div>
             <div className={styles.generalInfoPageWrapper}>
                 <h1 className={styles.title}>СЕРВИС<br/> КОЛЛАБОРАЦИЙ<br/> ДЛЯ БРЕНДОВ </h1>
@@ -32,7 +36,7 @@ const StartPage = () => {
                     <div className={styles.briliant}>
                     <BriliantSvg />
                     </div>
-                    <Button name={nameButtonNeedCollab} className={styles.buttonCollabs} />
+                    <Button click={() => navigate('/signUp-create')} name={nameButtonNeedCollab} className={styles.buttonCollabs} />
                 </div>
                 <div className={styles.blur1}>
                     <Blur1 />
