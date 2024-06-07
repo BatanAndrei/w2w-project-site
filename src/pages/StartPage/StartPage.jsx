@@ -9,6 +9,10 @@ import Blur2 from '../../components/Svg/Blur2Svg';
 import Blur3 from '../../components/Svg/Blur3Svg';
 import Blur4 from '../../components/Svg/Blur4Svg';
 import CosmosBottomPage from '../../components/Svg/CosmosBottomPage';
+import { nameButtonNeedCollab } from '../../datas/datas';
+import BriliantSvg from '../../components/Svg/BriliantSvg';
+import MoonStartPageSvg from '../../components/Svg/MoonStartPage';
+import GlasSvg from '../../components/Svg/GlasSvg';
 
 const StartPage = () => {
 
@@ -21,7 +25,24 @@ const StartPage = () => {
                 <Button className={styles.button+' '+styles.colorButton} name={nameButtonEnter} />
             </div>
             <div className={styles.generalInfoPageWrapper}>
-
+                <h1 className={styles.title}>СЕРВИС<br/> КОЛЛАБОРАЦИЙ<br/> ДЛЯ БРЕНДОВ </h1>
+                <h2 className={styles.subtitle}>Объединяем бренды по ценностям<br/> 
+                и помогаем предпринимательницам<br/> делать <span className={styles.wordRed}>коллабы</span> для роста бизнеса</h2>
+                <div className={styles.buttonWrapper}>
+                    <div className={styles.briliant}>
+                    <BriliantSvg />
+                    </div>
+                    <Button name={nameButtonNeedCollab} className={styles.buttonCollabs} />
+                </div>
+                <div className={styles.blur1}>
+                    <Blur1 />
+                </div>
+                <div className={styles.moon}>
+                    <MoonStartPageSvg />
+                </div>
+                <div className={styles.glas}>
+                    <GlasSvg />
+                </div>
             </div>
             <div className={styles.planetAndWomenWrapper}>
                 <di className={styles.blur2}>
