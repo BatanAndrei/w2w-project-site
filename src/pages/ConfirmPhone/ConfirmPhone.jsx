@@ -33,7 +33,7 @@ const handleChange = (e, index) => {
 };
 
 const handleRegistrationUser = () => {
-        dispatch(postAuthRegistration(otp.join("")));  //4598
+        dispatch(postAuthRegistration(otp.join(""))); 
         navigate("/onboarding-start");
 };
 

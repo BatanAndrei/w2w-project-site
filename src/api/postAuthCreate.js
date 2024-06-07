@@ -1,26 +1,37 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from "axios";
+
+export const AuthCreate = axios.create({
+    baseURL: `https://dipdeepcode.ru/api/auth`,
+                
+});
 
 export const postAuthCreate = createAsyncThunk(
     "authCreate/postAuthCreate", 
     async ({phoneNumber, email, password}, {rejectWithValue}) => { 
 
 try {
-        const response = await fetch(`https://dipdeepcode.ru/api/auth/create`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'origin, x-requested-with, content-type',
-                'Access-Control-Allow-Methods' :'PUT, GET, POST, DELETE, OPTIONS'
-            },
-        body: JSON.stringify({
+        const response = await AuthCreate.post(`/create`, {
             phoneNumber: phoneNumber,
             email: email,
             password: password
-            })
+        },{
+            withCredentials: true,
         });
-        
+
+       /*  const response = await fetch('https://dipdeepcode.ru/api/auth/create', {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                phoneNumber: phoneNumber,
+                email: email,
+                password: password
+                })
+        }) */
+    
         if(!response.ok) {
             throw new Error('Something went wrong!');
         }

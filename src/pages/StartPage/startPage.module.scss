@@ -31,15 +31,42 @@
             }
         }
 
-        .generalInfoPageWrapper {
-            width: 100%;
-            height: 100%;
-        }
-
         .planetAndWomenWrapper {
             width: 100%;
             height: 52.32vh;
-            border: 1px solid;
+
+            .blur2 {
+                position: absolute;
+                bottom: 0px
+            }
+        
+            .blur3 {
+                position: absolute;
+                right: 0px;
+                bottom: 10px;
+            }
+
+            .blur4 {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+            }
+
+            .PlanetsAndWomenPicture {
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            .cosmosBottomPage {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+            }
         }
+
     }
 }
