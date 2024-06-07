@@ -21,6 +21,7 @@ import BrandChoice from './pages/BrandChoice/BrandChoice';
 import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
 import TheBloggerQuestionnire from './pages/TheBloggerQuestionnire/TheBloggerQuestionnire';
 import TheBrandQuestionnire from './pages/TheBrandQuestionnire/TheBrandQuestionnire';
+import StartPage from './pages/StartPage/StartPage';
 
 
 
@@ -29,11 +30,12 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(true)
-        navigate('/signUp-create');
+        if(false)
+        navigate('/start-page');
     }, [])
 
     const paths = {
+        startPage: "/start-page",
         signUpCreate: "/signUp-create",
         userAgreements: "/signUp-create/user-agreements",
         policyPersonalData: "/signUp-create/policy-personalData",
@@ -53,6 +55,7 @@ function App() {
     };
 
     const routes = [
+        { path: paths.startPage, element: <StartPage /> },
         { path: paths.signUpCreate, element: <SignUpCreate /> },
         { path: paths.userAgreements, element: <UserAgreements /> },
         { path: paths.policyPersonalData, element: <PolicyProcessingPersonalDataDocument /> },

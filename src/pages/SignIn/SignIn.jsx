@@ -37,7 +37,7 @@ const SignIn = () => {
         <>
             <div className={styles.psevdoModal}></div>
             <div className={styles.logo}>
-                <Logo/>
+                <Logo colorBlack={true}/>
             </div>
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Вход</h2>
