@@ -34,7 +34,7 @@ const StartPage = () => {
                 и помогаем предпринимательницам<br/> делать <span className={styles.wordRed}>коллабы</span> для роста бизнеса</h2>
                 <div className={styles.buttonWrapper}>
                     <div className={styles.briliant}>
-                    <BriliantSvg />
+                    {/* <BriliantSvg /> */}
                     </div>
                     <Button click={() => navigate('/signUp-create')} name={nameButtonNeedCollab} className={styles.buttonCollabs} />
                 </div>

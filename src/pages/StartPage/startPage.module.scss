@@ -62,19 +62,22 @@
 
             .buttonWrapper {
                 display: flex;
+                
 
                 .briliant {
-                    width: 10px;
-                    height: 10px;
+                    width: 34px;
+                    height: 31px;
                     position: relative;
                     top: 33px;
-                    left: 25px;
+                    left: 60px;
                     z-index: 2;
+                    background-image: url('../../images/BriliantImage.png');
                 }
             
                 .buttonCollabs {
                     position: relative;
-                    margin: 24px 0px 0px 0px;
+                    padding-left: 32px;
+                    margin: 24px 20px 0px 0px;
                     width: 230px;
                     height: 50px;
                     border-radius: 24px;
