@@ -3,7 +3,10 @@ import axios from "axios";
 
 export const AuthCreate = axios.create({
     baseURL: `https://dipdeepcode.ru/api/auth`,
-                
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    withCredentials: true
 });
 
 export const postAuthCreate = createAsyncThunk(
@@ -15,28 +18,13 @@ try {
             phoneNumber: phoneNumber,
             email: email,
             password: password
-        },{
-            withCredentials: true,
         });
 
-       /*  const response = await fetch('https://dipdeepcode.ru/api/auth/create', {
-            method: 'POST',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                phoneNumber: phoneNumber,
-                email: email,
-                password: password
-                })
-        }) */
-    
         if(!response.ok) {
             throw new Error('Something went wrong!');
         }
         const data = response.status;
-
+        console.log(`create ${data}`)
             return data;
 
 }catch(error) {

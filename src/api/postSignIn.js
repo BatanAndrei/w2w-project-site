@@ -3,7 +3,10 @@ import axios from "axios";
 
 export const AuthSignIn = axios.create({
     baseURL: `https://dipdeepcode.ru/api/auth`,
-    withCredentials: true            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    withCredentials: true           
 });
 
 export const postSignIn = createAsyncThunk(
@@ -11,7 +14,7 @@ export const postSignIn = createAsyncThunk(
     async ({phoneNumberOrEmail, password}, {rejectWithValue}) => { 
 
 try {
-        const response = await AuthSignIn.post(`/login`, {}, {
+        const response = await AuthSignIn.post(`/login`, {
             phoneNumberOrEmail: phoneNumberOrEmail,
             password: password
         });
@@ -20,7 +23,7 @@ try {
             throw new Error('Something went wrong!');
         }
         const data = response.status;
-        console.log(data)
+        console.log(`signIn ${data}`)
             return data;
 
 }catch(error) {
