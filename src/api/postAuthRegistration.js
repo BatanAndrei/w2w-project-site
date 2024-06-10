@@ -20,7 +20,7 @@ try {
             throw new Error('Something went wrong!');
         }
         const data = response.status;
-        console.log(`register ${data}`)
+        
             return data;
 
 }catch(error) {

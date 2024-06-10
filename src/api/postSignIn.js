@@ -23,7 +23,7 @@ try {
             throw new Error('Something went wrong!');
         }
         const data = response.status;
-        console.log(`signIn ${data}`)
+        
             return data;
 
 }catch(error) {

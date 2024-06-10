@@ -38,7 +38,7 @@ const SignUpCreate = () => {
         dispatch(postAuthCreate(data));
         navigate("/signUp-create/confirm-phone");
     };
-                                                                                
+
     /* useEffect(() => {
         if(statusCreateUser === 200 && statusLoadCreate === 'resolved') {
             navigate("/signUp-create/confirm-phone");

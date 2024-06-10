@@ -14,7 +14,7 @@ export const signInSlice = createSlice({
     reducers: {   
 
         statusLoadNullReducer: (state, action) => {
-            state.statusLoadCreate = null;
+            state.statusLoadSignIn = null;
         },
     },
 

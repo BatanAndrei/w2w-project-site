@@ -9,6 +9,9 @@ import { Link } from 'react-router-dom';
 import { postSignIn } from '../../api/postSignIn';
 import { useSelector, useDispatch } from 'react-redux';
 import { nameButtonEnter } from '../../datas/datas';
+import { selectStatusSignInUser, selectStatusLoadSignIn } from '../../redux/selectors/selectors';
+import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 const defaultValues = {
@@ -18,7 +21,10 @@ const defaultValues = {
 
 const SignIn = () => {
 
+    const navigate = useNavigate();
     const dispatch = useDispatch();
+    const statusSignInUser = useSelector(selectStatusSignInUser);
+    const statusLoadSignIn = useSelector(selectStatusLoadSignIn);
     
     const {
         register,
@@ -30,9 +36,16 @@ const SignIn = () => {
 
 
     const handleSignIn = async (data) => {  //password: "pass" //phoneNumberOrEmail: "+71231231214"
-        dispatch(postSignIn(data))
+        dispatch(postSignIn(data));
+        navigate("/onboarding-start");
     };
 
+    /* useEffect(() => {
+        if(statusSignInUser === 200 && statusLoadSignIn === 'resolved') {
+            navigate("/onboarding-start");
+        }
+        }, [statusLoadSignIn]); */
+        
     return (
         <>
             <div className={styles.psevdoModal}></div>
