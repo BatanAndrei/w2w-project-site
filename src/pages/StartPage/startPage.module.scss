@@ -87,6 +87,19 @@
                     font-family: $manropeRegular;
                     z-index: 1;
                 }
+
+                .ripple {
+                    background-position: center;
+                    transition: background 0.8s;
+                }
+                .ripple:hover {
+                    background: white radial-gradient(circle, transparent 1%, #DFF88E 1%) center/15000%;
+                }
+                .ripple:active {
+                    background-color: #DFF88E;
+                    background-size: 100%;
+                    transition: background 0s;
+                }
             }
 
             .blur1 {
