@@ -24,7 +24,7 @@ const StartPage = () => {
             <div className={styles.logoWrapper}>
                 <BurgerMunuSvg className={styles.button} />
                 <LogoSvg colorWhite={true}/>
-                <Button click={() => navigate('/signUp-create')} className={styles.button+' '+styles.colorButton} name={nameButtonEnter} />
+                <Button click={() => navigate('/signIn')} className={styles.button+' '+styles.colorButton} name={nameButtonEnter} />
             </div>
             <div className={styles.generalInfoPageWrapper}>
                 <h1 className={styles.title}>СЕРВИС<br/> КОЛЛАБОРАЦИЙ<br/> ДЛЯ БРЕНДОВ </h1>
