@@ -33,7 +33,7 @@ const StartPage = () => {
                 <div className={styles.buttonWrapper}>
                     <div className={styles.briliant}>
                 </div>
-                    <Button /* click={() => navigate('/signUp-create')} */ name={nameButtonNeedCollab} className={styles.buttonCollabs+' '+styles.ripple} />
+                    <Button click={() => navigate('/signUp-create')} name={nameButtonNeedCollab} className={styles.buttonCollabs+' '+styles.ripple} />
                 </div>
                 <div className={styles.blur1}>
                     <Blur1 />
