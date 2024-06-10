@@ -14,12 +14,14 @@ const persistConfig = {
 };
 
 const reducer = combineReducers({
+    modalPersonalDatalReducer: informationSlice.reducer,
     authCreateExtraReducer: authCreateSlice.reducer,
     statusCreateUserReducer: authCreateSlice.reducer,
-    statusLoadNullReducer: authCreateSlice.reducer,
-    modalPersonalDatalReducer: informationSlice.reducer,
+    statusLoadNullCreateReducer: authCreateSlice.reducer,
+    statusLoadNullRegisterReducer: authRegistrationSlice.reducer,
     authRegistrationExtraReducer: authRegistrationSlice.reducer,
     signInExtraReducer: signInSlice.reducer,
+    statusLoadNullSignInReducer: signInSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

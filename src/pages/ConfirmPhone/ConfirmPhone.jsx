@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { selectStatusRegistrationUser, selectStatusLoadRegistration } from '../../redux/selectors/selectors';
 import { postAuthRegistration } from '../../api/postAuthRegistration';
 import { useSelector, useDispatch } from 'react-redux';
-import { statusLoadNullReducer } from '../../redux/slices/authCreateSlice';
+import { statusLoadNullRegisterReducer } from '../../redux/slices/authRegistrationSlice';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 
@@ -40,12 +40,13 @@ useEffect(() => {
     if(statusRegistrationUser === 200 && statusLoadRegistration === 'resolved') {
         navigate("/onboarding-start");
     }
+    dispatch(statusLoadNullRegisterReducer())
     }, [statusLoadRegistration]);
 
     return (
         <>
             <div className={styles.wrapperArrow}>
-                <Link to='/signUp-create'><ArrowBackSvg onClick={dispatch(statusLoadNullReducer())} className={styles.buttonArrow}/></Link>
+                <Link to='/signUp-create'><ArrowBackSvg className={styles.buttonArrow}/></Link>
             </div>
             <div className={styles.functionalArea}>
                 <div>

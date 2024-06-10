@@ -12,6 +12,7 @@ import { nameButtonEnter } from '../../datas/datas';
 import { selectStatusSignInUser, selectStatusLoadSignIn } from '../../redux/selectors/selectors';
 import { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import { statusLoadNullSignInReducer } from '../../redux/slices/signInSlice';
 
 
 const defaultValues = {
@@ -43,6 +44,7 @@ const SignIn = () => {
         if(statusSignInUser === 200 && statusLoadSignIn === 'resolved') {
             navigate("/onboarding-start");
         }
+        dispatch(statusLoadNullSignInReducer());
         }, [statusLoadSignIn]);
         
     return (

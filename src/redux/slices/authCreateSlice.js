@@ -13,7 +13,7 @@ export const authCreateSlice = createSlice({
     initialState,
     reducers: {   
 
-        statusLoadNullReducer: (state, action) => {
+        statusLoadNullCreateReducer: (state, action) => {
             state.statusLoadCreate = null;
         },
     },
@@ -42,4 +42,4 @@ export const authCreateSlice = createSlice({
     }
 });
 
-export const { statusLoadNullReducer } = authCreateSlice.actions;
+export const { statusLoadNullCreateReducer } = authCreateSlice.actions;

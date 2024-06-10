@@ -12,7 +12,10 @@ export const authRegistrationSlice = createSlice({
     name: "authRegistration",
     initialState,
     reducers: {   
-    
+
+    statusLoadNullRegisterReducer: (state, action) => {
+            state.statusLoadRegister = null;
+        },
     },
 
     extraReducers: (builder) => {
@@ -39,4 +42,4 @@ export const authRegistrationSlice = createSlice({
     }
 });
 
-export const {} = authRegistrationSlice.actions;
+export const { statusLoadNullRegisterReducer } = authRegistrationSlice.actions;

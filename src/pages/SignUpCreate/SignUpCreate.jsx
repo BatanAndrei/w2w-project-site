@@ -7,6 +7,7 @@ import { signUpCreateSchema } from "../../validatorSchemas/validationSchema";
 import { useSelector, useDispatch } from 'react-redux';
 import { selectActiveModal, selectStatusCreateUser, selectStatusLoadCreate } from '../../redux/selectors/selectors';
 import { modalPersonalDatalReducer } from '../../redux/slices/informationSlice';
+import { statusLoadNullCreateReducer } from '../../redux/slices/authCreateSlice';
 import { postAuthCreate } from '../../api/postAuthCreate';
 import LogoSvg from '../../components/Svg/LogoSvg'; 
 import { nameButtonRegistration } from '../../datas/datas';
@@ -42,6 +43,7 @@ const SignUpCreate = () => {
         if(statusCreateUser === 200 && statusLoadCreate === 'resolved') {
             navigate("/signUp-create/confirm-phone");
         }
+        dispatch(statusLoadNullCreateReducer());
         }, [statusLoadCreate]);
 
     const openModal = () => {
