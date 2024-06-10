@@ -33,15 +33,14 @@ const handleChange = (e, index) => {
 };
 
 const handleRegistrationUser = () => {
-    dispatch(postAuthRegistration(otp.join("")));
-    navigate("/onboarding-start"); 
+    dispatch(postAuthRegistration(otp.join(""))); 
 };
 
-/* useEffect(() => {
+useEffect(() => {
     if(statusRegistrationUser === 200 && statusLoadRegistration === 'resolved') {
         navigate("/onboarding-start");
     }
-    }, [statusLoadRegistration]); */
+    }, [statusLoadRegistration]);
 
     return (
         <>

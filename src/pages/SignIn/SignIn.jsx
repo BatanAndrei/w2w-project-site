@@ -37,14 +37,13 @@ const SignIn = () => {
 
     const handleSignIn = async (data) => {  //password: "pass" //phoneNumberOrEmail: "+71231231214"
         dispatch(postSignIn(data));
-        navigate("/onboarding-start");
     };
 
-    /* useEffect(() => {
+    useEffect(() => {
         if(statusSignInUser === 200 && statusLoadSignIn === 'resolved') {
             navigate("/onboarding-start");
         }
-        }, [statusLoadSignIn]); */
+        }, [statusLoadSignIn]);
         
     return (
         <>

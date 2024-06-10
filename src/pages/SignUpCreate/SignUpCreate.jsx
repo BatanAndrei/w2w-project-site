@@ -36,14 +36,13 @@ const SignUpCreate = () => {
 
     const handleCreateUser = async (data) => {
         dispatch(postAuthCreate(data));
-        navigate("/signUp-create/confirm-phone");
     };
 
-    /* useEffect(() => {
+    useEffect(() => {
         if(statusCreateUser === 200 && statusLoadCreate === 'resolved') {
             navigate("/signUp-create/confirm-phone");
         }
-        }, [statusLoadCreate]); */
+        }, [statusLoadCreate]);
 
     const openModal = () => {
         dispatch(modalPersonalDatalReducer(true));

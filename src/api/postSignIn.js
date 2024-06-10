@@ -18,12 +18,13 @@ try {
             phoneNumberOrEmail: phoneNumberOrEmail,
             password: password
         });
-
-        if(!response.ok) {
+        
+    if(response.status !== 200) {
             throw new Error('Something went wrong!');
         }
+            
         const data = response.status;
-        console.log(response)
+        
             return data;
 
 }catch(error) {

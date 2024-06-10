@@ -16,9 +16,10 @@ export const postAuthRegistration = createAsyncThunk(
 try {
         const response = await AuthRegister.post(`/register?passcode=${verificationСode}`, {});
 
-        if(!response.ok) {
+        if(response.status !== 200) {
             throw new Error('Something went wrong!');
         }
+        
         const data = response.status;
         
             return data;
