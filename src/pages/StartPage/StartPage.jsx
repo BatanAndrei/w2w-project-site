@@ -18,6 +18,10 @@ const StartPage = () => {
 
     const navigate = useNavigate();
 
+    const awaitTimeMoveToLink = () => {
+        setTimeout(() => {navigate('/signUp-create')}, 1000);
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.psevdoModal}></div>
@@ -33,7 +37,7 @@ const StartPage = () => {
                 <div className={styles.buttonWrapper}>
                     <div className={styles.briliant}>
                 </div>
-                    <Button click={() => navigate('/signUp-create')} name={nameButtonNeedCollab} className={styles.buttonCollabs+' '+styles.ripple} />
+                    <Button click={awaitTimeMoveToLink} name={nameButtonNeedCollab} className={styles.buttonCollabs+' '+styles.ripple} />
                 </div>
                 <div className={styles.blur1}>
                     <Blur1 />
