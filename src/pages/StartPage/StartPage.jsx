@@ -10,7 +10,7 @@ import Blur3 from '../../components/Svg/Blur3Svg';
 import Blur4 from '../../components/Svg/Blur4Svg';
 import CosmosBottomPage from '../../components/Svg/CosmosBottomPage';
 import { nameButtonNeedCollab } from '../../datas/datas';
-import BriliantSvg from '../../components/Svg/BriliantSvg';
+//import BriliantSvg from '../../components/Svg/BriliantSvg';
 import MoonStartPageSvg from '../../components/Svg/MoonStartPage';
 import GlasSvg from '../../components/Svg/GlasSvg';
 import { useNavigate } from "react-router-dom";
@@ -34,7 +34,6 @@ const StartPage = () => {
                 и помогаем предпринимательницам<br/> делать <span className={styles.wordRed}>коллабы</span> для роста бизнеса</h2>
                 <div className={styles.buttonWrapper}>
                     <div className={styles.briliant}>
-                    {/* <BriliantSvg /> */}
                     </div>
                     <Button click={() => navigate('/signUp-create')} name={nameButtonNeedCollab} className={styles.buttonCollabs} />
                 </div>
@@ -49,12 +48,12 @@ const StartPage = () => {
                 </div>
             </div>
             <div className={styles.planetAndWomenWrapper}>
-                <di className={styles.blur2}>
+                <div className={styles.blur2}>
                     <Blur2 />
-                </di>
-                <di className={styles.blur3}>
+                </div>
+                <div className={styles.blur3}>
                     <Blur3 />
-                </di>
+                </div>
                 <div className={styles.blur4}>
                     <Blur4 />
                 </div>

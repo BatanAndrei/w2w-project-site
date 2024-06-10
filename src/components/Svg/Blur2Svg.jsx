@@ -6,8 +6,8 @@ const Blur2 = () => {
             <rect x="-5" y="200" width="205" height="205" rx="102.5" fill="#C90A70"/>
             </g>
             <defs>
-            <filter id="filter0_f_638_5270" x="-205" y="0" width="605" height="605" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter0_f_638_5270" x="-205" y="0" width="605" height="605" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
             <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_638_5270"/>
             </filter>

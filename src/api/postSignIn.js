@@ -23,7 +23,7 @@ try {
             throw new Error('Something went wrong!');
         }
         const data = response.status;
-        
+        console.log(response)
             return data;
 
 }catch(error) {
