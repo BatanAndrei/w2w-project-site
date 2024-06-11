@@ -1,17 +1,17 @@
 @media (min-width: 359px) and (max-width: 1235px) {
 
     @font-face {
-        font-family: 'Bold';
+        font-family: 'RobotoBold';
         src: url('./fonts/Roboto-Bold.ttf');
     }
 
     @font-face {
-        font-family: 'Regular';
+        font-family: 'RobotoRegular';
         src: url('./fonts/Roboto-Regular.ttf');
     }
 
     @font-face {
-        font-family: 'Inter';
+        font-family: 'InterRegular';
         src: url('./fonts/InterTight-Regular.ttf');
     }
 

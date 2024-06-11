@@ -30,7 +30,7 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(true)
+        if(false)
         navigate('/start-page');
     }, [])
 

@@ -15,7 +15,7 @@
         width: 88.29vw;
         font-size: 28px;
         font-weight: $font-700;
-        font-family: $bold;
+        font-family: $robotoBold;
     }
 }
 
@@ -35,14 +35,14 @@
         color: $red-message;
         font-weight: $font-400;
         font-size: 14px;
-        font-family: $regular;
+        font-family: $interRegular;
     }
 
     .lable {
         margin: 3px 0px 7px 0px;
         font-weight: $font-400;
         font-size: 14px;
-        font-family: $regular;
+        font-family: $interRegular;
     }
 
     .input {
@@ -61,13 +61,13 @@
 
         .policyText {
             margin: 0px;
-            font-family: $regular;
+            font-family: $interRegular;
             font-weight: $font-400;
             font-size: 16px;
 
             .link {
                 color: black;
-                font-family: $regular;
+                font-family: $interRegular;
                 font-weight: $font-600;
                 font-size: 16px;
             }
@@ -78,7 +78,7 @@
         margin: 45px 0px 0px 0px;
         width: 88.29vw;
         height: 6.49vh;
-        font-family: $regular;
+        font-family: $interRegular;
         font-weight: $font-600;
         font-size: 16px;
         border-radius: 6px;
@@ -94,13 +94,13 @@
     .questionText {
         margin: 0px;
         color: black;
-        font-family: $regular;
+        font-family: $interRegular;
         font-weight: $font-400;
         font-size: 16px;
 
         .link {
             color: black;
-            font-family: $regular;
+            font-family: $interRegular;
             font-weight: $font-600;
             font-size: 16px;
         }

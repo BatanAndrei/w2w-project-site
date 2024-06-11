@@ -3,42 +3,40 @@
 @media (min-width: 359px) and (max-width: 1235px) {
 
 .wrapperBody {
-    width: 88.29vw;
-    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 83.44vw;
+    height: 44.53vh;
+
+    .wrapperImage {
+        width: 111.99px;
+        height: 147.23px;
+    }
 
     .title {
-        margin-top: 88px;
-        width: 88.29vw;
-        font-family: $regular;
-        font-weight: $font-700;
-        font-size: 32px;
+        margin: 33.27px 0px 0px 0px;
+        width: 50.4vw;
+        font-family: $cormarantRegular;
+        font-weight: $font-500;
+        font-size: 24px;
+        text-align: center;
     }
 
     .decription {
-        margin-top: 26px;
-        width: 88.29vw;
-        font-family: $regular;
+        margin: 11px 0px 0px 0px;
+        width: 83.44vw;
+        font-family: $interRegular;
         font-weight: $font-400;
         font-size: 16px;
-    }
-
-    .wrapperRole {
-        display: flex;
-        justify-content: center;
-        margin-top: 41px;
-        width: 88.29vw;
-        height: 24.78vh;
-
-        .brand {
-            width: 40.3vw;
-            height: 20.16vh;
-            border: 1px solid;
-        }
+        text-align: center;
     }
 }
 
 .wrapperButton {
-    width: 88.29vw;
+    width: 91.84vw;
     margin: 0px 0px 30px 0px;
 
     .buttonMargin {
@@ -46,12 +44,12 @@
     }
 
     .button {
-        width: 88.29vw;
+        width: 91.84vw;
         height: 6.49vh;
-        font-family: $regular;
+        font-family: $manropeRegular;
         font-weight: $font-600;
         font-size: 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         background-color: black;
         color: white;
     }

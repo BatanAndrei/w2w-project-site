@@ -1,7 +1,8 @@
 import styles from './brandChoice.module.scss';
 import Button from '../../components/Button/Button';
-import { nameButtonFillLeter, nameButtonFillQuestionnaire } from '../../datas/datas';
+import { nameButtonFillQuestionnaire } from '../../datas/datas';
 import { useNavigate } from "react-router-dom";
+import ImageBeforeFillQuestionnnireSvg from '../../components/Svg/ImageBeforeFillQuestionnnireSvg';
 
 const BrandQuestionnaire = () => {
 
@@ -10,14 +11,13 @@ const BrandQuestionnaire = () => {
     return (
         <>
             <div className={styles.wrapperBody}>
-                <h2 className={styles.title}>Анкета бренда</h2>
-                <p className={styles.decription}>Ответь на вопросы, чтобы начать пользоваться сервисом и создавать коллаборации. Вы пожете приступить к этому этапу позже, зайдя в Профиль пользователя.</p>
-                <div className={styles.wrapperRole}>
-                    <div className={styles.brand}></div>
+                <div className={styles.wrapperImage}>
+                    <ImageBeforeFillQuestionnnireSvg />
                 </div>
+                <h2 className={styles.title}>ДО КОЛЛАБЫ<br/> ОДИН ШАГ!</h2>
+                <p className={styles.decription}>Давайте познакомимся!<br/> Чтобы начать пользоваться сервисом<br/> и создавать коллаборации, заполните<br/> анкету</p>
             </div>
             <div className={styles.wrapperButton}>
-                <Button click={() => navigate("/")} name={nameButtonFillLeter} className={styles.button+' '+styles.buttonMargin} />
                 <Button click={() => navigate("/choose-role/blogger-choice/brand-questionnire")} name={nameButtonFillQuestionnaire} className={styles.button} />
             </div>
         </>

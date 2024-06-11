@@ -31,7 +31,7 @@
         .title {
             margin: 22px 0px 0px 0px;
             font-weight: $font-700;
-            font-family: $regular;
+            font-family: $interRegular;
             font-size: 32px;
         }
     }
@@ -42,7 +42,7 @@
         .description {
             margin: 20px 0px 0px 0px;
             font-weight: $font-400;
-            font-family: $regular;
+            font-family: $interRegular;
             font-size: 16px;
         }
     }
@@ -70,7 +70,7 @@
         
     .link {
         font-weight: $font-600;
-        font-family: $regular;
+        font-family: $interRegular;
         font-size: 16px;
         color: black;
     }
@@ -79,7 +79,7 @@
     .button {
         width: 88.29vw;
         height: 6.49vh;
-        font-family: $regular;
+        font-family: $interRegular;
         font-weight: $font-600;
         font-size: 16px;
         border-radius: 6px;

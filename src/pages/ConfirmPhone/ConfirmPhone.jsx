@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { statusLoadNullRegisterReducer } from '../../redux/slices/authRegistrationSlice';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import Field from '../../components/Field/Field';
 
 const ConfirmPhone = () => {
 
@@ -58,7 +59,7 @@ useEffect(() => {
                     </div>
                     <div className={styles.wrapperInput}>
                         {otp.map((data, i) => {
-                            return <input key={i} className={styles.otpInput}
+                            return <Field key={i} className={styles.otpInput}
                             type='password' 
                             value={data}
                             maxLength={1}
