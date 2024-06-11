@@ -15,7 +15,7 @@ const TheHeaderQuestionnier = () => {
             <div className={styles.pageQuestionnierHeader}>
                 {Array.from({length: 4}).map((line, index) => { 
                     return (
-                    <Link to={(index === 0 && '/brand-choice/brand-questionnire-first') || (index === 1 && '/brand-choice/brand-questionnire-second') || (index === 2 && '/brand-choice/brand-questionnire-third') || (index === 3 && '/brand-choice/brand-questionnire-fouth')} className={styles.link}><HorizontLineSvg key={index} purple={index}/></Link>
+                    <Link key={index} to={(index === 0 && '/brand-choice/brand-questionnire-first') || (index === 1 && '/brand-choice/brand-questionnire-second') || (index === 2 && '/brand-choice/brand-questionnire-third') || (index === 3 && '/brand-choice/brand-questionnire-fouth')} className={styles.link}><HorizontLineSvg purple={index}/></Link>
                     )
                 })}
             </div>
