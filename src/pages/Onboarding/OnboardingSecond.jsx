@@ -12,7 +12,7 @@ const OnboardingSecond = () => {
     return (
         <>
             <div className={styles.wrapperHead}>
-                <CrossSvg click={() => navigate("/choose-role")} className={styles.cross} />
+                <CrossSvg click={() => navigate("/brand-choice")} className={styles.cross} />
             </div>
             <div className={styles.wrapperBody}>
                 <div className={styles.body}>Онбординг SECOND</div>

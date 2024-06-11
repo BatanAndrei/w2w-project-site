@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 91.84vw;
+        height: 100%;
+        border: 1px solid;
+    }    
+}

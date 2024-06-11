@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import { store, persistor } from '../src/redux/store/store';
 import Home from '../src/pages/Home/Home';
-import Card from '../src/pages/Card/Card';
+//import Card from '../src/pages/Card/Card';
 import SignUpCreate from './pages/SignUpCreate/SignUpCreate';
 import SignIn from './pages/SignIn/SignIn';
 import Chat from './pages/Chat/Chat';
@@ -16,11 +16,11 @@ import { useEffect } from 'react';
 import OnboardingStart from '../src/pages/Onboarding/OnboardingStart';
 import OnboardingSecond from '../src/pages/Onboarding/OnboardingSecond';
 import OnboardingEnd from '../src/pages/Onboarding/OnboardingEnd';
-import ChooseRole from '../src/pages/ChooseRole/ChooseRole';
+//import ChooseRole from '../src/pages/ChooseRole/ChooseRole';
 import BrandChoice from './pages/BrandChoice/BrandChoice';
 import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
 import TheBloggerQuestionnire from './pages/TheBloggerQuestionnire/TheBloggerQuestionnire';
-import TheBrandQuestionnire from './pages/TheBrandQuestionnire/TheBrandQuestionnire';
+import TheBrandQuestionnireFirst from './pages/TheBrandQuestionnire/TheBrandQuestionnireFirst';
 import StartPage from './pages/StartPage/StartPage';
 
 
@@ -30,7 +30,7 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(true)
+        if(false)
         navigate('/choose-role/brand-choice');
     }, [])
 
@@ -44,11 +44,11 @@ function App() {
         onboardingStart: "/onboarding-start",
         onboardingSecond: "/onboarding-second",
         onboardingEnd: "/onboarding-end",
-        chooseRole: "/choose-role",
-        brandChoice: "/choose-role/brand-choice",
-        bloggerChoice: "/choose-role/blogger-choice",
-        theBloggerQuestionnire: "/choose-role/blogger-choice/blogger-questionnire",
-        theBrandQuestionnire: "/choose-role/blogger-choice/brand-questionnire",
+        //chooseRole: "/choose-role",
+        brandChoice: "/brand-choice",
+        bloggerChoice: "/blogger-choice",
+        theBloggerQuestionnire: "/blogger-choice/blogger-questionnire",
+        theBrandQuestionnireFirst: "/brand-choice/brand-questionnire-first",
         home: "/",
         //card: "/card",
         //chat: "/websocket"
@@ -64,12 +64,12 @@ function App() {
         { path: paths.onboardingStart, element: <OnboardingStart /> },
         { path: paths.onboardingSecond, element: <OnboardingSecond /> },
         { path: paths.onboardingEnd, element: <OnboardingEnd /> },
-        { path: paths.chooseRole, element: <ChooseRole /> },
+        //{ path: paths.chooseRole, element: <ChooseRole /> },
         { path: paths.home, element: <Home /> },
         { path: paths.brandChoice, element: <BrandChoice /> },
         { path: paths.bloggerChoice, element: <BloggerChoice /> },
         { path: paths.theBloggerQuestionnire, element: <TheBloggerQuestionnire /> },
-        { path: paths.theBrandQuestionnire, element: <TheBrandQuestionnire /> },
+        { path: paths.theBrandQuestionnireFirst, element: <TheBrandQuestionnireFirst /> },
         //{ path: paths.card, element: <Card /> },
         //{ path: paths.chat, element: <Chat /> },
     ];

@@ -12,13 +12,13 @@ const OnboardingEnd = () => {
     return (
         <>
             <div className={styles.wrapperHead}>
-                <CrossSvg click={() => navigate("/choose-role")} className={styles.cross} />
+                <CrossSvg click={() => navigate("/brand-choice")} className={styles.cross} />
             </div>
             <div className={styles.wrapperBody}>
                 <div className={styles.body}>Онбординг END</div>
             </div>
             <div className={styles.wrapperButton}>
-                <Button click={() => navigate("/choose-role")} name={nameButtonContinue} className={styles.button} />
+                <Button click={() => navigate("/brand-choice")} name={nameButtonContinue} className={styles.button} />
             </div>
         </>
     )

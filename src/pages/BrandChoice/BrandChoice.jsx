@@ -18,7 +18,7 @@ const BrandQuestionnaire = () => {
                 <p className={styles.decription}>Давайте познакомимся!<br/> Чтобы начать пользоваться сервисом<br/> и создавать коллаборации, заполните<br/> анкету</p>
             </div>
             <div className={styles.wrapperButton}>
-                <Button click={() => navigate("/choose-role/blogger-choice/brand-questionnire")} name={nameButtonFillQuestionnaire} className={styles.button} />
+                <Button click={() => navigate("/brand-choice/brand-questionnire-first")} name={nameButtonFillQuestionnaire} className={styles.button} />
             </div>
         </>
     )
