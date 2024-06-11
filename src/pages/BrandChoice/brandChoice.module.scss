@@ -50,7 +50,8 @@
         font-weight: $font-600;
         font-size: 16px;
         border-radius: 12px;
-        background-color: black;
+        border: none;
+        background: linear-gradient(#CA3CF1, #6C14BC);
         color: white;
     }
 }
