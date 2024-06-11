@@ -30,8 +30,8 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(false)
-        navigate('/start-page');
+        if(true)
+        navigate('/choose-role/brand-choice');
     }, [])
 
     const paths = {
