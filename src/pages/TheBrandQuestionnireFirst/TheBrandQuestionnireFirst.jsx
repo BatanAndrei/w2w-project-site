@@ -43,7 +43,7 @@ const TheBrandQuestionnire = () => {
         
         return data;
 
-       /*  const res = await fetch("https://dipdeepcode/api/files", {
+       /*  const res = await fetch("https://dipdeepcode.ru/api/files", {
             method: 'POST',
             body: formData,
         });
