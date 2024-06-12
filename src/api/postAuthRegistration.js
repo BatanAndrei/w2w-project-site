@@ -22,7 +22,7 @@ try {
         
         const data = response.status;
         
-            return data;
+        return data;
 
 }catch(error) {
     return rejectWithValue(error.message);
