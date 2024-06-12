@@ -20,7 +20,7 @@ import OnboardingEnd from '../src/pages/Onboarding/OnboardingEnd';
 import BrandChoice from './pages/BrandChoice/BrandChoice';
 import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
 import TheBloggerQuestionnire from './pages/TheBloggerQuestionnire/TheBloggerQuestionnire';
-import TheBrandQuestionnireFirst from './pages/TheBrandQuestionnire/TheBrandQuestionnireFirst';
+import TheBrandQuestionnireFirst from './pages/TheBrandQuestionnireFirst/TheBrandQuestionnireFirst';
 import StartPage from './pages/StartPage/StartPage';
 
 

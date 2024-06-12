@@ -1,0 +1,55 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 91.84vw;
+        height: 100%;
+        border: 1px solid;
+
+        .wrapperSubtitle {
+            width: 74.76vw;
+            height: 46px;
+
+            .textSubtitle {
+                font-weight: $font-600;
+                font-size: 16px;
+                font-family: $manropeRegular;
+                text-align: center;
+            }
+        }
+
+        .wrapperImageOnQuestionnier {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 1px solid;
+
+            .iconFotoDrvice {
+                position: relative;
+                left: 24px;
+                width: 24px;
+                height: 24px;
+                opacity: 0;
+                overflow: hidden;
+            }
+
+            .buttonChooseFile {
+                width: 24px;
+                height: 24px;
+                border: none;
+                background: none;
+            }
+        }
+    }    
+
+    .TEST {
+        margin-top: 30px;
+    }
+}
