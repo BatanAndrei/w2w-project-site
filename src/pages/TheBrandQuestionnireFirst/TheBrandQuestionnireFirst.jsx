@@ -30,9 +30,9 @@ const TheBrandQuestionnire = () => {
         formData.append('file', selectedFoto);
 
         const response = await PostFoto.post(`/files`, formData, {
-            headers: {
+           /*  headers: {
                 "Content-Type": "multipart/form-data",
-            }
+            } */
         });
 
         if(response.status !== 200) {
