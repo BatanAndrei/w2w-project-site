@@ -7,7 +7,7 @@ import axios from "axios";
 
 
 export const PostFoto = axios.create({
-    baseURL: `https://dipdeepcode/api`,
+    baseURL: `https://dipdeepcode.ru/api`,
     withCredentials: true
 });
 
@@ -17,7 +17,7 @@ const TheBrandQuestionnire = () => {
     const [displayFoto, setDisplayFoto] = useState();
 
     const chooseFotoForQuestionnier = (e) => {
-        setSelectedFoto(e.target.files[0]);
+        setSelectedFoto(e.target.files[0].name);
     };
 
     const addFotoForQuestionnire = async () => {
