@@ -27,7 +27,7 @@ const TheBrandQuestionnire = () => {
         };
 
         const formData = new FormData();
-        formData.append('name', selectedFoto);
+        formData.append('file', selectedFoto);
 
         const response = await PostFoto.post(`/files`, formData, {
             headers: {
