@@ -3,7 +3,13 @@ import TheHeaderQuestionnier from '../../components/TheHeaderQuestionnier/TheHea
 import FotoDivice from '../../components/Svg/FotoDivice';
 import Button from '../../components/Button/Button';
 import { useState } from 'react';
+import axios from "axios";
 
+
+export const PostFoto = axios.create({
+    baseURL: `https://dipdeepcode/api`,
+    withCredentials: true
+});
 
 const TheBrandQuestionnire = () => {
 
@@ -19,19 +25,34 @@ const TheBrandQuestionnire = () => {
             alert('Выберете своё фото');
             return;
         };
-        const formData = new FormData();
-        formData.append('file', selectedFoto);
 
-        const res = await fetch("https://dipdeepcode/api/files", {
+        const formData = new FormData();
+        formData.append('name', selectedFoto);
+
+        const response = await PostFoto.post(`/files`, formData, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            }
+        });
+
+        if(response.status !== 200) {
+            throw new Error('Something went wrong!');
+        }
+
+        const data = response;
+        
+        return data;
+
+       /*  const res = await fetch("https://dipdeepcode/api/files", {
             method: 'POST',
             body: formData,
         });
-        const data = await res.json();
+        const data = await res.json(); */
 
-        setDisplayFoto(data);
+        //setDisplayFoto(data);
     };
-
     console.log(selectedFoto)
+
     return (
         <div className={styles.container}>
             <TheHeaderQuestionnier />
