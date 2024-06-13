@@ -9,7 +9,7 @@ const TheBrandQuestionnireThird = () => {
 
     return (
         <div className={styles.container}>
-            <TheHeaderQuestionnier pageOwn={true} pageTwo={true} pageThree={true} />
+            <TheHeaderQuestionnier lineOwn={true} lineTwo={true} lineThree={true} />
         </div>
     )
 };

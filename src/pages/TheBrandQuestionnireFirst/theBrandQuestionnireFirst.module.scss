@@ -7,8 +7,6 @@
         flex-direction: column;
         align-items: center;
         width: 91.84vw;
-        height: 100%;
-        border: 1px solid;
 
         .wrapperSubtitle {
             width: 74.76vw;
@@ -26,6 +24,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
+            margin: 0px 0px 24px 0px;
             width: 90px;
             height: 90px;
             border-radius: 50%;
@@ -47,9 +46,65 @@
                 background: none;
             }
         }
-    }    
 
-    .TEST {
-        margin-top: 30px;
-    }
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 91.84vw;
+        
+            .wrapperMessage {
+                display: flex;
+                justify-content:flex-start;
+                width: 88.29vw;
+                height: 16px;
+            }
+            .error {
+                margin: 0px;
+                color: $red-message;
+                font-weight: $font-400;
+                font-size: 14px;
+                font-family: $interRegular;
+            }
+        
+            .lable {
+                margin: 0px 0px 8px 0px;
+                font-weight: $font-400;
+                font-size: 14px;
+                font-family: $manropeRegular;
+            }
+
+            .inputDateHidden {
+                position: relative;
+                top: 35px;
+                left: 300px;
+                width: 18px;
+                height: 18px;
+                border: none;
+                outline: none;
+            }
+        
+            .input {
+                padding: 0px 0px 0px 10px;
+                width: 91.84vw;
+                height: 6.49vh;
+                font-size: 16px;
+                border-radius: 16px;
+                outline: none;
+            }
+    
+            
+            .button {
+                margin: 122px 0px 0px 0px;
+                width: 91.84vw;
+                height: 6.49vh;
+                font-family: $interRegular;
+                font-weight: $font-600;
+                font-size: 16px;
+                border-radius: 16px;
+                border: none;
+                background: $backgroundButton;
+                color: white;
+            }
+        }
+    }    
 }

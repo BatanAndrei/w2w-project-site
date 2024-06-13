@@ -49,9 +49,9 @@
         font-family: $manropeRegular;
         font-weight: $font-600;
         font-size: 16px;
-        border-radius: 12px;
+        border-radius: 16px;
         border: none;
-        background: linear-gradient(#CA3CF1, #6C14BC);
+        background: $backgroundButton;
         color: white;
     }
 }

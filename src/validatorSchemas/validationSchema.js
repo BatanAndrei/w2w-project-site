@@ -29,3 +29,18 @@ export const signInSchema = Yup.object({
         .min(3, "Пароль - минимум 3 символа!")
         .max(120, "максимальная длина - 120 символов!"),
 });
+
+export const questionnireSchema = Yup.object({
+    jobTitle: Yup
+    .string()
+    .required("Поле обязательное!"),
+    nikTelegrem: Yup
+    .string()
+    .required("Поле обязательное!"),
+    nikInstagram: Yup
+    .string()
+    .required("Поле обязательное!"),
+});
+
+/* dateBirth: "",
+     */

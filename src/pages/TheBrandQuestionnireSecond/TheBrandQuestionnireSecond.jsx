@@ -9,7 +9,7 @@ const TheBrandQuestionnireSecond = () => {
 
     return (
         <div className={styles.container}>
-            <TheHeaderQuestionnier pageOwn={true} pageTwo={true} />
+            <TheHeaderQuestionnier lineOwn={true} lineTwo={true} />
         </div>
     )
 };

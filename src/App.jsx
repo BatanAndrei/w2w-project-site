@@ -7,7 +7,7 @@ import Home from '../src/pages/Home/Home';
 //import Card from '../src/pages/Card/Card';
 import SignUpCreate from './pages/SignUpCreate/SignUpCreate';
 import SignIn from './pages/SignIn/SignIn';
-import Chat from './pages/Chat/Chat';
+//import Chat from './pages/Chat/Chat';
 import UserAgreements from './pages/UserAgreements/UserAgreements';
 import PolicyProcessingPersonalDataDocument from './pages/PolicyProcessingPersonalDataDocument/PolicyProcessingPersonalDataDocument';
 import ConfirmPhone from './pages/ConfirmPhone/ConfirmPhone';
