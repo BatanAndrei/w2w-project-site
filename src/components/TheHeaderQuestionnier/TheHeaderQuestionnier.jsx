@@ -2,45 +2,20 @@ import styles from './theHeaderQuestionnier.module.scss';
 import { Link } from 'react-router-dom';
 import InfoSvg from '../../components/Svg/InfoSvg';
 import HorizontLineSvg from '../../components/Svg/HorizontLineSvg';
-import { dataLineProgressBar } from '../../datas/datas';
-import { useState } from 'react';
 
 
-const TheHeaderQuestionnier = () => {
-
-    const [lineProgressBar, setLineProgressBar] = useState(dataLineProgressBar);
-
-    const choseProgressBar = (line) => {
-        const id = line.id
-
-        if(id) {
-            const lineActive = lineProgressBar.map((line, index) => line.id === id ? {...line, active: line.active = true} : line);
-            setLineProgressBar(lineActive);
-        }
-
-        if(id) {
-            const lineActive = lineProgressBar.map((line, index) => index <= id ? {...line, active: line.active = true} : line);
-            setLineProgressBar(lineActive);
-            }
-
-        if((id)){
-            const lineActive = lineProgressBar.map((line , index) => index >= id ? {...line, active: line.active = false} : line);
-            setLineProgressBar(lineActive);
-        }
-    };
-
+const TheHeaderQuestionnier = ({ pageOwn, pageTwo, pageThree, pageFour }) => {
     return (
         <div className={styles.containerHeader}>
             <div className={styles.wrapperTitleHeader}>
                 <h1 className={styles.titleQuestionnier}>АНКЕТА БРЕНДА</h1>
                 <Link className={styles.infoAboutQuestionnier}><InfoSvg/></Link>
             </div>
-            <div className={styles.pageQuestionnierHeader}>
-                {lineProgressBar.map((line, index) => { 
-                    return (
-                    <Link onClick={() => choseProgressBar(line)} key={index} to={(index === 0 && '/brand-choice/brand-questionnire-first') || (index === 1 && '/brand-choice/brand-questionnire-second') || (index === 2 && '/brand-choice/brand-questionnire-third') || (index === 3 && '/brand-choice/brand-questionnire-fouth')} className={styles.link}><HorizontLineSvg purple={line.active}/></Link>
-                    )
-                })}
+            <div className={styles.wrapperProgressBar}>
+                <Link to='/brand-choice/brand-questionnire-first' className={styles.link}><HorizontLineSvg purple={pageOwn && true} /></Link>
+                <Link to='/brand-choice/brand-questionnire-second' className={styles.link}><HorizontLineSvg purple={(pageOwn && pageTwo) && true} /></Link>
+                <Link to='/brand-choice/brand-questionnire-third' className={styles.link}><HorizontLineSvg purple={(pageOwn && pageTwo && pageThree) && true} /></Link>
+                <Link to='/brand-choice/brand-questionnire-fouth' className={styles.link}><HorizontLineSvg purple={(pageOwn && pageTwo && pageThree && pageFour) && true} /></Link>
             </div>
         </div>
     )
