@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import InfoSvg from '../../components/Svg/InfoSvg';
 import HorizontLineSvg from '../../components/Svg/HorizontLineSvg';
 import { dataLineProgressBar } from '../../datas/datas';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 const TheHeaderQuestionnier = () => {
@@ -12,9 +12,10 @@ const TheHeaderQuestionnier = () => {
 
     const choseProgressBar = (line) => {
         const id = line.id
+
         if(id) {
-        const lineActive = lineProgressBar.map((line, index) => line.id === id ? {...line, active: line.active = true} : line);
-        setLineProgressBar(lineActive);
+            const lineActive = lineProgressBar.map((line, index) => line.id === id ? {...line, active: line.active = true} : line);
+            setLineProgressBar(lineActive);
         }
 
         if(id) {
@@ -23,8 +24,8 @@ const TheHeaderQuestionnier = () => {
             }
 
         if((id)){
-        const lineActive = lineProgressBar.map((line , index) => index >= id ? {...line, active: line.active = false} : line);
-        setLineProgressBar(lineActive);
+            const lineActive = lineProgressBar.map((line , index) => index >= id ? {...line, active: line.active = false} : line);
+            setLineProgressBar(lineActive);
         }
     };
 

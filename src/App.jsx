@@ -22,6 +22,8 @@ import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
 import TheBloggerQuestionnire from './pages/TheBloggerQuestionnire/TheBloggerQuestionnire';
 import TheBrandQuestionnireFirst from './pages/TheBrandQuestionnireFirst/TheBrandQuestionnireFirst';
 import TheBrandQuestionnireSecond from './pages/TheBrandQuestionnireSecond/TheBrandQuestionnireSecond';
+import TheBrandQuestionnireThird from './pages/TheBrandQuestionnireThird/TheBrandQuestionnireThird';
+import TheBrandQuestionnireFouth from './pages/TheBrandQuestionnireFouth/TheBrandQuestionnireFouth';
 import StartPage from './pages/StartPage/StartPage';
 
 
@@ -51,6 +53,8 @@ function App() {
         theBloggerQuestionnire: "/blogger-choice/blogger-questionnire",
         theBrandQuestionnireFirst: "/brand-choice/brand-questionnire-first",
         theBrandQuestionnireSecond: "/brand-choice/brand-questionnire-second",
+        theBrandQuestionnireThird: "/brand-choice/brand-questionnire-third",
+        theBrandQuestionnireFouth: "/brand-choice/brand-questionnire-fouth",
         home: "/",
         //card: "/card",
         //chat: "/websocket"
@@ -73,6 +77,8 @@ function App() {
         { path: paths.theBloggerQuestionnire, element: <TheBloggerQuestionnire /> },
         { path: paths.theBrandQuestionnireFirst, element: <TheBrandQuestionnireFirst /> },
         { path: paths.theBrandQuestionnireSecond, element: <TheBrandQuestionnireSecond /> },
+        { path: paths.theBrandQuestionnireThird, element: <TheBrandQuestionnireThird /> },
+        { path: paths.theBrandQuestionnireFouth, element: <TheBrandQuestionnireFouth /> },
         //{ path: paths.card, element: <Card /> },
         //{ path: paths.chat, element: <Chat /> },
     ];
