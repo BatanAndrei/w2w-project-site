@@ -5,6 +5,7 @@ import Button from '../../components/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { postAvatarUser } from '../../api/postAvatarUser';
 import { useState } from 'react';
+import Field from '../../components/Field/Field';
 
 
 const TheBrandQuestionnire = () => {
@@ -27,7 +28,7 @@ const TheBrandQuestionnire = () => {
             <TheHeaderQuestionnier />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите ваше любимое фото</h2></div>
             <div className={styles.wrapperImageAvatar}>
-                <input accept='image/*,.png,.jpg,.gif,.web' onChange={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
+                <Field accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
             <Button click={sendFotoForAvatar} className={styles.TEST} name={'TEST POST FOTO'}/>
