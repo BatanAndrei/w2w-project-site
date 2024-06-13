@@ -2,13 +2,13 @@ import styles from './theBrandQuestionnireFirst.module.scss';
 import TheHeaderQuestionnier from '../../components/TheHeaderQuestionnier/TheHeaderQuestionnier';
 import FotoDivice from '../../components/Svg/FotoDivice';
 import Button from '../../components/Button/Button';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { postAvatarUser } from '../../api/postAvatarUser';
 import { useState } from 'react';
 import Field from '../../components/Field/Field';
 
 
-const TheBrandQuestionnire = () => {
+const TheBrandQuestionnireFirst = () => {
 
     const [selectedFoto, setSelectedFoto] = useState(null);
 
@@ -36,4 +36,4 @@ const TheBrandQuestionnire = () => {
     )
 };
 
-export default TheBrandQuestionnire;
+export default TheBrandQuestionnireFirst;

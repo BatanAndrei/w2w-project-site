@@ -1,4 +1,4 @@
-import styles from './theBrandQuestionnireFirst.module.scss';
+/* import styles from './theBrandQuestionnireFirst.module.scss';
 import TheHeaderQuestionnier from '../../components/TheHeaderQuestionnier/TheHeaderQuestionnier';
 import FotoDivice from '../../components/Svg/FotoDivice';
 import Button from '../../components/Button/Button';
@@ -8,7 +8,6 @@ import { useState } from 'react';
 const TheBrandQuestionnire = () => {
 
     const [selectedFoto, setSelectedFoto] = useState(null);
-    const [displayFoto, setDisplayFoto] = useState();
 
     const chooseFotoForQuestionnier = (e) => {
         setSelectedFoto(e.target.files[0]);
@@ -45,4 +44,4 @@ const TheBrandQuestionnire = () => {
     )
 };
 
-export default TheBrandQuestionnire;
+export default TheBrandQuestionnire; */
