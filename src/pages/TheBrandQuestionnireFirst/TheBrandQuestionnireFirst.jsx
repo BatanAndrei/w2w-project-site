@@ -17,7 +17,7 @@ const TheBrandQuestionnire = () => {
     const [displayFoto, setDisplayFoto] = useState();
 
     const chooseFotoForQuestionnier = (e) => {
-        setSelectedFoto(e.target.files[0].name);
+        setSelectedFoto(e.target.files[0]);
     };
 
     const addFotoForQuestionnire = async () => {
@@ -29,11 +29,7 @@ const TheBrandQuestionnire = () => {
         const formData = new FormData();
         formData.append('file', selectedFoto);
 
-        const response = await PostFoto.post(`/files`, formData, {
-           /*  headers: {
-                "Content-Type": "multipart/form-data",
-            } */
-        });
+        const response = await PostFoto.post(`/files`, formData, {});
 
         if(response.status !== 200) {
             throw new Error('Something went wrong!');
@@ -43,13 +39,6 @@ const TheBrandQuestionnire = () => {
         
         return data;
 
-       /*  const res = await fetch("https://dipdeepcode.ru/api/files", {
-            method: 'POST',
-            body: formData,
-        });
-        const data = await res.json(); */
-
-        //setDisplayFoto(data);
     };
     console.log(selectedFoto)
 
