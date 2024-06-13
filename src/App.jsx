@@ -21,6 +21,7 @@ import BrandChoice from './pages/BrandChoice/BrandChoice';
 import BloggerChoice from './pages/BloggerChoice/BloggerChoice';
 import TheBloggerQuestionnire from './pages/TheBloggerQuestionnire/TheBloggerQuestionnire';
 import TheBrandQuestionnireFirst from './pages/TheBrandQuestionnireFirst/TheBrandQuestionnireFirst';
+import TheBrandQuestionnireSecond from './pages/TheBrandQuestionnireSecond/TheBrandQuestionnireSecond';
 import StartPage from './pages/StartPage/StartPage';
 
 
@@ -49,6 +50,7 @@ function App() {
         bloggerChoice: "/blogger-choice",
         theBloggerQuestionnire: "/blogger-choice/blogger-questionnire",
         theBrandQuestionnireFirst: "/brand-choice/brand-questionnire-first",
+        theBrandQuestionnireSecond: "/brand-choice/brand-questionnire-second",
         home: "/",
         //card: "/card",
         //chat: "/websocket"
@@ -70,6 +72,7 @@ function App() {
         { path: paths.bloggerChoice, element: <BloggerChoice /> },
         { path: paths.theBloggerQuestionnire, element: <TheBloggerQuestionnire /> },
         { path: paths.theBrandQuestionnireFirst, element: <TheBrandQuestionnireFirst /> },
+        { path: paths.theBrandQuestionnireSecond, element: <TheBrandQuestionnireSecond /> },
         //{ path: paths.card, element: <Card /> },
         //{ path: paths.chat, element: <Chat /> },
     ];
