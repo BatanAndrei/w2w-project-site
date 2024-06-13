@@ -22,7 +22,6 @@ const TheBrandQuestionnireFirst = () => {
         dispatch(postAvatarUser(selectedFoto));
     };
 
-
     return (
         <div className={styles.container}>
             <TheHeaderQuestionnier pageOwn={true} />
