@@ -7,6 +7,9 @@ export const selectStatusLoadRegistration = (state) => state.authRegistrationExt
 export const selectStatusSignInUser = (state) => state.signInExtraReducer.statusSignInUser;
 export const selectStatusLoadSignIn = (state) => state.signInExtraReducer.statusLoadSignIn;
 
+export const selectStatusAvatarUser = (state) => state.avatarUserExtraReducer.statusAvatarUser;
+export const selectStatusLoadAvatarUser = (state) => state.avatarUserExtraReducer.statusLoadAvatar;
+
 export const selectActiveModal = (state) => state.modalPersonalDatalReducer.isActivModal;
 
 
