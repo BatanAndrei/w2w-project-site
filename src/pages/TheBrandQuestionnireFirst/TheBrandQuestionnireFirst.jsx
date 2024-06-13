@@ -14,7 +14,7 @@ import { nameButtonNext } from '../../datas/datas';
 
 
 const defaultValues = {
-    dateBirth: "",
+    birthDate: "",
     jobTitle: "",
     nikTelegrem: "",
     nikInstagram: "",
@@ -27,10 +27,12 @@ const TheBrandQuestionnireFirst = () => {
         handleSubmit,
         formState: { errors },
     } = useForm({defaultValues,
-        resolver: yupResolver(questionnireSchema)
+        resolver: yupResolver(questionnireSchema),
     });
 
     const [selectedFoto, setSelectedFoto] = useState(null);
+    const [textDate, setTextDate] = useState('');
+    const [errorDate, setErrorDate] = useState('');
 
     const dispatch = useDispatch();
 
@@ -43,7 +45,22 @@ const TheBrandQuestionnireFirst = () => {
     };
 
     const dataQuestionnire = async (data) => {
-        console.log(data);
+    
+    };
+
+    const getDateFieldDate = (e) => {
+        let nowDate = new Date();
+        let setDateEnd = new Date(e.target.value+ 'T00:00:00');
+        if(nowDate > setDateEnd) {
+            setTextDate(e.target.value);
+            setErrorDate('');
+        }else if(nowDate <= setDateEnd) {
+            setErrorDate('Введите корректные данные!');
+        }
+
+        /* console.log(nowDate);
+        console.log(setDateEnd);
+        setTextDate(e.target.value); */
     };
 
     return (
@@ -59,16 +76,19 @@ const TheBrandQuestionnireFirst = () => {
             {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
                 <h2 className={styles.lable}>Дата рождения</h2>
                 <Field
-                    register={{...register("dateBirth")}}
+                    change={(e) => getDateFieldDate(e)}
                     autoComplete="off"
                     className={styles.inputDateHidden} 
                     type={'date'}/>
                 <Field 
+                    register={{...register("birthDate")}}
+                    autoComplete="off"
                     placeholder="01.01.0001"
                     className={styles.input}
                     type={'text'}
+                    value={textDate}
                     />
-                <div className={styles.wrapperMessage}>{Boolean(errors.dateBirth) && <p className={styles.error}>{errors.dateBirth?.message}</p>}</div>
+                <div className={styles.wrapperMessage}>{errorDate !== '' && <p className={styles.error}>{errorDate}</p>}</div>
                 <h2 className={styles.lable}>Должность</h2>
                 <Field 
                     register={{...register("jobTitle")}}

@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import parse from "date-fns/parse";
 
 //const phoneRegExp = /(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11}(\s*)?/;
 const phoneRegExp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
@@ -31,6 +32,9 @@ export const signInSchema = Yup.object({
 });
 
 export const questionnireSchema = Yup.object({
+    birthDate: Yup
+    .string()
+    .required("Поле обязательное!"),
     jobTitle: Yup
     .string()
     .required("Поле обязательное!"),
@@ -42,5 +46,3 @@ export const questionnireSchema = Yup.object({
     .required("Поле обязательное!"),
 });
 
-/* dateBirth: "",
-     */
