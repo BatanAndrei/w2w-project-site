@@ -5,6 +5,7 @@ import { informationSlice } from '../slices/informationSlice';
 import { authRegistrationSlice } from '../slices/authRegistrationSlice';
 import { signInSlice } from '../slices/signInSlice';
 import { avatarUserSlice } from '../slices/avatarUserSlice';
+import { questionnireSlice } from '../slices/questionnireSlise';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
 
@@ -24,6 +25,7 @@ const reducer = combineReducers({
     signInExtraReducer: signInSlice.reducer,
     statusLoadNullSignInReducer: signInSlice.reducer,
     avatarUserExtraReducer: avatarUserSlice.reducer,
+    questionnireExtraReducer: questionnireSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

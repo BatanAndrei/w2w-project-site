@@ -21,7 +21,7 @@ const TheBrandQuestionnireFirst = () => {
     const sendFotoForAvatar = () => {
         dispatch(postAvatarUser(selectedFoto));
     };
-
+console.log(selectedFoto)
     return (
         <div className={styles.container}>
             <TheHeaderQuestionnier pageOwn={true} />

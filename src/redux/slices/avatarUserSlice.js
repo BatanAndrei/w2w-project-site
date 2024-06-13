@@ -3,7 +3,7 @@ import { postAvatarUser } from '../../api/postAvatarUser';
 
 
 export const initialState = {
-    statusAvatarUser: '',
+    fileNameAvatarUser: '',
     statusLoadAvatar: null,
     errorLoadaAvatar: null,
 };
@@ -27,7 +27,7 @@ export const avatarUserSlice = createSlice({
             (state, action) => { 
             state.statusLoadAvatar = "resolved";
             state.errorLoadaAvatar = null;
-            state.statusAvatarUser = action.payload;
+            state.fileNameAvatarUser = action.payload;
     });
 
         builder
@@ -39,4 +39,4 @@ export const avatarUserSlice = createSlice({
     }
 });
 
-export const { chooseFotoForAvatarReducer } = avatarUserSlice.actions;
+export const { } = avatarUserSlice.actions;
