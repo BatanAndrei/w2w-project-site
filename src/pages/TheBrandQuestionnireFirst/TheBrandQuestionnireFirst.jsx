@@ -11,6 +11,7 @@ import { useForm } from 'react-hook-form';
 import { questionnireSchema } from '../../validatorSchemas/validationSchema';
 import { Link } from 'react-router-dom';
 import { nameButtonNext } from '../../datas/datas';
+import Select from '../../components/Select/Select';
 
 
 const defaultValues = {
@@ -31,7 +32,7 @@ const TheBrandQuestionnireFirst = () => {
     });
 
     const [selectedFoto, setSelectedFoto] = useState(null);
-    const [textDate, setTextDate] = useState('');
+    //const [textDate, setTextDate] = useState('');
     const [errorDate, setErrorDate] = useState('');
 
     const dispatch = useDispatch();
@@ -45,10 +46,11 @@ const TheBrandQuestionnireFirst = () => {
     };
 
     const dataQuestionnire = async (data) => {
-    
+        console.log(data)
     };
 
-    const getDateFieldDate = (e) => {
+    /* const getDateFieldDate = (e) => {
+
         let nowDate = new Date();
         let setDateEnd = new Date(e.target.value+ 'T00:00:00');
         if(nowDate > setDateEnd) {
@@ -57,11 +59,7 @@ const TheBrandQuestionnireFirst = () => {
         }else if(nowDate <= setDateEnd) {
             setErrorDate('Введите корректные данные!');
         }
-
-        /* console.log(nowDate);
-        console.log(setDateEnd);
-        setTextDate(e.target.value); */
-    };
+    }; */
 
     return (
         <div className={styles.container}>
@@ -75,20 +73,20 @@ const TheBrandQuestionnireFirst = () => {
 
             {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
                 <h2 className={styles.lable}>Дата рождения</h2>
-                <Field
-                    change={(e) => getDateFieldDate(e)}
+                {<Field
+                    register={{...register("birthDate")}}
+                    /* change={(e) => getDateFieldDate(e)} */
                     autoComplete="off"
                     className={styles.inputDateHidden} 
-                    type={'date'}/>
-                <Field 
-                    register={{...register("birthDate")}}
+                    type={'date'}/>}
+                {/* <Field
                     autoComplete="off"
                     placeholder="01.01.0001"
                     className={styles.input}
                     type={'text'}
                     value={textDate}
-                    />
-                <div className={styles.wrapperMessage}>{errorDate !== '' && <p className={styles.error}>{errorDate}</p>}</div>
+                    /> */}
+                <div className={styles.wrapperMessage}>{(Boolean(errors.birthDate) && <p className={styles.error}>{errors.birthDate?.message}</p>) || (errorDate !== '' && <p className={styles.error}>{errorDate}</p>)}</div>
                 <h2 className={styles.lable}>Должность</h2>
                 <Field 
                     register={{...register("jobTitle")}}
@@ -107,6 +105,9 @@ const TheBrandQuestionnireFirst = () => {
                     type={'text'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.nikTelegrem) && <p className={styles.error}>{errors.nikTelegrem?.message}</p>}</div>
+                <h2 className={styles.lable}>Ник в Telegram</h2>
+                <Select classNameInput={styles.input} classNameText={styles.textSelect} />
+                <div className={styles.wrapperMessage}>{Boolean(errors.nikInstagram) && <p className={styles.error}>{errors.nikInstagram?.message}</p>}</div>
                 <h2 className={styles.lable}>Ник в Instagram (страница, где вы отметите W2W Match)*</h2>
                 <Field 
                     register={{...register("nikInstagram")}}

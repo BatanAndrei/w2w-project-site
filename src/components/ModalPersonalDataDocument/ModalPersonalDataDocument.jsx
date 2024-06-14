@@ -37,7 +37,6 @@ export default function ModalPersonalDataDocument({ open }) {
         <div>
         <Modal
             open={open}
-            //onClose={closeModal}
             aria-describedby="modal-modal-description"
         >
             <Box sx={box}>
