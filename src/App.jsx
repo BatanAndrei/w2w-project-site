@@ -33,8 +33,8 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(false)
-        navigate('/start-page');
+        if(true)
+        navigate('/brand-choice/brand-questionnire-first');
     }, [])
 
     const paths = {
