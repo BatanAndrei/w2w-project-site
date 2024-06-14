@@ -5,8 +5,8 @@ import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
-import styles from './selectCheckbox.module.scss';
-import { communicationSpiking } from '../../datas/datas';
+import styles from './selectRadioButton.module.scss';
+import { publicSpikingAnswer } from '../../datas/datas';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -37,7 +37,6 @@ export default function MultipleSelectCheckmarks({register, ...rest}) {
             <Select
             sx={{ borderRadius: '16px', width: '91.84vw', height: '6.49vh', border: 1 }}
             {...register} {...rest}
-            multiple
             displayEmpty
             value={personName}
             onChange={handleChange}
@@ -51,9 +50,9 @@ export default function MultipleSelectCheckmarks({register, ...rest}) {
             MenuProps={MenuProps}
             inputProps={{ 'aria-label': 'Without label' }}
             >
-            {communicationSpiking.map((name) => (
+            {publicSpikingAnswer.map((name) => (
                 <MenuItem key={name} value={name}>
-                <Checkbox checked={personName.indexOf(name) > -1} />
+                    <input type='radio' id={name} name="answer"></input>
                 <ListItemText primary={name} />
                 </MenuItem>
             ))}

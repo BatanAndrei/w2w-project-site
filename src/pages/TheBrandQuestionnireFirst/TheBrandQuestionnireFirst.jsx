@@ -13,6 +13,7 @@ import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import Select from '../../components/Select/Select';
 import AvatarPlaceHolder from '../../components/Svg/AvatarPlaceHolder';
 import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectCheckbox';
+import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 
 
 const defaultValues = {
@@ -31,7 +32,7 @@ const TheBrandQuestionnireFirst = () => {
         handleSubmit,
         formState: { errors },
     } = useForm({defaultValues,
-        resolver: yupResolver(questionnireSchema),
+        //resolver: yupResolver(questionnireSchema),
     });
 
     const [selectedFoto, setSelectedFoto] = useState(null);
@@ -95,10 +96,13 @@ const TheBrandQuestionnireFirst = () => {
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
-                <Select
+                <SelectRadio
+                    register={{...register("publicSpeaking")}}
+                />
+               {/*  <Select
                     register={{...register("publicSpeaking")}}
                     classNameInput={styles.input} 
-                    classNameText={styles.textSelect} />
+                    classNameText={styles.textSelect} /> */}
                 <div className={styles.wrapperMessage}>{Boolean(errors.publicSpeaking) && <p className={styles.error}>{errors.publicSpeaking?.message}</p>}</div>
                 <h2 className={styles.lable}>Состоите ли вы в каком-то комьюнити/сообществе предпринимателей? Напишите, пожалуйста, название или добавьте ссылку на сообщество</h2>
                 <Field 

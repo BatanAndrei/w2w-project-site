@@ -1,0 +1,19 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+    .input {
+        padding: 0px 0px 0px 0px;
+        width: 91.84vw;
+        height: 6.49vh;
+        font-size: 16px;
+        border-radius: 16px;
+        outline: none;
+        background: none;
+        border: 1px solid;
+    }
+    .text {
+        font-family: $manropeRegular;
+        font-weight: $font-400;
+        font-size: 16px;
+    }
+}
