@@ -68,10 +68,15 @@ const TheBrandQuestionnireFirst = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.nikTelegrem) && <p className={styles.error}>{errors.nikTelegrem?.message}</p>}</div>
                 <h2 className={styles.lable}>Дата рождения</h2>
                 <Field
+                    placeholder="01.01.0001"
+                    type={'text'}
+                    change={(e) => console.log(e.target.value)}
+                    focus={(e) => (e.target.type = "date")}
+                    blur={(e) => (e.target.type = "text")}
                     register={{...register("birthDate")}}
                     autoComplete="off"
-                    className={styles.input} 
-                    type={'date'}/>
+                    className={styles.input}
+                    />
                 <div className={styles.wrapperMessage}>{Boolean(errors.birthDate) && <p className={styles.error}>{errors.birthDate?.message}</p>}</div>
                 <h2 className={styles.lable}>Должность</h2>
                 <Field 
