@@ -11,6 +11,7 @@ import { useForm } from 'react-hook-form';
 import { questionnireSchema } from '../../validatorSchemas/validationSchema';
 import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import Select from '../../components/Select/Select';
+import AvatarPlaceHolder from '../../components/Svg/AvatarPlaceHolder';
 
 
 const defaultValues = {
@@ -53,6 +54,7 @@ const TheBrandQuestionnireFirst = () => {
             <TheHeaderQuestionnier lineOwn={true} />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите ваше любимое фото</h2></div>
             <div className={styles.wrapperImageAvatar}>
+                <dav className={styles.positionAvatarImage}><AvatarPlaceHolder/></dav>
                 <Field accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>

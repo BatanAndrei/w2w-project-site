@@ -29,6 +29,13 @@
             height: 90px;
             border-radius: 50%;
             border: 1px solid;
+            background: #DFE0E3;
+
+            .positionAvatarImage {
+                position: relative;
+                left: 23px;
+                bottom: 20px;
+            }
 
             .iconFotoDrvice {
                 position: relative;
