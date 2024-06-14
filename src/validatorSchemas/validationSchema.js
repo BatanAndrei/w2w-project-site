@@ -50,10 +50,8 @@ export const questionnireSchema = Yup.object({
     .required("Поле обязательное!"),
     publicSpeaking: Yup
     .string()
-    //.oneOf(["Ten"])
     .required("Поле обязательное!"),
     topicСommunication: Yup
     .string()
-    //.oneOf(["Ten"])
     .required("Поле обязательное!"),
 });

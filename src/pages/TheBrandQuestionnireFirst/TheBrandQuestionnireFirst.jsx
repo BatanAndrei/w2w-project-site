@@ -70,7 +70,7 @@ const TheBrandQuestionnireFirst = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.nikTelegrem) && <p className={styles.error}>{errors.nikTelegrem?.message}</p>}</div>
                 <h2 className={styles.lable}>Дата рождения</h2>
                 <Field
-                    placeholder="01.01.0001"
+                    placeholder="Выберите дату"
                     type={'text'}
                     focus={(e) => (e.target.type = "date")}
                     blur={(e) => (e.target.type = "text")}
