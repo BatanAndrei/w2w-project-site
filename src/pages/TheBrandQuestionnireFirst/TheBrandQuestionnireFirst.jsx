@@ -15,6 +15,7 @@ import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectChec
 import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 import { useNavigate } from "react-router-dom";
 import { publicSpikingAnswer } from '../../datas/datas';
+import { communicationSpiking } from '../../datas/datas';
 
 
 const defaultValues = {
@@ -94,7 +95,8 @@ const TheBrandQuestionnireFirst = () => {
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
-                <MultipleSelectCheckmarks 
+                <MultipleSelectCheckmarks
+                    nameTitle={communicationSpiking}
                     register={{...register("topicСommunication")}}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>

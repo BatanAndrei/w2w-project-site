@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import styles from './selectCheckbox.module.scss';
-import { communicationSpiking } from '../../datas/datas';
+
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -19,7 +19,7 @@ const MenuProps = {
     },
 };
 
-export default function MultipleSelectCheckmarks({register, ...rest}) {
+export default function MultipleSelectCheckmarks({nameTitle, register, ...rest}) {
     const [personName, setPersonName] = React.useState([]);
 
     const handleChange = (event) => {
@@ -51,7 +51,7 @@ export default function MultipleSelectCheckmarks({register, ...rest}) {
             MenuProps={MenuProps}
             inputProps={{ 'aria-label': 'Without label' }}
             >
-            {communicationSpiking.map((name) => (
+            {nameTitle?.map((name) => (
                 <MenuItem key={name} value={name}>
                 <Checkbox checked={personName.indexOf(name) > -1} />
                 <ListItemText primary={name} />

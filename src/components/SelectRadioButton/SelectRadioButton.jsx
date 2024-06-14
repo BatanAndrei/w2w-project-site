@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import styles from './selectRadioButton.module.scss';
-import { publicSpikingAnswer } from '../../datas/datas';
+
 
 
 const ITEM_HEIGHT = 48;
