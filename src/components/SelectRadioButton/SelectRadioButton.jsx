@@ -19,7 +19,7 @@ const MenuProps = {
     },
 };
 
-export default function MultipleSelectCheckmarks({nameTitle, register, ...rest}) {
+export default function MultipleSelectCheckmarks({itemLable, register, ...rest}) {
     const [personName, setPersonName] = React.useState([]);
 
     const handleChange = (event) => {
@@ -50,7 +50,7 @@ export default function MultipleSelectCheckmarks({nameTitle, register, ...rest})
             MenuProps={MenuProps}
             inputProps={{ 'aria-label': 'Without label' }}
             >
-            {nameTitle?.map((name) => (
+            {itemLable?.map((name) => (
                 <MenuItem key={name} value={name}>
                     <input type='radio' id={name} name="answer"></input>
                 <ListItemText primary={name} />

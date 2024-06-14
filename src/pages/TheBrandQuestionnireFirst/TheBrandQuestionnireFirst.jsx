@@ -96,13 +96,13 @@ const TheBrandQuestionnireFirst = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
                 <MultipleSelectCheckmarks
-                    nameTitle={communicationSpiking}
+                    itemLable={communicationSpiking}
                     register={{...register("topicСommunication")}}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
                 <SelectRadio
-                    nameTitle={publicSpikingAnswer}
+                    itemLable={publicSpikingAnswer}
                     register={{...register("publicSpeaking")}}
                 />
                 <div className={styles.wrapperMessage}>{Boolean(errors.publicSpeaking) && <p className={styles.error}>{errors.publicSpeaking?.message}</p>}</div>
