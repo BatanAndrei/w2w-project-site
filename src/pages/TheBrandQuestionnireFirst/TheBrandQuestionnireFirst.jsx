@@ -70,7 +70,6 @@ const TheBrandQuestionnireFirst = () => {
                 <Field
                     placeholder="01.01.0001"
                     type={'text'}
-                    change={(e) => console.log(e.target.value)}
                     focus={(e) => (e.target.type = "date")}
                     blur={(e) => (e.target.type = "text")}
                     register={{...register("birthDate")}}
