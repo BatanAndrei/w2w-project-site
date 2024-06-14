@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+
+@media (min-width: 359px) and (max-width: 1235px) {
+    .marginItem {
+        display: flex;
+        grid-column: 10px;
+
+        .cardInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #DFE0E3;
+            width: 25.2vw;
+            height: 12.6vh;
+            border-radius: 10px;
+            border: 1px solid;
+        }
+    }    
+}

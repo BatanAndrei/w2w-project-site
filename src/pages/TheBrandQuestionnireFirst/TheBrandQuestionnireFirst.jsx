@@ -8,12 +8,13 @@ import Field from '../../components/Field/Field';
 import TheHeaderQuestionnier from '../../components/TheHeaderQuestionnier/TheHeaderQuestionnier';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from 'react-hook-form';
-import { questionnireSchema } from '../../validatorSchemas/validationSchema';
+import { questionnireSchemaFirstPage } from '../../validatorSchemas/validationSchema';
 import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
-import Select from '../../components/Select/Select';
 import AvatarPlaceHolder from '../../components/Svg/AvatarPlaceHolder';
 import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectCheckbox';
 import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
+import { useNavigate } from "react-router-dom";
+import { publicSpikingAnswer } from '../../datas/datas';
 
 
 const defaultValues = {
@@ -27,12 +28,14 @@ const defaultValues = {
 
 const TheBrandQuestionnireFirst = () => {
 
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm({defaultValues,
-        //resolver: yupResolver(questionnireSchema),
+        //resolver: yupResolver(questionnireSchemaFirstPage),
     });
 
     const [selectedFoto, setSelectedFoto] = useState(null);
@@ -60,7 +63,7 @@ const TheBrandQuestionnireFirst = () => {
                 <Field accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
-            {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
+            <form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
                 <h2 className={styles.lable}>Ник в Telegram</h2>
                 <Field 
                     register={{...register("nikTelegrem")}}
@@ -97,12 +100,9 @@ const TheBrandQuestionnireFirst = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
                 <SelectRadio
+                    nameTitle={publicSpikingAnswer}
                     register={{...register("publicSpeaking")}}
                 />
-               {/*  <Select
-                    register={{...register("publicSpeaking")}}
-                    classNameInput={styles.input} 
-                    classNameText={styles.textSelect} /> */}
                 <div className={styles.wrapperMessage}>{Boolean(errors.publicSpeaking) && <p className={styles.error}>{errors.publicSpeaking?.message}</p>}</div>
                 <h2 className={styles.lable}>Состоите ли вы в каком-то комьюнити/сообществе предпринимателей? Напишите, пожалуйста, название или добавьте ссылку на сообщество</h2>
                 <Field 
@@ -113,9 +113,9 @@ const TheBrandQuestionnireFirst = () => {
                     type={'text'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.community) && <p className={styles.error}>{errors.community?.message}</p>}</div>
-                <Button className={styles.button} name={nameButtonNext} type="submit"/>
-            </form>}
-            <Button className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+                <Button click={()=> navigate('/brand-choice/brand-questionnire-second')} className={styles.button} name={nameButtonNext} type="submit"/>
+            </form>
+            <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
         </div>
     )
 };

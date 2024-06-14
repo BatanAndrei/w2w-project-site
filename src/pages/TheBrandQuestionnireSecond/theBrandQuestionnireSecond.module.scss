@@ -1,0 +1,145 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 91.84vw;
+
+    .wrapperSubtitle {
+        width: 74.76vw;
+        height: 46px;
+
+        .textSubtitle {
+            font-weight: $font-600;
+            font-size: 16px;
+            font-family: $manropeRegular;
+            text-align: center;
+        }
+    }
+
+    .wrapperImageLogo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 0px 0px 24px 0px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 1px solid;
+        background: #DFE0E3;
+
+        .positionLogoImage {
+            position: relative;
+            left: 23px;
+            bottom: 27px;
+        }
+
+        .iconFotoDrvice {
+            position: relative;
+            left: 24px;
+            width: 24px;
+            height: 24px;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .buttonChooseFile {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: none;
+        }
+    }
+
+    .wrapperDescriptionSlider {
+        width: 91.84vw;
+        height: 9.24vh;
+
+        .descriptionSlider {
+            margin: 0px;
+            font-family: $manropeRegular;
+            font-size: 16px;
+            font-weight: $font-600;
+        }
+    }
+
+    .wrapperSlider {
+        margin: 8px 0px 24px 0px;
+        width: 91.84vw;
+        height: 12.6vh;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 91.84vw;
+    
+        .wrapperMessage {
+            display: flex;
+            justify-content:flex-start;
+            width: 88.29vw;
+            height: 16px;
+        }
+        .error {
+            margin: 0px;
+            color: $red-message;
+            font-weight: $font-400;
+            font-size: 14px;
+            font-family: $interRegular;
+        }
+    
+        .lable {
+            margin: 2px 0px 8px 0px;
+            font-weight: $font-400;
+            font-size: 14px;
+            font-family: $manropeRegular;
+        }
+
+        .input {
+            padding: 0px 10px 0px 10px;
+            width: 91.84vw;
+            height: 6.49vh;
+            font-size: 16px;
+            border-radius: 16px;
+            outline: none;
+            background: none;
+            border: 1px solid;
+        }
+
+        .textSelect {
+            font-family: $manropeRegular;
+            font-weight: $font-400;
+            font-size: 14px;
+        }
+        
+        .button {
+            margin: 34px 0px 0px 0px;
+            width: 91.84vw;
+            height: 6.49vh;
+            font-family: $manropeRegular;
+            font-weight: $font-600;
+            font-size: 16px;
+            border-radius: 16px;
+            border: none;
+            background: $backgroundButton;
+            color: white;
+        }
+    }
+
+    .buttonFillLeter {
+        margin: 12px 0px 30px 0px;
+        width: 91.84vw;
+        height: 6.49vh;
+        color: #A73AFD;
+        font-family: $manropeRegular;
+        font-weight: $font-600;
+        font-size: 16px;
+        border-radius: 16px;
+        border: none;
+        background: none;
+    }
+}  
+}

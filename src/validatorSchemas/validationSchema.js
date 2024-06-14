@@ -31,7 +31,7 @@ export const signInSchema = Yup.object({
         .max(120, "максимальная длина - 120 символов!"),
 });
 
-export const questionnireSchema = Yup.object({
+export const questionnireSchemaFirstPage = Yup.object({
     birthDate: Yup
     .date()
     .required()

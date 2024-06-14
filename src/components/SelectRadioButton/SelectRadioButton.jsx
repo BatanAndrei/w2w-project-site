@@ -4,9 +4,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
-import Checkbox from '@mui/material/Checkbox';
 import styles from './selectRadioButton.module.scss';
 import { publicSpikingAnswer } from '../../datas/datas';
+
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -19,7 +19,7 @@ const MenuProps = {
     },
 };
 
-export default function MultipleSelectCheckmarks({register, ...rest}) {
+export default function MultipleSelectCheckmarks({nameTitle, register, ...rest}) {
     const [personName, setPersonName] = React.useState([]);
 
     const handleChange = (event) => {
@@ -50,7 +50,7 @@ export default function MultipleSelectCheckmarks({register, ...rest}) {
             MenuProps={MenuProps}
             inputProps={{ 'aria-label': 'Without label' }}
             >
-            {publicSpikingAnswer.map((name) => (
+            {nameTitle?.map((name) => (
                 <MenuItem key={name} value={name}>
                     <input type='radio' id={name} name="answer"></input>
                 <ListItemText primary={name} />
