@@ -4,7 +4,6 @@ import styles from './signIn.module.scss';
 import Field from '../../components/Field/Field';
 import { yupResolver } from "@hookform/resolvers/yup"; 
 import { signInSchema } from "../../validatorSchemas/validationSchema";
-import LogoSvg from '../../components/Svg/LogoSvg';
 import { Link } from 'react-router-dom';
 import { postSignIn } from '../../api/postSignIn';
 import { useSelector, useDispatch } from 'react-redux';
@@ -52,7 +51,7 @@ const SignIn = () => {
         <div className={styles.containerPage}>
             <div className={styles.psevdoModal}></div>
             <div className={styles.titleWrapper}>
-                <div className={styles.arrowLeft}><ArrowLeft/></div>
+                <Link to='/start-page' className={styles.arrowLeft}><ArrowLeft/></Link>
                 <h2 className={styles.titleText}>Вход</h2>
                 <div className={styles.hiddenBlockForPosition}></div>
             </div>

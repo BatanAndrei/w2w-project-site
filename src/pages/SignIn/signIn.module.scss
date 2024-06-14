@@ -55,24 +55,27 @@
         }
     
         .lable {
-            margin: 3px 0px 7px 0px;
+            margin: 0px;
             font-weight: $font-400;
             font-size: 14px;
             font-family: $manropeRegular;
         }
     
         .input {
+            margin: 8px 0px 0px 0px;
             padding: 0px 0px 0px 10px;
             width: 91.56vw;
             height: 6.49vh;
             font-size: 16px;
             border-radius: 16px;
             outline: none;
+            font-weight: $font-400;
+            font-family: $manropeRegular;
         }
 
         
         .button {
-            margin: 32px 0px 0px 0px;
+            margin: 20px 0px 0px 0px;
             width: 91.56vw;
             height: 6.49vh;
             font-family: $manropeRegular;

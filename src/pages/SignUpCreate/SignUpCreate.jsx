@@ -9,7 +9,6 @@ import { selectActiveModal, selectStatusCreateUser, selectStatusLoadCreate } fro
 import { modalPersonalDatalReducer } from '../../redux/slices/informationSlice';
 import { statusLoadNullCreateReducer } from '../../redux/slices/authCreateSlice';
 import { postAuthCreate } from '../../api/postAuthCreate';
-import LogoSvg from '../../components/Svg/LogoSvg'; 
 import { nameButtonRegistration } from '../../datas/datas';
 import { Link } from 'react-router-dom';
 import BasicModalPersonalDataDocument from '../../components/ModalPersonalDataDocument/ModalPersonalDataDocument';
@@ -55,7 +54,7 @@ const SignUpCreate = () => {
         <div className={styles.containerPage}>
             <BasicModalPersonalDataDocument open={isActiveModal} />
             <div className={styles.titleWrapper}>
-                <div className={styles.arrowLeft}><ArrowLeft/></div>
+                <Link to='/start-page' className={styles.arrowLeft}><ArrowLeft/></Link>
                 <h2 className={styles.titleText}>Регистрация</h2>
                 <div className={styles.hiddenBlockForPosition}></div>
             </div>
