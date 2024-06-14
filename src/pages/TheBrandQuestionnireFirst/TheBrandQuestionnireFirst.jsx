@@ -12,6 +12,7 @@ import { questionnireSchema } from '../../validatorSchemas/validationSchema';
 import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import Select from '../../components/Select/Select';
 import AvatarPlaceHolder from '../../components/Svg/AvatarPlaceHolder';
+import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectCheckbox';
 
 
 const defaultValues = {
@@ -89,10 +90,9 @@ const TheBrandQuestionnireFirst = () => {
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
-                <Select
+                <MultipleSelectCheckmarks 
                     register={{...register("topicСommunication")}}
-                    classNameInput={styles.input} 
-                    classNameText={styles.textSelect} />
+                    />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
                 <Select

@@ -68,7 +68,7 @@ const SignIn = () => {
                 <Field 
                     register={{...register("password")}}
                     autoComplete="off"
-                    placeholder="пароль..."
+                    placeholder="********"
                     className={styles.input}
                     type={'password'}
                     />
