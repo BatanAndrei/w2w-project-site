@@ -48,5 +48,12 @@ export const questionnireSchema = Yup.object({
     community: Yup
     .string()
     .required("Поле обязательное!"),
+    publicSpeaking: Yup
+    .string()
+    //.oneOf(["Ten"])
+    .required("Поле обязательное!"),
+    topicСommunication: Yup
+    .string()
+    //.oneOf(["Ten"])
+    .required("Поле обязательное!"),
 });
-

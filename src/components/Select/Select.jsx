@@ -1,30 +1,20 @@
-import * as React from 'react';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import styles from './select.module.scss';
+import { useState } from "react";
 
-
-export default function SelectLabels({classNameText, classNameInput}) {
-    const [option, setOption] = React.useState('');
+export default function SelectLabels({classNameText, classNameInput, register, ...rest}) {
+    const [value, setValue] = useState('');
 
     const handleChange = (event) => {
-        setOption(event.target.value);
+        setValue(event.target.value);
     };
 
     return (
         <div>
-            <Select className={classNameInput}
-                value={option}
-                onChange={handleChange}
-                displayEmpty
-            >
-                <MenuItem  className={styles.title} value="">
-                    <h2 className={classNameText}>Выбрать</h2>
-                </MenuItem>
-                <MenuItem sx={{ p: 1}} value={10}>Ten</MenuItem>
-                <MenuItem sx={{ p: 1}} value={20}>Twenty</MenuItem>
-                <MenuItem sx={{ p: 1}} value={30}>Thirty</MenuItem>
-            </Select>
+            <select name='select' className={classNameInput} {...register} {...rest} onChange={handleChange} value={value}>
+                <option className={classNameText} value="" disabled selected>Выбрать</option>
+                <option  value="value1">Значение 1</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+            </select>
         </div>
     );
 }
