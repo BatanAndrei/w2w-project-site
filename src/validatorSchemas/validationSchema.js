@@ -33,8 +33,9 @@ export const signInSchema = Yup.object({
 
 export const questionnireSchema = Yup.object({
     birthDate: Yup
-    .string()
-    .required("Поле обязательное!"),
+    .date()
+    .required()
+    .typeError("Поле обязательное!"),
     jobTitle: Yup
     .string()
     .required("Поле обязательное!"),

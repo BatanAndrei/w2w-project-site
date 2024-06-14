@@ -86,7 +86,7 @@ const TheBrandQuestionnireFirst = () => {
                     type={'text'}
                     value={textDate}
                     /> */}
-                <div className={styles.wrapperMessage}>{(Boolean(errors.birthDate) && <p className={styles.error}>{errors.birthDate?.message}</p>) || (errorDate !== '' && <p className={styles.error}>{errorDate}</p>)}</div>
+                <div className={styles.wrapperMessage}>{Boolean(errors.birthDate) && <p className={styles.error}>{errors.birthDate?.message}</p>}</div>
                 <h2 className={styles.lable}>Должность</h2>
                 <Field 
                     register={{...register("jobTitle")}}
