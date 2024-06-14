@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import BasicModalPersonalDataDocument from '../../components/ModalPersonalDataDocument/ModalPersonalDataDocument';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import ArrowLeft from '../../components/Svg/ArrowLeft';
 
 
 const defaultValues = {
@@ -51,13 +52,15 @@ const SignUpCreate = () => {
     };
 
     return (
-        <>
+        <div className={styles.containerPage}>
             <BasicModalPersonalDataDocument open={isActiveModal} />
             <div className={styles.titleWrapper}>
+                <div className={styles.arrowLeft}><ArrowLeft/></div>
                 <h2 className={styles.titleText}>Регистрация</h2>
+                <div className={styles.hiddenBlockForPosition}></div>
             </div>
             <form className={styles.form} onSubmit={handleSubmit(handleCreateUser)}>
-                <h2 className={styles.lable}>Телефон</h2>
+                <h2 className={styles.lable}>Телефон/Email</h2>
                 <Field 
                     register={{...register("phoneNumber")}}
                     autoComplete="off"
@@ -66,11 +69,11 @@ const SignUpCreate = () => {
                     type={'text'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.phoneNumber) && <p className={styles.error}>{errors.phoneNumber?.message}</p>}</div>
-                <h2 className={styles.lable}>Email</h2>
+                <h2 className={styles.lable}>Телефон/Email</h2>
                 <Field 
                     register={{...register("email")}}
                     autoComplete="off"
-                    placeholder="exemple@mail.com"
+                    placeholder="yourmail@mail.ru"
                     className={styles.input}
                     type={'text'}
                     />
@@ -84,17 +87,17 @@ const SignUpCreate = () => {
                     type={'password'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.password) && <p className={styles.error}>{errors.password?.message}</p>}</div>
-                <div className={styles.policyDoc}>
-                    <p className={styles.policyText}>
-                    Зарегистрировавшись, я принимаю условия <Link to="/signUp-create/user-agreements" className={styles.link}>пользовательского соглашения</Link> и даю свое согласие на <Link onClick={openModal} className={styles.link}>обработку персональных данных</Link> в соответствии с <Link to="/signUp-create/policy-personalData" className={styles.link}>политикой обработки персональных данных.</Link>
-                    </p>
-                </div>
                 <Button className={styles.button} name={nameButtonRegistration} type="submit"/>
             </form>
             <div className={styles.wrapperQuestinText}>
                 <h3 className={styles.questionText}>Уже есть профиль? <Link to="/signIn" className={styles.link}>Войти</Link></h3>
             </div>
-        </>
+            <div className={styles.policyDoc}>
+                <p className={styles.policyText}>
+                Зарегистрировавшись, я принимаю условия <Link to="/signUp-create/user-agreements" className={styles.link}>пользовательского соглашения</Link> и даю свое согласие на <Link onClick={openModal} className={styles.link}>обработку персональных данных</Link> в соответствии с <Link to="/signUp-create/policy-personalData" className={styles.link}>политикой обработки персональных данных.</Link>
+                </p>
+            </div>
+        </div>
     )
 };
 

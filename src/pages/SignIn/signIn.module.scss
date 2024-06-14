@@ -2,33 +2,48 @@
 
 @media (min-width: 359px) and (max-width: 1235px) {
 
+    .containerPage {
+        margin-top: 10px;
+    
     .psevdoModal {
         height: 1px;
     }
 
     .titleWrapper {
+        margin-bottom: 44px;
         display: flex;
-        justify-content: center;
-        width: 130px;
+        justify-content: space-between;
+        align-items: center;
+        width: 91.56vw;
     
+        .arrowLeft {
+            width: 24px;
+            height: 24px;
+        }
+
         .titleText {
             margin: 0px;
-            width: 88.29vw;
-            font-size: 28px;
-            font-weight: $font-700;
-            font-family: $robotoBold;
+            width: 48px;
+            font-size: 22px;
+            font-weight: $font-600;
+            font-family: $manropeRegular;
+        }
+
+        .hiddenBlockForPosition {
+            width: 24px;
+            height: 24px;
         }
     }
 
     .form {
         display: flex;
         flex-direction: column;
-        width: 88.29vw;
+        width: 91.56vw;
     
         .wrapperMessage {
             display: flex;
             justify-content:flex-start;
-            width: 88.29vw;
+            width: 91.56vw;
             height: 16px;
         }
         .error {
@@ -36,54 +51,44 @@
             color: $red-message;
             font-weight: $font-400;
             font-size: 14px;
-            font-family: $interRegular;
+            font-family: $manropeRegular;
         }
     
         .lable {
             margin: 3px 0px 7px 0px;
             font-weight: $font-400;
             font-size: 14px;
-            font-family: $interRegular;
+            font-family: $manropeRegular;
         }
     
         .input {
             padding: 0px 0px 0px 10px;
-            width: 88.29vw;
+            width: 91.56vw;
             height: 6.49vh;
             font-size: 16px;
-            border-radius: 6px;
+            border-radius: 16px;
             outline: none;
         }
 
         
         .button {
-            margin: 240px 0px 0px 0px;
-            width: 88.29vw;
+            margin: 32px 0px 0px 0px;
+            width: 91.56vw;
             height: 6.49vh;
-            font-family: $interRegular;
+            font-family: $manropeRegular;
             font-weight: $font-600;
             font-size: 16px;
-            border-radius: 6px;
-            background-color: black;
+            border-radius: 16px;
+            background: $backgroundButton;
             color: white;
+            border: none;
         }
-    }
-
-    .linkWrapper {
-        margin-top: 16px;
-        width: 88.29vw;
-
-    .link {
-        font-weight: $font-600;
-        font-family: $interRegular;
-        font-size: 16px;
-        color: black;
     }
 }
 
 .wrapperQuestinText{
-    width: 88.29vw;
-    margin: 10px 0px 30px 0px;
+    width: 91.56vw;
+    margin: 12px 0px 30px 0px;
 
     .questionText {
         margin: 0px;

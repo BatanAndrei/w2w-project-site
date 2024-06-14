@@ -13,6 +13,7 @@ import { selectStatusSignInUser, selectStatusLoadSignIn } from '../../redux/sele
 import { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { statusLoadNullSignInReducer } from '../../redux/slices/signInSlice';
+import ArrowLeft from '../../components/Svg/ArrowLeft';
 
 
 const defaultValues = {
@@ -48,17 +49,19 @@ const SignIn = () => {
         }, [statusLoadSignIn]);
         
     return (
-        <>
+        <div className={styles.containerPage}>
             <div className={styles.psevdoModal}></div>
             <div className={styles.titleWrapper}>
+                <div className={styles.arrowLeft}><ArrowLeft/></div>
                 <h2 className={styles.titleText}>Вход</h2>
+                <div className={styles.hiddenBlockForPosition}></div>
             </div>
             <form className={styles.form} onSubmit={handleSubmit(handleSignIn)}>
                 <h2 className={styles.lable}>Телефон/Email</h2>
                 <Field 
                     register={{...register("phoneNumberOrEmail")}}
                     autoComplete="off"
-                    placeholder="телефон/email"
+                    placeholder="+7 (999) 999-99-99"
                     className={styles.input}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.phoneNumberOrEmail) && <p className={styles.error}>{errors.phoneNumberOrEmail?.message}</p>}</div>
@@ -71,15 +74,12 @@ const SignIn = () => {
                     type={'password'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.password) && <p className={styles.error}>{errors.password?.message}</p>}</div>
-                <div className={styles.linkWrapper}>
-                    <Link className={styles.link}>Не помню пароль</Link>
-                </div>
                 <Button className={styles.button} name={nameButtonEnter} type="submit"/>
             </form>
             <div className={styles.wrapperQuestinText}>
                 <h3 className={styles.questionText}>Нет профиля? <Link to="/signUp-create" className={styles.link}>Зарегистрируйтесь</Link></h3>
             </div>
-        </>
+        </div>
     )
 };
 
