@@ -18,12 +18,12 @@ export default function SelectLabels({classNameText, classNameInput}) {
                 onChange={handleChange}
                 displayEmpty
             >
-                <MenuItem className={styles.title} value="">
+                <MenuItem  className={styles.title} value="">
                     <h2 className={classNameText}>Выбрать</h2>
                 </MenuItem>
-                <MenuItem className={styles.title} value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem sx={{ p: 1}} value={10}>Ten</MenuItem>
+                <MenuItem sx={{ p: 1}} value={20}>Twenty</MenuItem>
+                <MenuItem sx={{ p: 1}} value={30}>Thirty</MenuItem>
             </Select>
         </div>
     );

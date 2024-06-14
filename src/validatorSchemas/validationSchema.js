@@ -45,5 +45,8 @@ export const questionnireSchema = Yup.object({
     nikInstagram: Yup
     .string()
     .required("Поле обязательное!"),
+    community: Yup
+    .string()
+    .required("Поле обязательное!"),
 });
 

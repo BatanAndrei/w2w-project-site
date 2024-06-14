@@ -67,22 +67,14 @@
             }
         
             .lable {
-                margin: 0px 0px 8px 0px;
+                margin: 2px 0px 8px 0px;
                 font-weight: $font-400;
                 font-size: 14px;
                 font-family: $manropeRegular;
             }
         
-            .inputDateHidden {
-                padding: 0px 10px 0px 10px;
-                width: 91.84vw;
-                height: 6.49vh;
-                border-radius: 16px;
-                outline: none;
-            }
-        
             .input {
-                padding: 0px 0px 0px 10px;
+                padding: 0px 10px 0px 10px;
                 width: 91.84vw;
                 height: 6.49vh;
                 font-size: 16px;
@@ -90,12 +82,27 @@
                 outline: none;
             }
     
-            
-            .button {
-                margin: 122px 0px 0px 0px;
+            .inputSelect {
+                padding: 0px 10px 0px 0px;
                 width: 91.84vw;
                 height: 6.49vh;
-                font-family: $interRegular;
+                font-size: 16px;
+                border-radius: 16px;
+                outline: none;
+                border: 1px solid;
+            }
+    
+            .textSelect {
+                font-family: $manropeRegular;
+                font-weight: $font-400;
+                font-size: 16px;
+            }
+            
+            .button {
+                margin: 34px 0px 0px 0px;
+                width: 91.84vw;
+                height: 6.49vh;
+                font-family: $manropeRegular;
                 font-weight: $font-600;
                 font-size: 16px;
                 border-radius: 16px;
@@ -104,10 +111,18 @@
                 color: white;
             }
         }
-        .textSelect {
+
+        .buttonFillLeter {
+            margin: 12px 0px 30px 0px;
+            width: 91.84vw;
+            height: 6.49vh;
+            color: #A73AFD;
             font-family: $manropeRegular;
-            font-weight: $font-400;
+            font-weight: $font-600;
             font-size: 16px;
+            border-radius: 16px;
+            border: none;
+            background: none;
         }
     }    
 }
