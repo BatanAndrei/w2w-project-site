@@ -53,9 +53,6 @@ const SignUpCreate = () => {
     return (
         <>
             <BasicModalPersonalDataDocument open={isActiveModal} />
-            <div className={styles.logo}>
-                <LogoSvg colorBlack={true}/>
-            </div>
             <div className={styles.titleWrapper}>
                 <h2 className={styles.titleText}>Регистрация</h2>
             </div>

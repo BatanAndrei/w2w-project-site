@@ -56,8 +56,6 @@ const TheBrandQuestionnireFirst = () => {
                 <Field accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
-
-
             {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
                 <h2 className={styles.lable}>Ник в Telegram</h2>
                 <Field 
