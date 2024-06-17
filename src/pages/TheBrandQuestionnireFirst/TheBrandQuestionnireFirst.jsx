@@ -52,6 +52,7 @@ const TheBrandQuestionnireFirst = () => {
     };
 
     const dataQuestionnire = async (data) => {
+        //navigate('/brand-choice/brand-questionnire-second')
         console.log(data)
     };
 
@@ -118,7 +119,7 @@ const TheBrandQuestionnireFirst = () => {
                     type={'text'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.community) && <p className={styles.error}>{errors.community?.message}</p>}</div>
-                <Button /* click={()=> navigate('/brand-choice/brand-questionnire-second')} */ className={styles.button} name={nameButtonNext} type="submit"/>
+                <Button className={styles.button} name={nameButtonNext} type="submit"/>
             </form>
             <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
         </div>
