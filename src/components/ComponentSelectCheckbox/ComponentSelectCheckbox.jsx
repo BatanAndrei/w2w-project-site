@@ -8,7 +8,7 @@ const ComponentSelectCheckbox = ({placeholder ,dataListItems, classNameTextTitle
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
     const [displayTextArea, setDisplayTextArea] = useState(false);
     const [fillDataFromCheckboxes, setFillDataFromCheckboxes] = useState([]);
-    const [allListItems, setAllListItems] = useState(dataListItems)
+    const [allListItems, setAllListItems] = useState(dataListItems);
 
     const handleDropeList = () => {
         setDisplayCheckboxes(() => !displayCheckboxes);
@@ -39,7 +39,7 @@ const ComponentSelectCheckbox = ({placeholder ,dataListItems, classNameTextTitle
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input placeholder={!displayCheckboxes && placeholder} value={fillDataFromCheckboxes.join(', ')} className={styles.input} type='type' {...register} {...rest} readonly
+                <input placeholder={!displayCheckboxes && placeholder} value={fillDataFromCheckboxes.join(', ')} className={styles.input} type='type' {...register} {...rest}
                 />
                 <div onClick={handleDropeList} className={styles.arrow}>{displayCheckboxes ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>

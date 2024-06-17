@@ -96,11 +96,11 @@ const TheBrandQuestionnireFirst = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
                 <ComponentSelectCheckbox type={'checkbox'}
-                placeholder={'Выбрать'}
-                classNamePositionLableSelect={styles.positionLableSelect}
-                classNameTextTitleSelect={styles.textTitleSelect}
-                register={{...register("topicСommunication")}}
-                dataListItems={communicationSpiking}
+                    placeholder='Выбрать'
+                    classNamePositionLableSelect={styles.positionLableSelect}
+                    classNameTextTitleSelect={styles.textTitleSelect}
+                    register={{...register("topicСommunication")}}
+                    dataListItems={communicationSpiking}
                 />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
@@ -118,7 +118,7 @@ const TheBrandQuestionnireFirst = () => {
                     type={'text'}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.community) && <p className={styles.error}>{errors.community?.message}</p>}</div>
-                <Button click={()=> navigate('/brand-choice/brand-questionnire-second')}className={styles.button} name={nameButtonNext} type="submit"/>
+                <Button /* click={()=> navigate('/brand-choice/brand-questionnire-second')} */ className={styles.button} name={nameButtonNext} type="submit"/>
             </form>
             <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
         </div>
