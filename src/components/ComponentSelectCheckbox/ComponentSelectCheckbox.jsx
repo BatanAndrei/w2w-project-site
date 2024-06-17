@@ -1,6 +1,7 @@
 import styles from './componentSelectCheckbox.module.scss';
 import { useState } from 'react';
-
+import ArrowDown from '../Svg/ArrowDown';
+import ArrowUp from '../Svg/ArrowUp';
 
 const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
 
@@ -20,15 +21,19 @@ const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, class
                 return [...pre.filter(item => item !== e.target.name)]
             })
         };
-        
+
         const id = item.id
         let checkedItems = allListItems.map((item) => item.id === id ? {...item, checked: !item.checked, count: 1} : item);
         setAllListItems(checkedItems);
     };
     
     return (
-        <>
-            <input onClick={handleDropeList} value={fillDataFromCheckboxes.join(', ')} className={classNameInputTextSelect} type='type' {...register} {...rest} readonly/>
+        <>  
+            <div className={styles.containerMainInput}>
+                <input value={fillDataFromCheckboxes.join(', ')} className={styles.input} type='type' {...register} {...rest} readonly
+                />
+                <div onClick={handleDropeList} className={styles.arrow}>{displayCheckboxes ? <ArrowUp/> : <ArrowDown/>}</div>
+            </div>
             {displayCheckboxes && <div className={styles.containerDropeList}>
                 <div className={styles.wrapperCheckboxes}>
                     {allListItems.map((item, index) => <label className={classNamePositionLableSelect} key={index}>
