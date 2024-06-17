@@ -33,6 +33,7 @@
     }
 
     .containerDropeList {
+        padding-bottom: 10px;
         width: 91.84vw;
         border-radius: 16px;
         background-color: white;
@@ -77,5 +78,26 @@
     
     .checkbox:checked + .fake::before{
         opacity: 1;
+    }
+
+    .wrapperTextArea {
+        margin: 15px 0px 0px 0px;
+        width: 91.84vw;
+        display: flex;
+        justify-content: center;
+
+        .textArea {
+            font-weight: $font-400;
+            font-size: 16px;
+            font-family: $manropeRegular;
+            width: 87.36vw;
+            min-height: 12.49vh;
+            padding: 12px 16px 12px 16px;
+            border-radius: 16px;
+            color: #858FA3;
+            outline: none;
+            border: 1px solid #D0D4DB;
+        }
+
     }
 }

@@ -6,6 +6,7 @@ import ArrowUp from '../Svg/ArrowUp';
 const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
 
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
+    const [displayTextArea, setDisplayTextArea] = useState(false);
     const [fillDataFromCheckboxes, setFillDataFromCheckboxes] = useState([]);
     const [allListItems, setAllListItems] = useState(dataListItems)
 
@@ -26,6 +27,14 @@ const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, class
         let checkedItems = allListItems.map((item) => item.id === id ? {...item, checked: !item.checked, count: 1} : item);
         setAllListItems(checkedItems);
     };
+
+    const handleDropeTextArea = (e) => {
+        if(e.target.checked) {
+            setDisplayTextArea(true)
+        }else {
+            setDisplayTextArea(false)
+        }
+    };
     
     return (
         <>  
@@ -41,6 +50,14 @@ const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, class
                     <span className={styles.fake}></span>
                     <div className={classNameTextTitleSelect}>{item.title}</div>
                 </label>)}
+                <label className={classNamePositionLableSelect}>
+                    <input checked={displayTextArea} onClick={(e) => handleDropeTextArea(e)} type={type} className={styles.checkbox}/>
+                    <span className={styles.fake}></span>
+                    <div className={classNameTextTitleSelect}>Свой вариант</div>
+                </label>
+                {displayTextArea && <div className={styles.wrapperTextArea}>
+                    <textarea placeholder='Введите Ваш текст' className={styles.textArea}></textarea> 
+                </div>}
                 </div>
             </div>}
         </>
