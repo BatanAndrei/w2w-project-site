@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
+const ComponentSelectCheckbox = ({placeholder ,dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
 
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
     const [displayTextArea, setDisplayTextArea] = useState(false);
@@ -16,10 +16,10 @@ const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, class
 
     const handleChangeCheckbox = (e, item) => {
         if(e.target.checked) {
-            setFillDataFromCheckboxes(pre => [...pre, e.target.name])
+            setFillDataFromCheckboxes(pre => [...pre, e.target.name]);
         }else {
             setFillDataFromCheckboxes(pre => {
-                return [...pre.filter(item => item !== e.target.name)]
+                return [...pre.filter(item => item !== e.target.name)];
             })
         };
 
@@ -39,7 +39,7 @@ const ComponentSelectCheckbox = ({dataListItems, classNameInputTextSelect, class
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input value={fillDataFromCheckboxes.join(', ')} className={styles.input} type='type' {...register} {...rest} readonly
+                <input placeholder={!displayCheckboxes && placeholder} value={fillDataFromCheckboxes.join(', ')} className={styles.input} type='type' {...register} {...rest} readonly
                 />
                 <div onClick={handleDropeList} className={styles.arrow}>{displayCheckboxes ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>

@@ -11,9 +11,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from 'react-hook-form';
 import { questionnireSchemaSecondPage } from '../../validatorSchemas/validationSchema';
 import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
-import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectCheckbox';
+//import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectCheckbox';
 import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 import { useNavigate } from "react-router-dom";
+import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';
 
 
 const defaultValues = {
@@ -98,7 +99,7 @@ const TheBrandQuestionnireSecond = () => {
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
-                <MultipleSelectCheckmarks 
+                    <ComponentSelectCheckbox
                     register={{...register("topicСommunication")}}
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
