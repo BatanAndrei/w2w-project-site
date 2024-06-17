@@ -16,6 +16,7 @@ import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 import { useNavigate } from "react-router-dom";
 import { publicSpikingAnswer } from '../../datas/datas';
 import { communicationSpiking } from '../../datas/datas';
+import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';
 
 
 const defaultValues = {
@@ -95,10 +96,17 @@ const TheBrandQuestionnireFirst = () => {
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
-                <MultipleSelectCheckmarks
+                <ComponentSelectCheckbox type={'checkbox'} 
+                classNameInputTextSelect={styles.input}
+                classNamePositionLableSelect={styles.positionLableSelect}
+                classNameTextTitleSelect={styles.textTitleSelect}
+                register={{...register("topicСommunication")}}
+                dataListItems={communicationSpiking}
+                />
+                {/* <MultipleSelectCheckmarks
                     itemLable={communicationSpiking}
                     register={{...register("topicСommunication")}}
-                    />
+                    /> */}
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
                 <SelectRadio

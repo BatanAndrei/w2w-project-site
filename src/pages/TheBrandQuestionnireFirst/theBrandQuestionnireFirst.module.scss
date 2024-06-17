@@ -90,12 +90,25 @@
                 background: none;
                 border: 1px solid;
             }
+
+            .positionLableSelect {
+                position: relative;
+                color: black;
+                left: 50px;
+            }
+
+            .textTitleSelect {
+                font-family: $manropeRegular;
+                font-size: 14px;
+                font-weight: $font-400;
+                margin-top: -18px;
+            }
     
-            .textSelect {
+            /* .textSelect {
                 font-family: $manropeRegular;
                 font-weight: $font-400;
                 font-size: 14px;
-            }
+            } */
             
             .button {
                 margin: 34px 0px 0px 0px;
