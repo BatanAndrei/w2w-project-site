@@ -35,8 +35,10 @@ function App() {
     useEffect(() => {
         if(false)
         navigate('/brand-choice/brand-questionnire-first');
-        if(true)
+        if(false)
             navigate('/start-page'); 
+        if(true)
+            navigate('/brand-choice'); 
     }, [])
 
     const paths = {
