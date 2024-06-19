@@ -54,7 +54,7 @@ export const communicationSpiking = [
 ];
 
 export const publicSpikingAnswer = [
-    'Да',
-    'Нет',
+    {id: 1, title: 'Да'},
+    {id: 2, title: 'Нет'}
 ];
 

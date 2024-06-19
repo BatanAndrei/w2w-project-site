@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectCheckbox = ({placeholder ,dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
+const ComponentSelectCheckbox = ({textAreaOnOff, placeholder ,dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
 
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
     const [displayTextArea, setDisplayTextArea] = useState(false);
@@ -50,11 +50,11 @@ const ComponentSelectCheckbox = ({placeholder ,dataListItems, classNameTextTitle
                     <span className={styles.fake}></span>
                     <div className={classNameTextTitleSelect}>{item.title}</div>
                 </label>)}
-                <label className={classNamePositionLableSelect}>
+                {textAreaOnOff && <label className={classNamePositionLableSelect}>
                     <input checked={displayTextArea} onClick={(e) => handleDropeTextArea(e)} type={type} className={styles.checkbox}/>
                     <span className={styles.fake}></span>
                     <div className={classNameTextTitleSelect}>Свой вариант</div>
-                </label>
+                </label>}
                 {displayTextArea && <div className={styles.wrapperTextArea}>
                     <textarea placeholder='Введите Ваш текст' className={styles.textArea}></textarea> 
                 </div>}
