@@ -11,7 +11,6 @@ import { useForm } from 'react-hook-form';
 import { questionnireSchemaFirstPage } from '../../validatorSchemas/validationSchema';
 import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import AvatarPlaceHolder from '../../components/Svg/AvatarPlaceHolder';
-import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 import { useNavigate } from "react-router-dom";
 import { publicSpikingAnswerData, communicationSpikingAnswerData } from '../../datas/datas';
 import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';

@@ -6,13 +6,25 @@ import styles from './simpleSlider.module.scss';
 import FotikSvg from '../../components/Svg/FotikSvg';
 
 
-function Arrow(props) {
+function ArrowPrev(props) {
     const { className, style, onClick } = props;
     
     return (
         <div
-            className={className+' '+styles.arrow}
-            style={{ ...style, display: "block", background: "#dadada" }}
+            className={className+' '+styles.arrow+' '+styles.slick_prev}
+            style={{ ...style, display: "block", background: "#dadada"}}
+            onClick={onClick}
+        />
+    );
+}; 
+
+function ArrowNext(props) {
+    const { className, style, onClick } = props;
+    
+    return (
+        <div
+            className={className+' '+styles.arrow+' '+styles.slick_next}
+            style={{ ...style, display: "block", background: "#dadada"}}
             onClick={onClick}
         />
     );
@@ -26,6 +38,8 @@ export default function SimpleSlider() {
         dots: false,
         infinite: true,
         speed: 500,
+        nextArrow: <ArrowNext />,
+        prevArrow: <ArrowPrev />,
         slidesToShow: 3.5,
         slidesToScroll: 1,
         responsive: [

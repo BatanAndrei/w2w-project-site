@@ -12,7 +12,6 @@ import { useForm } from 'react-hook-form';
 import { questionnireSchemaSecondPage } from '../../validatorSchemas/validationSchema';
 import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 //import MultipleSelectCheckmarks from '../../components/SelectCheckbox/SelectCheckbox';
-import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 import { useNavigate } from "react-router-dom";
 import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';
 import { useRef } from 'react';
