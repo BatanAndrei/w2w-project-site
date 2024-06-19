@@ -110,3 +110,15 @@ export const targetCollabAnswerData = [
     {id: 5, title: 'Другое'}
 ]
 
+export const businessWithCollabAnswerData = [
+    {id: 1, title: 'Я открыта к экспериментам и категория партнера мне не важна'},
+    {id: 2, title: 'Образование и эксперты'},
+    {id: 3, title: 'HoReCa'},
+    {id: 4, title: 'Украшения'},
+    {id: 5, title: 'Услуги'},
+    {id: 6, title: 'Товары для детей'},
+    {id: 7, title: 'Красота и здоровье'},
+    {id: 8, title: 'Товары для дома'},
+    {id: 9, title: 'Одежда и обувь'},
+    {id: 10, title: 'Другое'}
+]

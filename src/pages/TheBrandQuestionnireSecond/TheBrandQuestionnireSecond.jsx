@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';
 import { useRef } from 'react';
 import ComponentSelectRadio from '../../components/ComponentSelectRadio/ComponentSelectRadio';
-import { howCategoryBusinessAnswerData, offLineOrOnLineBusinessAnswerData, howManySubscribersAnswerData, averageBillAnswerData, interestingFormatAnswerData, targetCollabAnswerData } from '../../datas/datas';
+import { howCategoryBusinessAnswerData, offLineOrOnLineBusinessAnswerData, howManySubscribersAnswerData, averageBillAnswerData, interestingFormatAnswerData, targetCollabAnswerData, businessWithCollabAnswerData } from '../../datas/datas';
 import FieldTextArea from '../../components/FieldTextArea/FieldTextArea';
 
 
@@ -32,6 +32,7 @@ const defaultValues = {
     problemResolve: "",
     interestingFormat: "",
     targetCollab: "",
+    businessWithCollab: "",
 };
 
 const TheBrandQuestionnireSecond = () => {
@@ -193,6 +194,17 @@ const TheBrandQuestionnireSecond = () => {
                     textAreaOnOff={true}
                 />
                 <div className={styles.wrapperMessage}>{Boolean(errors.targetCollab) && <p className={styles.error}>{errors.targetCollab?.message}</p>}</div>
+                <h2 className={styles.lable}>С бизнесом из какой категории вам было бы интересно сделать коллаборацию?</h2>
+                <ComponentSelectRadio 
+                    type={'radio'}
+                    placeholder='Выбрать'
+                    classNamePositionLableSelect={styles.positionLableSelect}
+                    classNameTextTitleSelect={styles.textTitleSelect}
+                    dataListItems={businessWithCollabAnswerData}
+                    register={{...register("businessWithCollab")}}
+                    name={'businessWithCollab'}
+                    />
+                <div className={styles.wrapperMessage}>{Boolean(errors.businessWithCollab) && <p className={styles.error}>{errors.businessWithCollab?.message}</p>}</div>
 
                 <Button className={styles.button} name={nameButtonNext} type="submit"/>
             </form>}
