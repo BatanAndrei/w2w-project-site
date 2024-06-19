@@ -1,0 +1,49 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .wrapperSubtitle {
+        width: 91.84vw;
+
+        .textSubtitle {
+            font-weight: $font-600;
+            font-size: 16px;
+            font-family: $manropeRegular;
+            color: $colorSubTitlePage;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 91.84vw;
+
+    .inputTextArea {
+        font-weight: $font-400;
+        font-size: 16px;
+        font-family: $manropeRegular;
+        width: 91.84vw;
+        min-height: 16.8vh;
+        padding: 12px 16px 12px 16px;
+        border-radius: 16px;
+        color: #858FA3;
+        outline: none;
+        border: 1px solid #D0D4DB;
+    }
+
+    .countWords {
+        margin: 8px 0px 0px 0px;
+        width: 91.84vw;
+        display: flex;
+        justify-content: flex-end;
+
+        .textCount {
+            margin: 0px;
+            font-weight: $font-400;
+            font-size: 12px;
+            font-family: $manropeRegular;
+            color: $colorLable;
+        }
+    }
+}
+}

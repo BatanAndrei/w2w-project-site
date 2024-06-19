@@ -78,10 +78,10 @@ const TheBrandQuestionnireSecond = () => {
             <div className={styles.wrapperDescriptionSlider}>
                 <p className={styles.descriptionSlider}>Загрузите, пожалуйста, фото, иллюстрирующее ваш продукт (товар или услугу):</p>
             </div>
-            <div className={styles.wrapperSlider}>
+            {/* <div className={styles.wrapperSlider}>
                 <SimpleSlider/>
-            </div>
-            {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnireSecond)}>
+            </div> */}
+            <form className={styles.form} onSubmit={handleSubmit(dataQuestionnireSecond)}>
                 <h2 className={styles.lable}>Название брэнда</h2>
                 <Field 
                     register={{...register("nameBrand")}}
@@ -206,7 +206,7 @@ const TheBrandQuestionnireSecond = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.businessWithCollab) && <p className={styles.error}>{errors.businessWithCollab?.message}</p>}</div>
 
                 <Button className={styles.button} name={nameButtonNext} type="submit"/>
-            </form>}
+            </form>
             <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
         </div>
     )
