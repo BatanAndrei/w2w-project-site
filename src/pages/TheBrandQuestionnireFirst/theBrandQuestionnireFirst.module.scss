@@ -17,6 +17,7 @@
                 font-size: 16px;
                 font-family: $manropeRegular;
                 text-align: center;
+                color: $colorTitleQuestionnire;
             }
         }
 
@@ -28,8 +29,8 @@
             width: 90px;
             height: 90px;
             border-radius: 50%;
-            border: 1px solid;
-            background: #DFE0E3;
+            border: 1px solid $borderFrameImage;
+            background: $backgroundFrameImage;
 
             .positionAvatarImage {
                 position: relative;
@@ -78,6 +79,7 @@
                 font-weight: $font-400;
                 font-size: 14px;
                 font-family: $manropeRegular;
+                color: $colorLable;
             }
 
             .input {
@@ -88,7 +90,8 @@
                 border-radius: 16px;
                 outline: none;
                 background: none;
-                border: 1px solid;
+                color: $colorTextInput;
+                border: 1px solid $borderInput;
             }
 
             .positionLableSelect {
@@ -102,6 +105,7 @@
                 font-size: 14px;
                 font-weight: $font-400;
                 margin-top: -14px;
+                color: $colorItemList;
             }
     
             .button {

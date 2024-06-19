@@ -44,7 +44,7 @@ const TheBrandQuestionnireSecond = () => {
         //dispatch(postAvatarUser(selectedLogo));
     };
 
-    const dataQuestionnire = async (data) => {
+    const dataQuestionnireSecond = async (data) => {
         navigate('/brand-choice/brand-questionnire-third')
         console.log(data)
     };
@@ -64,7 +64,7 @@ const TheBrandQuestionnireSecond = () => {
             <div className={styles.wrapperSlider}>
                 <SimpleSlider/>
             </div>
-            {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
+            {<form className={styles.form} onSubmit={handleSubmit(dataQuestionnireSecond)}>
                 <h2 className={styles.lable}>Название брэнда</h2>
                 <Field 
                     register={{...register("nameBrand")}}

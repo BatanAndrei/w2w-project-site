@@ -19,12 +19,13 @@ import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/Co
 
 
 const defaultValues = {
+    fullName: "",
+    nikTelegrem: "",
     birthDate: "",
     jobTitle: "",
-    nikTelegrem: "",
-    community: "",
+    topicСommunication: "",
     publicSpeaking: "",
-    topicСommunication: ""
+    community: ""
 };
 
 const TheBrandQuestionnireFirst = () => {
@@ -48,10 +49,10 @@ const TheBrandQuestionnireFirst = () => {
     };
 
     const sendFotoForAvatar = () => {
-        dispatch(postAvatarUser(selectedFoto));
+        //dispatch(postAvatarUser(selectedFoto));
     };
 
-    const dataQuestionnire = async (data) => {
+    const dataQuestionnireFirst = async (data) => {
         navigate('/brand-choice/brand-questionnire-second')
         console.log(data)
     };
@@ -65,7 +66,16 @@ const TheBrandQuestionnireFirst = () => {
                 <Field accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
-            <form className={styles.form} onSubmit={handleSubmit(dataQuestionnire)}>
+            <form className={styles.form} onSubmit={handleSubmit(dataQuestionnireFirst)}>
+                <h2 className={styles.lable}>Фамилия Имя</h2>
+                <Field 
+                    register={{...register("fullName")}}
+                    autoComplete="off"
+                    placeholder="Иванова Екатерина"
+                    className={styles.input}
+                    type={'text'}
+                    />
+                <div className={styles.wrapperMessage}>{Boolean(errors.fullName) && <p className={styles.error}>{errors.fullName?.message}</p>}</div>
                 <h2 className={styles.lable}>Ник в Telegram</h2>
                 <Field 
                     register={{...register("nikTelegrem")}}
