@@ -78,9 +78,9 @@ const TheBrandQuestionnireSecond = () => {
             <div className={styles.wrapperDescriptionSlider}>
                 <p className={styles.descriptionSlider}>Загрузите, пожалуйста, фото, иллюстрирующее ваш продукт (товар или услугу):</p>
             </div>
-            {/* <div className={styles.wrapperSlider}>
+            <div className={styles.wrapperSlider}>
                 <SimpleSlider/>
-            </div> */}
+            </div>
             <form className={styles.form} onSubmit={handleSubmit(dataQuestionnireSecond)}>
                 <h2 className={styles.lable}>Название брэнда</h2>
                 <Field 
