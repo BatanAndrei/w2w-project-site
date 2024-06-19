@@ -4,6 +4,7 @@ import FieldTextArea from '../../components/FieldTextArea/FieldTextArea';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
+import ComponentCheckBadge from '../../components/ComponentCheckBadge/ComponentCheckBadge';
 
 
 const defaultValues = {
@@ -19,7 +20,7 @@ const TheBrandQuestionnireThird = () => {
         handleSubmit,
         formState: { errors },
     } = useForm({defaultValues,
-        //resolver: yupResolver(questionnireSchemaSecondPage),
+        //resolver: yupResolver(questionnireSchemaThirdPage),
     });
 
     const dataQuestionnireThird = async (data) => {
@@ -44,6 +45,11 @@ const TheBrandQuestionnireThird = () => {
             <div className={styles.countWords}><p className={styles.textCount}>0/50</p></div>
             <div className={styles.wrapperSubtitle}>
                 <p className={styles.textSubtitle}>Выберите 3 ценности, наиболее подходящие вашему бренду (по ним будут выставляться совпадения на мэтч)</p>
+            </div>
+            <div className={styles.wrapperChoiseValues}>
+                <ComponentCheckBadge
+                
+                />
             </div>
             </form>
         </div>
