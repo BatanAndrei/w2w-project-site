@@ -52,7 +52,7 @@ const TheBrandQuestionnireFirst = () => {
     };
 
     const dataQuestionnire = async (data) => {
-        //navigate('/brand-choice/brand-questionnire-second')
+        navigate('/brand-choice/brand-questionnire-second')
         console.log(data)
     };
 
