@@ -24,9 +24,10 @@
         .titleText {
             margin: 0px;
             width: 48px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: $font-600;
             font-family: $manropeRegular;
+            color: $colorSubTitlePage;
         }
 
         .hiddenBlockForPosition {
@@ -59,6 +60,7 @@
             font-weight: $font-400;
             font-size: 14px;
             font-family: $manropeRegular;
+            color: $colorLable;
         }
     
         .input {
@@ -71,6 +73,8 @@
             outline: none;
             font-weight: $font-400;
             font-family: $manropeRegular;
+            color: $colorTextInput;
+            border: 1px solid $borderInput;
         }
 
         
@@ -95,16 +99,17 @@
 
     .questionText {
         margin: 0px;
-        color: black;
         font-family: $interRegular;
         font-weight: $font-400;
         font-size: 16px;
+        color: $colorSubTitlePage;
 
         .link {
-            color: black;
             font-family: $interRegular;
             font-weight: $font-600;
             font-size: 16px;
+            color: $colorSubTitlePage;
+            text-decoration: none;
         }
     }
 }
