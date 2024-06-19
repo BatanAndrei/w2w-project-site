@@ -6,7 +6,7 @@ export let nameButtonFillLeter = 'Заполнить позже';
 export let nameButtonFillQuestionnaire = 'Заполнить анкету';
 export let nameButtonNeedCollab = 'Хочу коллабу!';
 
-export const communicationSpiking = [
+export const communicationSpikingAnswerData = [
     {id: 1, checked: false, title: 'Активный образ жизни'},
     {id: 2, checked: false, title: 'IT-технологии'},
     {id: 3, checked: false, title: 'Активный отдых'},
@@ -53,8 +53,60 @@ export const communicationSpiking = [
     {id: 44, checked: false, title: 'Эстетика'}
 ];
 
-export const publicSpikingAnswer = [
+export const publicSpikingAnswerData = [
     {id: 1, title: 'Да'},
     {id: 2, title: 'Нет'}
 ];
+
+export const howCategoryBusinessAnswerData = [
+    {id: 1, title: 'Красота и здоровье'},
+    {id: 2, title: 'Товары для детей'},
+    {id: 3, title: 'Украшения'},
+    {id: 4, title: 'Одежда и обувь'},
+    {id: 5, title: 'Услуги'},
+    {id: 6, title: 'Товары для дома'},
+    {id: 7, title: 'Фрилансеры/агенства'},
+    {id: 8, title: 'Инфлюенсеры/блогеры'},
+    {id: 9, title: 'HoReCa'},
+    {id: 10, title: 'Другое'}
+];
+
+export const offLineOrOnLineBusinessAnswerData = [
+    {id: 1, title: 'Online'},
+    {id: 2, title: 'Offline'},
+    {id: 3, title: 'Оба варианта'}
+]
+
+export const howManySubscribersAnswerData = [
+    {id: 1, title: '0 - 1.000'},
+    {id: 2, title: '1.000 - 10.000'},
+    {id: 3, title: '10.000 - 100.000'},
+    {id: 4, title: '100.000 - 500.000'},
+    {id: 5, title: '500.000+'}
+]
+
+export const averageBillAnswerData = [
+    {id: 1, title: '0 - 1.000'},
+    {id: 2, title: '1.000 - 10.000'},
+    {id: 3, title: '10.000 - 100.000'},
+    {id: 4, title: '100.000 - 500.000'},
+    {id: 5, title: '500.000+'}
+]
+
+export const interestingFormatAnswerData = [
+    {id: 1, title: 'Не определилась с форматом, но открыта к обсуждению'},
+    {id: 2, title: 'Совместный reels'},
+    {id: 3, title: 'Выпустить совместный продукт'},
+    {id: 4, title: 'Совместный прямой эфир'},
+    {id: 5, title: 'Совместный пост'},
+    {id: 6, title: 'Провести совместное мероприятие'}
+]
+
+export const targetCollabAnswerData = [
+    {id: 1, title: 'Рост продаж'},
+    {id: 2, title: 'Повышение узнаваемости и лояльности'},
+    {id: 3, title: 'Новая аудитория и охваты в соцсетях'},
+    {id: 4, title: 'Совместное творчество и усиление навыков'},
+    {id: 5, title: 'Другое'}
+]
 

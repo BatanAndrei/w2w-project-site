@@ -13,10 +13,10 @@ import { nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import AvatarPlaceHolder from '../../components/Svg/AvatarPlaceHolder';
 import SelectRadio from '../../components/SelectRadioButton/SelectRadioButton';
 import { useNavigate } from "react-router-dom";
-import { publicSpikingAnswer } from '../../datas/datas';
-import { communicationSpiking } from '../../datas/datas';
+import { publicSpikingAnswerData, communicationSpikingAnswerData } from '../../datas/datas';
 import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';
 import ComponentSelectRadio from '../../components/ComponentSelectRadio/ComponentSelectRadio';
+import { useRef } from 'react';
 
 
 const defaultValues = {
@@ -32,6 +32,7 @@ const defaultValues = {
 const TheBrandQuestionnireFirst = () => {
 
     const navigate = useNavigate();
+    const filePicker = useRef(null);
 
     const {
         register,
@@ -49,6 +50,10 @@ const TheBrandQuestionnireFirst = () => {
         setSelectedFoto(e.target.files[0]);
     };
 
+    const handleClickPicker = () => {
+        filePicker.current.click();
+    };
+
     const sendFotoForAvatar = () => {
         //dispatch(postAvatarUser(selectedFoto));
     };
@@ -62,9 +67,9 @@ const TheBrandQuestionnireFirst = () => {
         <div className={styles.container}>
             <TheHeaderQuestionnier lineOwn={true} />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите ваше любимое фото</h2></div>
-            <div className={styles.wrapperImageAvatar}>
+            <div onClick={handleClickPicker} className={styles.wrapperImageAvatar}>
                 <dav className={styles.positionAvatarImage}><AvatarPlaceHolder/></dav>
-                <Field accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
+                <Field filePicker={filePicker} accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
             <form className={styles.form} onSubmit={handleSubmit(dataQuestionnireFirst)}>
@@ -113,7 +118,7 @@ const TheBrandQuestionnireFirst = () => {
                     classNamePositionLableSelect={styles.positionLableSelect}
                     classNameTextTitleSelect={styles.textTitleSelect}
                     register={{...register("topicСommunication")}}
-                    dataListItems={communicationSpiking}
+                    dataListItems={communicationSpikingAnswerData}
                     textAreaOnOff={true}
                 />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
@@ -123,7 +128,7 @@ const TheBrandQuestionnireFirst = () => {
                     placeholder='Выбрать'
                     classNamePositionLableSelect={styles.positionLableSelect}
                     classNameTextTitleSelect={styles.textTitleSelect}
-                    dataListItems={publicSpikingAnswer}
+                    dataListItems={publicSpikingAnswerData}
                     register={{...register("publicSpeaking")}}
                     name={'publicSpeaking'}
                     />

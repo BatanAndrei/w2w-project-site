@@ -10,11 +10,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #DFE0E3;
             width: 25.2vw;
             height: 12.6vh;
             border-radius: 10px;
-            border: 1px solid;
+            border: 1px solid $borderFrameImage;
+            background: $backgroundFrameImage;
         }
     }    
 }
