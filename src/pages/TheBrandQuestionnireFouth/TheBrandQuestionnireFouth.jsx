@@ -16,6 +16,7 @@ import ModalSentCheck from '../../components/ModalSentCheck/ModalSentCheck';
 
 const defaultValues = {
     targetAudience: "",
+    choseCategory: ""
 };
 
 

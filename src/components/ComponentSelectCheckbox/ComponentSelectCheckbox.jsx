@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectCheckbox = ({textAreaOnOff, placeholder, dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, register, ...rest}) => {
+const ComponentSelectCheckbox = ({textAreaOnOff, placeholder, dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type}) => {
 
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
     const [displayTextArea, setDisplayTextArea] = useState(false);
@@ -39,8 +39,7 @@ const ComponentSelectCheckbox = ({textAreaOnOff, placeholder, dataListItems, cla
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input placeholder={!displayCheckboxes && placeholder} onChange={e => {}} value={fillDataFromCheckboxes.join(', ')} className={styles.input} {...register} {...rest}
-                />
+                <input placeholder={!displayCheckboxes && placeholder} value={fillDataFromCheckboxes.join(', ')} className={styles.input}/>
                 <div onClick={handleDropeList} className={styles.arrow}>{displayCheckboxes ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>
             {displayCheckboxes && <div className={styles.containerDropeList}>

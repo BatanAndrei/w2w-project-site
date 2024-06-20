@@ -16,6 +16,7 @@ import ModalFillLeter from '../../components/ModalFillLeter/ModalFillLeter';
 
 const defaultValues = {
     missionBusiness: "",
+    chooseValue: ""
 };
 
 const TheBrandQuestionnireThird = () => {

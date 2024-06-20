@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectRadio = ({name, placeholder ,dataListItems, classNameTextTitleSelect, type, register, ...rest}) => {
+const ComponentSelectRadio = ({name, placeholder ,dataListItems, classNameTextTitleSelect, type}) => {
 
     const [displayRadio, setDisplayRadio] = useState(false);
     const [fillDataFromRadio, setFillDataFromRadio] = useState('');
@@ -19,8 +19,7 @@ const ComponentSelectRadio = ({name, placeholder ,dataListItems, classNameTextTi
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input placeholder={!displayRadio && placeholder} onChange={e => {}} className={styles.input} {...register} {...rest} value={fillDataFromRadio}
-                />
+                <input placeholder={!displayRadio && placeholder} onChange={e => {}} className={styles.input} value={fillDataFromRadio}/>
                 <div onClick={handleDropeList} className={styles.arrow}>{displayRadio ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>
             {displayRadio && <div className={styles.containerDropeList}>
