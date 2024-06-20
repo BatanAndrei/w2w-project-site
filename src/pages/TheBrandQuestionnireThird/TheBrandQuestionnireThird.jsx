@@ -32,7 +32,7 @@ const TheBrandQuestionnireThird = () => {
         console.log(data)
     };
 
-    const changeTextArea = (e) => {
+    const quantityWordTextArea = (e) => {
         if (e.target.value.length <= 50) {
             setQuantityWord(e.target.value);
         } else {
@@ -49,7 +49,7 @@ const TheBrandQuestionnireThird = () => {
             <form className={styles.form} onSubmit={handleSubmit(dataQuestionnireThird)}>
                 <FieldTextArea
                     value={quantityWord || ""}
-                    oninput={(e) => changeTextArea(e)}
+                    oninput={(e) => quantityWordTextArea(e)}
                     register={{...register("missionBusiness")}}
                     autoComplete="off"
                     placeholder="Например, миссия бренда LVL — праздник каждый день"
