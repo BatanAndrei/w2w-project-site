@@ -5,6 +5,9 @@ export let nameButtonContinue = 'Продолжить';
 export let nameButtonFillLeter = 'Заполнить позже';
 export let nameButtonFillQuestionnaire = 'Заполнить анкету';
 export let nameButtonNeedCollab = 'Хочу коллабу!';
+export let nameButtonToQuestionnire = 'К анкете';
+export let nameButtonSend = 'Отправить';
+export let nameButtonSaveAndExit = 'Сохранить и выйти';
 
 export const communicationSpikingAnswerData = [
     {id: 1, checked: false, title: 'Активный образ жизни'},

@@ -9,9 +9,10 @@ import { choiseCategoriesAnswerData, nameButtonNext, nameButtonFillLeter } from 
 import Button from '../../components/Button/Button';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { modalFillLeterlReducer } from '../../redux/slices/informationSlice';
-import { selectActiveModalFillLeter } from '../../redux/selectors/selectors';
+import { modalFillLeterlReducer, modalSentChecklReducer } from '../../redux/slices/informationSlice';
+import { selectActiveModalFillLeter, selectActiveModalSentCheck } from '../../redux/selectors/selectors';
 import ModalFillLeter from '../../components/ModalFillLeter/ModalFillLeter';
+import ModalSentCheck from '../../components/ModalSentCheck/ModalSentCheck';
 
 
 const defaultValues = {
@@ -25,6 +26,7 @@ const TheBrandQuestionnireFouth = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
+    const isActiveModalSentCheck = useSelector(selectActiveModalSentCheck);
 
     const {
         register,
@@ -35,7 +37,7 @@ const TheBrandQuestionnireFouth = () => {
     });
 
     const dataQuestionnireFouth = async (data) => {
-        navigate('/brand-choice/brand-questionnire-fouth')
+        dispatch(modalSentChecklReducer(true))
         console.log(data)
     };
 
@@ -81,7 +83,8 @@ const TheBrandQuestionnireFouth = () => {
                 <Button className={styles.button} name={nameButtonNext} type="submit"/>
             </form>
             <Button click={openModalFillLeter} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
-            <ModalFillLeter open={isActiveModalFillLeter} />
+            <ModalSentCheck open={isActiveModalSentCheck}/>
+            <ModalFillLeter open={isActiveModalFillLeter}/>
         </div>
     )
 };

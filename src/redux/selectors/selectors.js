@@ -12,5 +12,6 @@ export const selectStatusLoadAvatarUser = (state) => state.avatarUserExtraReduce
 
 export const selectActiveModal = (state) => state.modalPersonalDatalReducer.isActivModal;
 export const selectActiveModalFillLeter = (state) => state.modalFillLeterlReducer.isActiveModalFillLeter;
+export const selectActiveModalSentCheck = (state) => state.modalSentChecklReducer.isActiveModalSentCheck;
 
 

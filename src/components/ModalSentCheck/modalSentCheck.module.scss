@@ -3,5 +3,71 @@
 
 @media (min-width: 359px) and (max-width: 1235px) {
 
-    
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    .wrapperPicture {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .wrapperDescription {
+        width: 100%;
+
+        .titleDescription {
+            margin: 0px;
+            font-family: $manropeRegular;
+            font-size: 20px;
+            font-weight: $font-600;
+            color: $colorSubTitlePage;
+            text-align: center;
+        }
+
+        .subTitleDescription {
+            margin: 12px 0px 0px 0px;
+            font-family: $manropeRegular;
+            font-size: 16px;
+            font-weight: $font-400;
+            color: $colorTitlePage;
+            text-align: center;
+        }
+    }
+
+    .wrapperButton{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-between;
+        width: 100%;
+        height: 108px;
+
+        .button {
+        margin: 0px 0px 0px 0px;
+        width: 279px;
+        height: 48px;
+        font-family: $manropeRegular;
+        font-weight: $font-600;
+        font-size: 16px;
+        border-radius: 16px;
+        background: $backgroundButton;
+        color: white;
+        border: none;
+        }
+
+        .link {
+            margin: 0px 0px 15px 0px;
+            font-family: $manropeRegular;
+            font-weight: $font-600;
+            font-size: 16px;
+            color: $backgroundButton;
+            text-decoration: none;
+        }
+    }
+}
 }
