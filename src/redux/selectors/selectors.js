@@ -11,5 +11,6 @@ export const selectFileNameAvatarUser = (state) => state.avatarUserExtraReducer.
 export const selectStatusLoadAvatarUser = (state) => state.avatarUserExtraReducer.statusLoadAvatar;
 
 export const selectActiveModal = (state) => state.modalPersonalDatalReducer.isActivModal;
+export const selectActiveModalFillLeter = (state) => state.modalFillLeterlReducer.isActiveModalFillLeter;
 
 

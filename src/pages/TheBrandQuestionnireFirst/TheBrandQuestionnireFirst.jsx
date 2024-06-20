@@ -1,7 +1,6 @@
 import styles from './theBrandQuestionnireFirst.module.scss';
 import FotoDivice from '../../components/Svg/FotoDivice';
 import Button from '../../components/Button/Button';
-import { useDispatch } from 'react-redux';
 import { postAvatarUser } from '../../api/postAvatarUser';
 import { useState } from 'react';
 import Field from '../../components/Field/Field';
@@ -16,6 +15,10 @@ import { publicSpikingAnswerData, communicationSpikingAnswerData } from '../../d
 import ComponentSelectCheckbox from '../../components/ComponentSelectCheckbox/ComponentSelectCheckbox';
 import ComponentSelectRadio from '../../components/ComponentSelectRadio/ComponentSelectRadio';
 import { useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectActiveModalFillLeter } from '../../redux/selectors/selectors';
+import { modalFillLeterlReducer } from '../../redux/slices/informationSlice';
+import ModalFillLeter from '../../components/ModalFillLeter/ModalFillLeter';
 
 
 const defaultValues = {
@@ -30,8 +33,11 @@ const defaultValues = {
 
 const TheBrandQuestionnireFirst = () => {
 
+    const [selectedFoto, setSelectedFoto] = useState(null);
     const navigate = useNavigate();
     const filePicker = useRef(null);
+    const dispatch = useDispatch();
+    const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
 
     const {
         register,
@@ -40,10 +46,6 @@ const TheBrandQuestionnireFirst = () => {
     } = useForm({defaultValues,
         //resolver: yupResolver(questionnireSchemaFirstPage),
     });
-
-    const [selectedFoto, setSelectedFoto] = useState(null);
-
-    const dispatch = useDispatch();
 
     const chooseFotoForAvatar = (e) => {
         setSelectedFoto(e.target.files[0]);
@@ -60,6 +62,10 @@ const TheBrandQuestionnireFirst = () => {
     const dataQuestionnireFirst = async (data) => {
         navigate('/brand-choice/brand-questionnire-second')
         console.log(data)
+    };
+
+    const openModalFillLeter = () => {
+        dispatch(modalFillLeterlReducer(true));
     };
 
     return (
@@ -143,7 +149,8 @@ const TheBrandQuestionnireFirst = () => {
                 <div className={styles.wrapperMessage}>{Boolean(errors.community) && <p className={styles.error}>{errors.community?.message}</p>}</div>
                 <Button className={styles.button} name={nameButtonNext} type="submit"/>
             </form>
-            <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+            <Button click={openModalFillLeter} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+            <ModalFillLeter open={isActiveModalFillLeter} />
         </div>
     )
 };

@@ -7,7 +7,11 @@ import { useNavigate } from "react-router-dom";
 import ComponentCheckBadge from '../../components/ComponentCheckBadge/ComponentCheckBadge';
 import { choiseValuesAnswerData, nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import Button from '../../components/Button/Button';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
+import { modalFillLeterlReducer } from '../../redux/slices/informationSlice';
+import { selectActiveModalFillLeter } from '../../redux/selectors/selectors';
+import ModalFillLeter from '../../components/ModalFillLeter/ModalFillLeter';
 
 
 const defaultValues = {
@@ -18,6 +22,8 @@ const TheBrandQuestionnireThird = () => {
 
     const [quantityWord, setQuantityWord] = useState(0);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
 
     const {
         register,
@@ -38,6 +44,10 @@ const TheBrandQuestionnireThird = () => {
         } else {
             return;
         }
+    };
+
+    const openModalFillLeter = () => {
+        dispatch(modalFillLeterlReducer(true));
     };
 
     return (
@@ -69,7 +79,8 @@ const TheBrandQuestionnireThird = () => {
                 </div>
                 <Button className={styles.button} name={nameButtonNext} type="submit"/>
             </form>
-            <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+            <Button click={openModalFillLeter} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+            <ModalFillLeter open={isActiveModalFillLeter} />
         </div>
     )
 };

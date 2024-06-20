@@ -2,7 +2,7 @@ import styles from './theBrandQuestionnireSecond.module.scss';
 import TheHeaderQuestionnier from '../../components/TheHeaderQuestionnier/TheHeaderQuestionnier';
 import Field from '../../components/Field/Field';
 import LogoWordSvgPlaceholder from '../../components/Svg/LogoWordSvgPlaceholder';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import Button from '../../components/Button/Button';
 import FotoDivice from '../../components/Svg/FotoDivice';
@@ -18,6 +18,9 @@ import { useRef } from 'react';
 import ComponentSelectRadio from '../../components/ComponentSelectRadio/ComponentSelectRadio';
 import { howCategoryBusinessAnswerData, offLineOrOnLineBusinessAnswerData, howManySubscribersAnswerData, averageBillAnswerData, interestingFormatAnswerData, targetCollabAnswerData, businessWithCollabAnswerData } from '../../datas/datas';
 import FieldTextArea from '../../components/FieldTextArea/FieldTextArea';
+import { modalFillLeterlReducer } from '../../redux/slices/informationSlice';
+import { selectActiveModalFillLeter } from '../../redux/selectors/selectors';
+import ModalFillLeter from '../../components/ModalFillLeter/ModalFillLeter';
 
 
 const defaultValues = {
@@ -38,6 +41,7 @@ const TheBrandQuestionnireSecond = () => {
 
     const [selectedLogo, setSelectedLogo] = useState(null);
     const dispatch = useDispatch();
+    const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
     const navigate = useNavigate();
     const filePicker = useRef(null);
 
@@ -64,6 +68,10 @@ const TheBrandQuestionnireSecond = () => {
     const dataQuestionnireSecond = async (data) => {
         navigate('/brand-choice/brand-questionnire-third')
         console.log(data)
+    };
+
+    const openModalFillLeter = () => {
+        dispatch(modalFillLeterlReducer(true));
     };
 
     return (
@@ -207,7 +215,8 @@ const TheBrandQuestionnireSecond = () => {
 
                 <Button className={styles.button} name={nameButtonNext} type="submit"/>
             </form>
-            <Button click={()=> navigate('/')} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+            <Button click={openModalFillLeter} className={styles.buttonFillLeter} name={nameButtonFillLeter}/>
+            <ModalFillLeter open={isActiveModalFillLeter} />
         </div>
     )
 };
