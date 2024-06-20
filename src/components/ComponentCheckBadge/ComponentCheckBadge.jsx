@@ -25,7 +25,6 @@ console.log(fillDataFromBadge)
         <>
             {allListItems.map((item, index) => <label key={index}>
                     <input onChange={(e) => handleChangeBadge(e, item)} checked={item.checked} type='checkbox' name={item.title} id={item.id} className={styles.checkbox}/>
-                    <span></span>
                     <div className={item.checked ? classNameChangeColorBadge : classNameCheckBadge}>{item.title}</div>
                 </label>)}
         </>
