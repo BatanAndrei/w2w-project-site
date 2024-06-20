@@ -3,7 +3,6 @@ import TheHeaderQuestionnier from '../../components/TheHeaderQuestionnier/TheHea
 import FieldTextArea from '../../components/FieldTextArea/FieldTextArea';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useNavigate } from "react-router-dom";
 import ComponentCheckBadge from '../../components/ComponentCheckBadge/ComponentCheckBadge';
 import { choiseCategoriesAnswerData, nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import Button from '../../components/Button/Button';
@@ -23,7 +22,6 @@ const defaultValues = {
 const TheBrandQuestionnireFouth = () => {
 
     const [quantityWord, setQuantityWord] = useState(0);
-    const navigate = useNavigate();
     const dispatch = useDispatch();
     const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
     const isActiveModalSentCheck = useSelector(selectActiveModalSentCheck);
