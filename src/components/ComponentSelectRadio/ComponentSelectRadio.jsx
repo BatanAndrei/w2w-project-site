@@ -19,7 +19,7 @@ const ComponentSelectRadio = ({name, placeholder ,dataListItems, classNameTextTi
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input placeholder={!displayRadio && placeholder} className={styles.input} type='type' {...register} {...rest} value={fillDataFromRadio}
+                <input placeholder={!displayRadio && placeholder} onChange={e => {}} className={styles.input} {...register} {...rest} value={fillDataFromRadio}
                 />
                 <div onClick={handleDropeList} className={styles.arrow}>{displayRadio ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>

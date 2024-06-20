@@ -7,6 +7,7 @@ import { modalSentChecklReducer } from '../../redux/slices/informationSlice';
 import AlertPictureSvg from '../../components/Svg/AlertPicture';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
 import { nameButtonSend, nameButtonSaveAndExit} from '../../datas/datas';
 
 
@@ -28,10 +29,12 @@ const box = {
 
 export default function ModalSentCheck({ open }) {
 
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const closeModal = () => {
         dispatch(modalSentChecklReducer(false));
+        navigate('/');
     };
 
     return (

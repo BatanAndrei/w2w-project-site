@@ -28,6 +28,11 @@ const reducer = combineReducers({
     statusLoadNullSignInReducer: signInSlice.reducer,
     avatarUserExtraReducer: avatarUserSlice.reducer,
     questionnireExtraReducer: questionnireSlice.reducer,
+    getDataFromQuestionnireFirst: questionnireSlice.reducer,
+    getDataFromQuestionnireTopicСommunication: questionnireSlice.reducer,
+    getDataFromQuestionnireSecond: questionnireSlice.reducer,
+    getDataFromQuestionnireYhird: questionnireSlice.reducer,
+    getDataFromQuestionnireFouth: questionnireSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

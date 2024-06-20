@@ -7,7 +7,13 @@ export const initialState = {
     statusLoadQuestionnire: null,
     errorLoadQuestionnire: null,
     paramsQuestionnire: {
-        
+        fullName: "",
+        nikTelegrem: "",
+        birthDate: "",
+        jobTitle: "",
+        topicСommunication: [],
+        publicSpeaking: "",
+        community: "",
     }
 };
 
@@ -15,7 +21,29 @@ export const questionnireSlice = createSlice({
     name: "questionnire",
     initialState,
     reducers: {   
+        getDataFromQuestionnireFirst: (state, action) => {
+            state.paramsQuestionnire.fullName = action.payload.fullName;
+            state.paramsQuestionnire.nikTelegrem = action.payload.nikTelegrem;
+            state.paramsQuestionnire.birthDate = action.payload.birthDate;
+            state.paramsQuestionnire.jobTitle = action.payload.jobTitle;
+            state.paramsQuestionnire.community = action.payload.community;
+        },
 
+        getDataFromQuestionnireTopicСommunication: (state, action) => {
+            state.paramsQuestionnire.topicСommunication = action.payload.topicСommunication;
+        },
+
+        getDataFromQuestionnireSecond: (state, action) => {
+            
+        },
+
+        getDataFromQuestionnireThird: (state, action) => {
+            
+        },
+
+        getDataFromQuestionnireFouth: (state, action) => {
+            
+        },
     },
 
     extraReducers: (builder) => {
@@ -42,4 +70,4 @@ export const questionnireSlice = createSlice({
     }
 });
 
-export const { } = questionnireSlice.actions;
+export const { getDataFromQuestionnireFirst, getDataFromQuestionnireFirstReadonlyField, getDataFromQuestionnireSecond, getDataFromQuestionnireYhird, getDataFromQuestionnireFouth } = questionnireSlice.actions;

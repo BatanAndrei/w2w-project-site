@@ -18,6 +18,7 @@ import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectActiveModalFillLeter } from '../../redux/selectors/selectors';
 import { modalFillLeterlReducer } from '../../redux/slices/informationSlice';
+import { getDataFromQuestionnireFirst } from '../../redux/slices/questionnireSlise';
 import ModalFillLeter from '../../components/ModalFillLeter/ModalFillLeter';
 
 
@@ -60,7 +61,8 @@ const TheBrandQuestionnireFirst = () => {
     };
 
     const dataQuestionnireFirst = async (data) => {
-        navigate('/brand-choice/brand-questionnire-second')
+        navigate('/brand-choice/brand-questionnire-second');
+        dispatch(getDataFromQuestionnireFirst(data));
         console.log(data)
     };
 
