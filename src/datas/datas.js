@@ -168,6 +168,40 @@ export const choiseValuesAnswerData = [
 ]
 
 
+export const choiseCategoriesAnswerData = [
+    {id: 1, checked: false, title: 'Девушки'},
+    {id: 2, checked: false, title: 'От 18 лет'},
+    {id: 3, checked: false, title: 'От 25 лет'},
+    {id: 4, checked: false, title: 'Предприниматели'},
+    {id: 5, checked: false, title: 'Россия'},
+    {id: 6, checked: false, title: 'Страны СНГ'},
+    {id: 7, checked: false, title: 'Активный образ жизни'},
+    {id: 8, checked: false, title: 'Открытость новому'},
+    {id: 9, checked: false, title: 'Доход от 60 000 руб.'},
+    {id: 10, checked: false, title: 'Москва'},
+    {id: 11, checked: false, title: 'Мужчины'},
+    {id: 12, checked: false, title: 'Города миллионники'},
+    {id: 13, checked: false, title: 'От 30 лет'},
+    {id: 14, checked: false, title: 'В отношениях'},
+    {id: 15, checked: false, title: 'В декрете'},
+    {id: 16, checked: false, title: 'Средний доход'},
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

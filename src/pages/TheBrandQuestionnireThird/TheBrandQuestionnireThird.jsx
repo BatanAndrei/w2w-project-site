@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import ComponentCheckBadge from '../../components/ComponentCheckBadge/ComponentCheckBadge';
-import { choiseValuesAnswerData, nameButtonNext,nameButtonFillLeter } from '../../datas/datas';
+import { choiseValuesAnswerData, nameButtonNext, nameButtonFillLeter } from '../../datas/datas';
 import Button from '../../components/Button/Button';
 import { useState } from 'react';
 

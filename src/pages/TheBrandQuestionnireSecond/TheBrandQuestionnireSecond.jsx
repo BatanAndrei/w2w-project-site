@@ -157,7 +157,7 @@ const TheBrandQuestionnireSecond = () => {
                 <FieldTextArea
                     register={{...register("uniqeProduct")}}
                     autoComplete="off"
-                    placeholder="Введите Ваш текст"
+                    placeholder="Введите ваш текст"
                     className={styles.inputTextArea}
                     type={'text'}
                 />
@@ -166,7 +166,7 @@ const TheBrandQuestionnireSecond = () => {
                 <FieldTextArea
                     register={{...register("problemResolve")}}
                     autoComplete="off"
-                    placeholder="Введите Ваш текст"
+                    placeholder="Введите ваш текст"
                     className={styles.inputTextArea}
                     type={'text'}
                 />
