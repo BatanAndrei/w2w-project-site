@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .checkbox {
+        display: none;
+    }
+}
