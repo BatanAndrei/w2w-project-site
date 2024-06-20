@@ -19,14 +19,14 @@ const ComponentCheckBadge = ({dataListItems, classNameCheckBadge, classNameChang
         const id = item.id
         let checkedItems = allListItems.map((item) => item.id === id ? {...item, checked: !item.checked} : item);
         setAllListItems(checkedItems);
-    }
-console.log(fillDataFromBadge)
+    };
+
     return (
         <>
             {allListItems.map((item, index) => <label key={index}>
-                    <input onChange={(e) => handleChangeBadge(e, item)} checked={item.checked} type='checkbox' name={item.title} id={item.id} className={styles.checkbox}/>
-                    <div className={item.checked ? classNameChangeColorBadge : classNameCheckBadge}>{item.title}</div>
-                </label>)}
+                <input onChange={(e) => handleChangeBadge(e, item)} checked={item.checked} type='checkbox' name={item.title} id={item.id} className={styles.checkbox}/>
+                <div className={item.checked ? classNameChangeColorBadge : classNameCheckBadge}>{item.title}</div>
+            </label>)}
         </>
     )
 };
