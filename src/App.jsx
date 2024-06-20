@@ -33,12 +33,14 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(true)
-        navigate('/brand-choice/brand-questionnire-third');
         if(false)
+        navigate('/brand-choice/brand-questionnire-third');
+        if(true)
             navigate('/start-page'); 
         if(false)
             navigate('/brand-choice'); 
+        if(false)
+            navigate('/onboarding-start'); 
     }, [])
 
     const paths = {

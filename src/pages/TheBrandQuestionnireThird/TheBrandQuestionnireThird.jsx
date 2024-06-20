@@ -56,7 +56,7 @@ const TheBrandQuestionnireThird = () => {
                     className={styles.inputTextArea}
                     type={'text'}
                 />
-                <div className={styles.countWords}><p className={styles.textCount}>{quantityWord.length}/50</p></div>
+                <div className={styles.countWords}><p className={styles.textCount}>{!quantityWord.length ? 0 : quantityWord.length}/50</p></div>
                 <div className={styles.wrapperSubtitle}>
                     <p className={styles.textSubtitle}>Выберите 3 ценности, наиболее подходящие вашему бренду (по ним будут выставляться совпадения на мэтч)</p>
                 </div>

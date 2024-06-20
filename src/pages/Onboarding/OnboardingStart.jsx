@@ -12,14 +12,16 @@ const OnboardingStart = () => {
 
     return (
         <>
-            <div className={styles.wrapperHead}>
-                <CrossSvg click={() => navigate("/brand-choice")} className={styles.cross} />
-            </div>
-            <div className={styles.wrapperBody}>
-                <div className={styles.body}>Онбординг START</div>
-            </div>
-            <div className={styles.wrapperButton}>
-                <Button click={() => navigate("/onboarding-second")} name={nameButtonNext} className={styles.button} />
+            <div className={styles.container}>
+                <div className={styles.wrapperHead}>
+                    <CrossSvg click={() => navigate("/brand-choice")} className={styles.cross} />
+                </div>
+                <div className={styles.wrapperBody}>
+                    <div className={styles.body}>КАК ПРАВИЛЬНО КОЛЛАБИТЬСЯ (start)</div>
+                </div>
+                <div className={styles.wrapperButton}>
+                    <Button click={() => navigate("/onboarding-second")} name={nameButtonNext} className={styles.button} />
+                </div>
             </div>
         </>
     )
