@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import ComponentCheckBadge from '../../components/ComponentCheckBadge/ComponentCheckBadge';
 import { choiseValuesAnswerData, nameButtonNext,nameButtonFillLeter } from '../../datas/datas';
 import Button from '../../components/Button/Button';
+import { useState } from 'react';
 
 
 const defaultValues = {
@@ -15,6 +16,7 @@ const defaultValues = {
 
 const TheBrandQuestionnireThird = () => {
 
+    const [quantityWord, setQuantityWord] = useState(0);
     const navigate = useNavigate();
 
     const {
@@ -30,6 +32,14 @@ const TheBrandQuestionnireThird = () => {
         console.log(data)
     };
 
+    const changeTextArea = (e) => {
+        if (e.target.value.length <= 50) {
+            setQuantityWord(e.target.value);
+        } else {
+            return;
+        }
+    };
+
     return (
         <div className={styles.container}>
             <TheHeaderQuestionnier lineOwn={true} lineTwo={true} lineThree={true} />
@@ -38,13 +48,15 @@ const TheBrandQuestionnireThird = () => {
             </div>
             <form className={styles.form} onSubmit={handleSubmit(dataQuestionnireThird)}>
                 <FieldTextArea
+                    value={quantityWord || ""}
+                    oninput={(e) => changeTextArea(e)}
                     register={{...register("missionBusiness")}}
                     autoComplete="off"
                     placeholder="Например, миссия бренда LVL — праздник каждый день"
                     className={styles.inputTextArea}
                     type={'text'}
                 />
-                <div className={styles.countWords}><p className={styles.textCount}>0/50</p></div>
+                <div className={styles.countWords}><p className={styles.textCount}>{quantityWord.length}/50</p></div>
                 <div className={styles.wrapperSubtitle}>
                     <p className={styles.textSubtitle}>Выберите 3 ценности, наиболее подходящие вашему бренду (по ним будут выставляться совпадения на мэтч)</p>
                 </div>

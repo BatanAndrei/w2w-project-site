@@ -8,6 +8,7 @@ const ComponentCheckBadge = ({dataListItems, classNameCheckBadge, classNameChang
     const [fillDataFromBadge, setFillDataFromBadge] = useState([]);
 
     const handleChangeBadge = (e, item) => {
+        
         if(e.target.checked) {
             setFillDataFromBadge(pre => [...pre, e.target.name]);
         }else {
