@@ -7,6 +7,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #521794;
+    z-index: -1;
 
     .wrapperHeader {
         display: flex;
@@ -15,13 +16,14 @@
         width: 100vw;
         height: 80px;
         background-color: #37217D;
+        z-index: 1;
     }
 
     .description {
         margin-top: 60px;
         width: 602px;
         height: 160px;
-        
+        z-index: 3;
 
         .title {
             margin: 0px;
@@ -33,6 +35,7 @@
             font-size: 48px;
             line-height: 45px;
             color: white;
+            z-index: 3;
         }
 
         .subTitle {
@@ -44,9 +47,11 @@
             font-weight: $font-400;
             font-size: 24px;
             color: white;
+            z-index: 3;
 
             .span {
                 color: #DFF88E;
+                z-index: 3;
             }
         }
     }
@@ -59,5 +64,52 @@
         object-fit: cover;
         background-size: cover;
         background-image: url('../../images/wolf-dancing-meme-dancing-wolf-meme.gif');
+        z-index: 1;
+    }
+
+    .blur1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .blur2 {
+        position: absolute;
+        left: 100px;
+        z-index: 0;
+    } 
+
+    .blur3 {
+        position: absolute;
+        right: 0px;
+        z-index: 0;
+    }
+
+    .blur4 {
+        position: absolute;
+        left: 50px;
+        bottom: 0px;
+        z-index: 0;
+    }
+
+    .moon {
+        position: absolute;
+        top: 90px;
+        left: 10px;
+        z-index: 3;
+    }
+
+    .glas {
+        position: absolute;
+        top: 250px;
+        right: 10px;
+        z-index: 3;
+    }
+
+    .cosmos {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 3;
     }
 }
