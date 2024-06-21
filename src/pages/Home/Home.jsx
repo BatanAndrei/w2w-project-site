@@ -1,5 +1,7 @@
 import styles from './home.module.scss';
 import { Link } from 'react-router-dom';
+import LogoSvg from '../../components/Svg/LogoSvg';
+import BellHeaderSvg from '../../components/Svg/BellHeaderSvg';
 
 
 const Home = () => {
@@ -7,22 +9,31 @@ const Home = () => {
     return (
         <>
             <div className={styles.headWrapper}>
-                <Link to='/signUp-create/confirm-phone'>НАЗАД к проверочному номеру</Link>
+                <div className={styles.opacity}></div>
+                <LogoSvg colorPurple={true}/>
+                <BellHeaderSvg/>
             </div>
-            <div className={styles.trackerWrapper}>
+            <div className={styles.subscribeWrapper}>
                 
             </div>
-            <div className={styles.sliderWrapper}>
+            <div className={styles.collabaWeekWrapper}>
                 
             </div>
-            <div className={styles.sliderPartnersWrapper}>
+            <div className={styles.goTestWrapper}>
                 
             </div>
-            <div className={styles.wrapperTitlePartners}><h2 className={styles.titlePartners}>Лучшие партнёры</h2></div>
-            <div className={styles.collabsWrapper}>
+            <div className={styles.sliderArticleWrapper}>
+
+            </div>
+            <div className={styles.getBookWrapper}>
                 
             </div>
-            <div className={styles.wrapperTitleCollaba}><h2 className={styles.titleCollaba}>Коллаба недели</h2></div>
+            <div className={styles.sliderBrandWrapper}>
+
+            </div>
+            <div className={styles.connectCommunityWrapper}>
+                
+            </div>
             <div className={styles.footerWrapper}>
                 
             </div>

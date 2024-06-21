@@ -51,7 +51,7 @@ const SignIn = () => {
         <div className={styles.containerPage}>
             <div className={styles.psevdoModal}></div>
             <div className={styles.titleWrapper}>
-                <Link to='/start-page' className={styles.arrowLeft}><ArrowLeft/></Link>
+                <Link to='/start-pageLight' className={styles.arrowLeft}><ArrowLeft/></Link>
                 <h2 className={styles.titleText}>Вход</h2>
                 <div className={styles.hiddenBlockForPosition}></div>
             </div>

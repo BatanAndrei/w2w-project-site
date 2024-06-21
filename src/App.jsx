@@ -36,12 +36,14 @@ function App() {
     useEffect(() => {
         if(false)
         navigate('/brand-choice/brand-questionnire-first');
-        if(true)
+        if(false)
             navigate('/start-pageLight'); 
         if(false)
             navigate('/brand-choice'); 
         if(false)
-            navigate('/onboarding-start'); 
+            navigate('/onboarding-start');
+        if(true)
+            navigate('/');
     }, [])
 
     const paths = {

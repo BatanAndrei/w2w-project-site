@@ -3,8 +3,6 @@ import LogoSvg from '../../components/Svg/LogoSvg';
 import BurgerMunuSvg from '../../components/Svg/BurgerSvg';
 import Button from '../../components/Button/Button';
 import { nameButtonEnter } from '../../datas/datas';
-import PlanetsAndWomenSvg from '../../components/Svg/PlanetsAndWomenSvg';
-import CosmosBottomPage from '../../components/Svg/CosmosBottomPage';
 import { nameButtonNeedCollab } from '../../datas/datas';
 import { useNavigate } from "react-router-dom";
 import DescktopViewComponent from '../DescktopView/DescktopViewComponent';

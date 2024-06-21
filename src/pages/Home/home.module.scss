@@ -3,64 +3,67 @@
 @media (min-width: 359px) and (max-width: 1235px) {
 
     .headWrapper {
-        margin-top: 21px;
-        width: 88.29vw;
-        height: 4.2vh;
-        font-family: $interRegular;
-        font-weight: $font-600;
-        font-size: 20px;
-        border: 1px solid;
-    }
+        margin-top: 30px;
+        padding: 0px 18px 0px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100.8vw;
+        height: 65px;
 
-    .trackerWrapper {
-        width: 88.29vw;
-        height: 12.88vh;
-        border: 1px solid;
-    }
-
-    .sliderWrapper {
-        width: 88.29vw;
-        height: 21.28vh;
-        border: 1px solid;
-    }
-
-    .sliderPartnersWrapper {
-        width: 88.29vw;
-        height: 15.12vh;
-        border: 1px solid;
-    }
-
-    .wrapperTitlePartners {
-        width: 88.29vw;
-
-        .titlePartners {
-            margin: 20px 0px 8px 0px;
-            font-family: $interRegular;
-            font-weight: $font-700;
-            font-size: 16px;
-        }       
-    }
-
-    .collabsWrapper{
-        width: 88.29vw;
-        height: 7.84vh;
-        border: 1px solid;
-    }
-
-    .wrapperTitleCollaba {
-        width: 88.29vw;
-
-        .titleCollaba {
-            margin: 20px 0px 8px 0px;
-            font-family: $interRegular;
-            font-weight: $font-700;
-            font-size: 16px;
+        .opacity {
+            width: 24px;
+            height: 24px;
         }
     }
 
+    .subscribeWrapper {
+        width: 95.48vw;
+        height: 206px;
+        border: 1px solid;
+    }
+
+    .collabaWeekWrapper {
+        width: 91.84vw;
+        height: 216px;
+        border: 1px solid;
+    }
+
+    .goTestWrapper {
+        width: 91.84vw;
+        height: 141px;
+        border: 1px solid;
+    }
+
+    .sliderArticleWrapper {
+        width: 91.84vw;
+        height: 245px;
+        border: 1px solid;
+    
+    }
+
+    .getBookWrapper{
+        width: 91.84vw;
+        height: 275px;
+        border: 1px solid;
+    }
+
+    .sliderBrandWrapper {
+        width: 91.84vw;
+        height: 179px;
+        border: 1px solid;
+    }
+
+    .connectCommunityWrapper {
+        width: 91.84vw;
+        height: 152px;
+        margin-bottom: 30px;
+        border: 1px solid;
+    }
+
     .footerWrapper {
-        width: 88.29vw;
-        height: 18.34vh;
+        width: 91.08vw;
+        height: 152px;
         margin-bottom: 30px;
         border: 1px solid;
     }
