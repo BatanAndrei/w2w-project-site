@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectCheckbox = ({onChangeCallBack, textAreaOnOff, placeholder, dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, value}) => {
+const ComponentSelectCheckbox = ({onChangeCallback, textAreaOnOff, placeholder, dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, value}) => {
 
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
     const [displayTextArea, setDisplayTextArea] = useState(false);
@@ -15,9 +15,9 @@ const ComponentSelectCheckbox = ({onChangeCallBack, textAreaOnOff, placeholder, 
 
     const handleChangeCheckboxForCallBack = (e, item) => {
         if(e.target.checked) {
-            onChangeCallBack(pre => [...pre, e.target.name]);
+            onChangeCallback(pre => [...pre, e.target.name]);
         }else {
-            onChangeCallBack(pre => {
+            onChangeCallback(pre => {
                 return [...pre.filter(item => item !== e.target.name)];
             })
         };

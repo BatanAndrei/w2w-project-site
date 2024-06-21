@@ -40,6 +40,7 @@ const TheBrandQuestionnireFirst = () => {
     const dispatch = useDispatch();
     const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
     const [fillDataFromCheckboxesCommunity, setFillDataFromCheckboxesCommunity] = useState([]);
+    const [fillDataFromRadioPublicSpicking, setFillDataFromRadioPublicSpicking] = useState('');
 
     const {
         register,
@@ -49,10 +50,14 @@ const TheBrandQuestionnireFirst = () => {
         //resolver: yupResolver(questionnireSchemaFirstPage),
     });
 
-    const handleChangeCheckboxCommunity = (value) => {
-        setFillDataFromCheckboxesCommunity(value)
+    const handleChangeCheckboxCommunity = (data) => {
+        setFillDataFromCheckboxesCommunity(data)
     };
-console.log(fillDataFromCheckboxesCommunity)
+
+    const handleChangeRadioPublickSpicking = (data) => {
+        setFillDataFromRadioPublicSpicking(data)
+    }
+console.log(fillDataFromRadioPublicSpicking)
     const chooseFotoForAvatar = (e) => {
         setSelectedFoto(e.target.files[0]);
     };
@@ -126,7 +131,7 @@ console.log(fillDataFromCheckboxesCommunity)
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
                 <ComponentSelectCheckbox
                     value={fillDataFromCheckboxesCommunity.join(', ')}
-                    onChangeCallBack={handleChangeCheckboxCommunity}
+                    onChangeCallback={handleChangeCheckboxCommunity}
                     type={'checkbox'}
                     placeholder='Выбрать'
                     classNamePositionLableSelect={styles.positionLableSelect}
@@ -137,7 +142,9 @@ console.log(fillDataFromCheckboxesCommunity)
                 />
                 <div className={styles.wrapperMessage}>{Boolean(errors.topicСommunication) && <p className={styles.error}>{errors.topicСommunication?.message}</p>}</div>
                 <h2 className={styles.lable}>Готовы ли вы быть спикером прямого эфира или участвовать в публичном выступлении для резидентов?</h2>
-                <ComponentSelectRadio 
+                <ComponentSelectRadio
+                    value={fillDataFromRadioPublicSpicking}
+                    onChangeCallback={handleChangeRadioPublickSpicking} 
                     type={'radio'}
                     placeholder='Выбрать'
                     classNamePositionLableSelect={styles.positionLableSelect}

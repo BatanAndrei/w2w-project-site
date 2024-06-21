@@ -3,29 +3,28 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectRadio = ({name, placeholder ,dataListItems, classNameTextTitleSelect, type}) => {
+const ComponentSelectRadio = ({onChangeCallback, value,  name, placeholder ,dataListItems, classNameTextTitleSelect, type}) => {
 
     const [displayRadio, setDisplayRadio] = useState(false);
-    const [fillDataFromRadio, setFillDataFromRadio] = useState('');
 
     const handleDropeList = () => {
         setDisplayRadio(() => !displayRadio);
     };
 
-    const handleChangeRadio = (e) => {
-        setFillDataFromRadio(e.target.value)
+    const handleChangeRadioForCallback = (e) => {
+        onChangeCallback(e.target.value)
     };
 
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input placeholder={!displayRadio && placeholder} onChange={e => {}} className={styles.input} value={fillDataFromRadio}/>
+                <input placeholder={!displayRadio && placeholder} onChange={e => {}} className={styles.input} value={value}/>
                 <div onClick={handleDropeList} className={styles.arrow}>{displayRadio ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>
             {displayRadio && <div className={styles.containerDropeList}>
                 <div className={styles.wrapperRadio}>
                     {dataListItems.map((item, index) => <label className={styles.radio} key={index}>
-                    <input onChange={(e) => handleChangeRadio(e)} type={type} name={name} id={item.id} value={item.title}/>
+                    <input onChange={(e) => handleChangeRadioForCallback(e)} type={type} name={name} id={item.id} value={item.title}/>
                     <span>{item.title}</span>
                 </label>)}
                 </div>
