@@ -57,11 +57,11 @@ const TheBrandQuestionnireFirst = () => {
     const handleChangeRadioPublickSpicking = (data) => {
         setFillDataFromRadioPublicSpicking(data)
     }
-console.log(fillDataFromRadioPublicSpicking)
-    const chooseFotoForAvatar = (e) => {
-        setSelectedFoto(e.target.files[0]);
-    };
 
+    const chooseFotoForAvatar = (e) => {
+        setSelectedFoto(e.target.files[0].name);
+    };
+    console.log(selectedFoto)
     const handleClickPicker = () => {
         filePicker.current.click();
     };
@@ -85,7 +85,7 @@ console.log(fillDataFromRadioPublicSpicking)
             <TheHeaderQuestionnier lineOwn={true} />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите ваше любимое фото</h2></div>
             <div onClick={handleClickPicker} className={styles.wrapperImageAvatar}>
-                <dav className={styles.positionAvatarImage}><AvatarPlaceHolder/></dav>
+                <div className={styles.positionAvatarImage}>{true ? <AvatarPlaceHolder/> : <img className={styles.image} src={selectedFoto}></img>}</div>
                 <Field filePicker={filePicker} accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
