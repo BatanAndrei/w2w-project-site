@@ -54,7 +54,13 @@ const TheBrandQuestionnireSecond = () => {
     });
 
     const chooseFotoForLogo = (e) => {
-        setSelectedLogo(e.target.files[0]);
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = ev => {
+            setSelectedLogo(ev.target.result);
+        }
+        reader.readAsDataURL(file);
     };
 
     const handleClickPicker = () => {
@@ -79,7 +85,7 @@ const TheBrandQuestionnireSecond = () => {
             <TheHeaderQuestionnier lineOwn={true} lineTwo={true} />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите логотип</h2></div>
             <div onClick={handleClickPicker} className={styles.wrapperImageLogo}>
-                <dav className={styles.positionLogoImage}>{true ? <LogoWordSvgPlaceholder/> : <img className={styles.image} src={selectedLogo}></img>}</dav>
+                <dav className={styles.positionLogoImage}>{!selectedLogo ? <LogoWordSvgPlaceholder/> : <img className={styles.image} src={selectedLogo}></img>}</dav>
                 <Field filePicker={filePicker} accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForLogo(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>

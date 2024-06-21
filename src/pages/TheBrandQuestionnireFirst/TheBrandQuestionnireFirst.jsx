@@ -59,9 +59,15 @@ const TheBrandQuestionnireFirst = () => {
     }
 
     const chooseFotoForAvatar = (e) => {
-        setSelectedFoto(e.target.files[0].name);
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = ev => {
+            setSelectedFoto(ev.target.result);
+        }
+        reader.readAsDataURL(file);
     };
-    console.log(selectedFoto)
+
     const handleClickPicker = () => {
         filePicker.current.click();
     };
@@ -85,7 +91,7 @@ const TheBrandQuestionnireFirst = () => {
             <TheHeaderQuestionnier lineOwn={true} />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите ваше любимое фото</h2></div>
             <div onClick={handleClickPicker} className={styles.wrapperImageAvatar}>
-                <div className={styles.positionAvatarImage}>{true ? <AvatarPlaceHolder/> : <img className={styles.image} src={selectedFoto}></img>}</div>
+                <div className={styles.positionAvatarImage}>{!selectedFoto ? <AvatarPlaceHolder/> : <img className={styles.image} src={selectedFoto}></img>}</div>
                 <Field filePicker={filePicker} accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForAvatar(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
