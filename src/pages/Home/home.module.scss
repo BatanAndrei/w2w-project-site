@@ -2,13 +2,16 @@
 
 @media (min-width: 359px) and (max-width: 1235px) {
 
+.container{
+    width: 100%;
+    height: 100%;
+
     .headWrapper {
-        margin-top: 30px;
         padding: 0px 18px 0px 18px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100.8vw;
+        width: 100%;
         height: 65px;
 
         .opacity {
@@ -18,53 +21,66 @@
     }
 
     .subscribeWrapper {
-        width: 95.48vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         height: 206px;
         border: 1px solid;
+
+        .goStart {
+            width: 300px;
+            height: 50px;
+            font-family: $manropeRegular;
+            font-weight: 600;
+            font-size: 24px;
+            text-decoration: none;
+        }
     }
 
     .collabaWeekWrapper {
-        width: 91.84vw;
+        width: 100%;
         height: 216px;
         border: 1px solid;
     }
 
     .goTestWrapper {
-        width: 91.84vw;
+        width: 100%;
         height: 141px;
         border: 1px solid;
     }
 
     .sliderArticleWrapper {
-        width: 91.84vw;
+        width: 100%;
         height: 245px;
         border: 1px solid;
     
     }
 
     .getBookWrapper{
-        width: 91.84vw;
+        width: 100%;
         height: 275px;
         border: 1px solid;
     }
 
     .sliderBrandWrapper {
-        width: 91.84vw;
+        width: 100%;
         height: 179px;
         border: 1px solid;
     }
 
     .connectCommunityWrapper {
-        width: 91.84vw;
+        width: 100%;
         height: 152px;
         margin-bottom: 30px;
         border: 1px solid;
     }
 
     .footerWrapper {
-        width: 91.08vw;
-        height: 152px;
+        width: 100%;
+        height: 43px;
         margin-bottom: 30px;
         border: 1px solid;
     }
+}
 }
