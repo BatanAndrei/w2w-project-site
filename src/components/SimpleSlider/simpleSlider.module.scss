@@ -6,7 +6,7 @@
         display: flex;
         grid-column: 10px;
 
-        .cardInfo {
+        .wrapperCardInfo {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,6 +15,25 @@
             border-radius: 10px;
             border: 1px solid $borderFrameImage;
             background: $backgroundFrameImage;
+
+            .positionImage {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .image {
+                    position: relative;
+                    width: 25.2vw;
+                    height: 12.6vh;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    background-color: red;
+                }
+            }
+
+            .fieldAtach {
+                display: none;
+            }
         }
     }   
     
