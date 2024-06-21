@@ -39,6 +39,7 @@ const TheBrandQuestionnireFirst = () => {
     const filePicker = useRef(null);
     const dispatch = useDispatch();
     const isActiveModalFillLeter = useSelector(selectActiveModalFillLeter);
+    const [fillDataFromCheckboxesCommunity, setFillDataFromCheckboxesCommunity] = useState([]);
 
     const {
         register,
@@ -48,6 +49,10 @@ const TheBrandQuestionnireFirst = () => {
         //resolver: yupResolver(questionnireSchemaFirstPage),
     });
 
+    const handleChangeCheckboxCommunity = (value) => {
+        setFillDataFromCheckboxesCommunity(value)
+    };
+console.log(fillDataFromCheckboxesCommunity)
     const chooseFotoForAvatar = (e) => {
         setSelectedFoto(e.target.files[0]);
     };
@@ -119,7 +124,9 @@ const TheBrandQuestionnireFirst = () => {
                     />
                 <div className={styles.wrapperMessage}>{Boolean(errors.jobTitle) && <p className={styles.error}>{errors.jobTitle?.message}</p>}</div>
                 <h2 className={styles.lable}>На какие темы с тобой можно пообщаться? Или по каким темам ты можешь дать рекомендации?</h2>
-                <ComponentSelectCheckbox 
+                <ComponentSelectCheckbox
+                    value={fillDataFromCheckboxesCommunity.join(', ')}
+                    onChangeCallBack={handleChangeCheckboxCommunity}
                     type={'checkbox'}
                     placeholder='Выбрать'
                     classNamePositionLableSelect={styles.positionLableSelect}

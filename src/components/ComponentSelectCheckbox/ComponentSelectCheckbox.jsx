@@ -3,22 +3,21 @@ import { useState } from 'react';
 import ArrowDown from '../Svg/ArrowDown';
 import ArrowUp from '../Svg/ArrowUp';
 
-const ComponentSelectCheckbox = ({textAreaOnOff, placeholder, dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type}) => {
+const ComponentSelectCheckbox = ({onChangeCallBack, textAreaOnOff, placeholder, dataListItems, classNameTextTitleSelect, classNamePositionLableSelect, type, value}) => {
 
     const [displayCheckboxes, setDisplayCheckboxes] = useState(false);
     const [displayTextArea, setDisplayTextArea] = useState(false);
-    const [fillDataFromCheckboxes, setFillDataFromCheckboxes] = useState([]);
     const [allListItems, setAllListItems] = useState(dataListItems);
 
     const handleDropeList = () => {
         setDisplayCheckboxes(() => !displayCheckboxes);
     };
 
-    const handleChangeCheckbox = (e, item) => {
+    const handleChangeCheckboxForCallBack = (e, item) => {
         if(e.target.checked) {
-            setFillDataFromCheckboxes(pre => [...pre, e.target.name]);
+            onChangeCallBack(pre => [...pre, e.target.name]);
         }else {
-            setFillDataFromCheckboxes(pre => {
+            onChangeCallBack(pre => {
                 return [...pre.filter(item => item !== e.target.name)];
             })
         };
@@ -39,13 +38,13 @@ const ComponentSelectCheckbox = ({textAreaOnOff, placeholder, dataListItems, cla
     return (
         <>  
             <div className={styles.containerMainInput}>
-                <input placeholder={!displayCheckboxes && placeholder} value={fillDataFromCheckboxes.join(', ')} className={styles.input}/>
+                <input placeholder={!displayCheckboxes && placeholder} value={value} className={styles.input}/>
                 <div onClick={handleDropeList} className={styles.arrow}>{displayCheckboxes ? <ArrowUp/> : <ArrowDown/>}</div>
             </div>
             {displayCheckboxes && <div className={styles.containerDropeList}>
                 <div className={styles.wrapperCheckboxes}>
                     {allListItems.map((item, index) => <label className={classNamePositionLableSelect} key={index}>
-                    <input onChange={(e) => handleChangeCheckbox(e, item)} checked={item.checked} type={type} name={item.title} id={item.id} className={styles.checkbox}/>
+                    <input onChange={(e) => handleChangeCheckboxForCallBack(e, item)} checked={item.checked} type={type} name={item.title} id={item.id} className={styles.checkbox}/>
                     <span className={styles.fake}></span>
                     <div className={classNameTextTitleSelect}>{item.title}</div>
                 </label>)}
