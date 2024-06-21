@@ -1,3 +1,44 @@
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'InterRegular';
+    src: url('./fonts/InterTight-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ManropeRegular';
+    src: url('./fonts/Manrope-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'CormarantRegular';
+    src: url('./fonts/CormorantGaramond-Regular.ttf');
+}
+
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 @media (min-width: 359px) and (max-width: 1235px) {
 
     @font-face {

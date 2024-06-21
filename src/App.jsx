@@ -33,9 +33,9 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(true)
-        navigate('/brand-choice/brand-questionnire-first');
         if(false)
+        navigate('/brand-choice/brand-questionnire-first');
+        if(true)
             navigate('/start-page'); 
         if(false)
             navigate('/brand-choice'); 

@@ -13,6 +13,8 @@ import { nameButtonNeedCollab } from '../../datas/datas';
 import MoonStartPageSvg from '../../components/Svg/MoonStartPage';
 import GlasSvg from '../../components/Svg/GlasSvg';
 import { useNavigate } from "react-router-dom";
+import DescktopViewComponent from '../DescktopView/DescktopViewComponent';
+
 
 const StartPage = () => {
 
@@ -23,6 +25,10 @@ const StartPage = () => {
     };
 
     return (
+        <>
+        <div className={styles.containerDescktop}>
+            <DescktopViewComponent/>
+        </div>
         <div className={styles.container}>
             <div className={styles.psevdoModal}></div>
             <div className={styles.logoWrapper}>
@@ -67,6 +73,7 @@ const StartPage = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 };
 

@@ -1,7 +1,17 @@
 @import '../../scss/variables.scss';
 
+.container {
+    display: none;
+}
+
+.containerDescktop {
+    display: block;
+}
 
 @media (min-width: 359px) and (max-width: 1235px) {
+    .containerDescktop {
+        display: none;
+    }
 
     .container {
         display: flex;
