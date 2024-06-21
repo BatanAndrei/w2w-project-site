@@ -25,6 +25,7 @@ import TheBrandQuestionnireSecond from './pages/TheBrandQuestionnireSecond/TheBr
 import TheBrandQuestionnireThird from './pages/TheBrandQuestionnireThird/TheBrandQuestionnireThird';
 import TheBrandQuestionnireFouth from './pages/TheBrandQuestionnireFouth/TheBrandQuestionnireFouth';
 import StartPage from './pages/StartPage/StartPage';
+import StartPageLight from './pages/StartPageLight/StartPageLight';
 
 
 
@@ -36,7 +37,7 @@ function App() {
         if(false)
         navigate('/brand-choice/brand-questionnire-first');
         if(true)
-            navigate('/start-page'); 
+            navigate('/start-pageLight'); 
         if(false)
             navigate('/brand-choice'); 
         if(false)
@@ -45,6 +46,7 @@ function App() {
 
     const paths = {
         startPage: "/start-page",
+        startPageLight: "/start-pageLight",
         signUpCreate: "/signUp-create",
         userAgreements: "/signUp-create/user-agreements",
         policyPersonalData: "/signUp-create/policy-personalData",
@@ -68,6 +70,7 @@ function App() {
 
     const routes = [
         { path: paths.startPage, element: <StartPage /> },
+        { path: paths.startPageLight, element: <StartPageLight /> },
         { path: paths.signUpCreate, element: <SignUpCreate /> },
         { path: paths.userAgreements, element: <UserAgreements /> },
         { path: paths.policyPersonalData, element: <PolicyProcessingPersonalDataDocument /> },

@@ -1,0 +1,113 @@
+@import '../../scss/variables.scss';
+
+.container {
+    display: none;
+}
+
+.containerDescktop {
+    display: block;
+}
+
+@media (min-width: 359px) and (max-width: 1235px) {
+    .containerDescktop {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+
+        .logoWrapper{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: 91.84vw;
+            height: 28px;
+
+            .button {
+                background: none;
+                border: none;
+            }
+
+            .colorButton {
+                color: #37217D;
+                font-weight: $font-400;
+                font-size: 16px;
+                font-family: $manropeRegular;
+            }
+        }
+
+        .generalInfoPageWrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+
+            .title {
+                margin: 70px 0px 0px 0px;
+                color: #37217D;
+                text-align: center;
+                font-weight: $font-600;
+                font-size: 34px;
+                font-family: $cormarantRegular;
+            }
+
+            .subtitle {
+                margin: 12px 0px 0px 0px;
+                text-align: center;
+                color: #080E17;
+                font-weight: $font-600;
+                font-size: 16px;
+                font-family: $manropeRegular;
+
+                .wordPurple {
+                    color: #8768BD;
+                }
+            }
+
+            .buttonWrapper {
+                display: flex;
+            
+                .buttonCollabs {
+                    margin-top: 24px;
+                    width: 230px;
+                    height: 50px;
+                    border-radius: 24px;
+                    border: none;
+                    color: #F6F3FF;
+                    font-weight: $font-500;
+                    font-size: 18px;
+                    font-family: $manropeRegular;
+                    background-color: #8861CD;
+                    z-index: 1;
+                }
+
+                .ripple {
+                    background-position: center;
+                    transition: background 0.8s;
+                }
+                .ripple:hover {
+                    background: #8861CD radial-gradient(circle, transparent 1%, #d2c022 1%) center/15000%;
+                }
+                .ripple:active {
+                    background-color: #d2c022;
+                    background-size: 100%;
+                    transition: background 0s;
+                }
+            }
+        }
+
+        .planetAndWomenWrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 52vh;
+        }
+
+    }
+}
