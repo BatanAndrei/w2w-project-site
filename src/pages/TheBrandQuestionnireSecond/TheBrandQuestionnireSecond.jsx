@@ -79,7 +79,7 @@ const TheBrandQuestionnireSecond = () => {
             <TheHeaderQuestionnier lineOwn={true} lineTwo={true} />
             <div className={styles.wrapperSubtitle}><h2 className={styles.textSubtitle}>Загрузите логотип</h2></div>
             <div onClick={handleClickPicker} className={styles.wrapperImageLogo}>
-                <dav className={styles.positionLogoImage}>{true ? <LogoWordSvgPlaceholder/> : <img className={styles.image} /* src={selectedFoto} */></img>}</dav>
+                <dav className={styles.positionLogoImage}>{true ? <LogoWordSvgPlaceholder/> : <img className={styles.image} src={selectedLogo}></img>}</dav>
                 <Field filePicker={filePicker} accept='image/*,.png,.jpg,.gif,.web' change={(e) => chooseFotoForLogo(e)} type='file' className={styles.iconFotoDrvice}/>
                 <Button className={styles.buttonChooseFile}><FotoDivice/></Button>
             </div>
