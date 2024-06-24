@@ -8,6 +8,8 @@ export let nameButtonNeedCollab = 'Хочу коллабу!';
 export let nameButtonToQuestionnire = 'К анкете';
 export let nameButtonSend = 'Отправить';
 export let nameButtonSaveAndExit = 'Сохранить и выйти';
+export let nameButtonCollabNow = 'Заколлабимся?';
+export let nameButtonKnowYourself = 'Узнай себя';
 
 export const communicationSpikingAnswerData = [
     {id: 1, checked: false, title: 'Активный образ жизни'},

@@ -13,6 +13,7 @@
         align-items: center;
         width: 100%;
         height: 65px;
+        box-shadow: 0px 1px 3px 0px rgba(47, 43, 67, 0.1);
 
         .opacity {
             width: 24px;
@@ -26,35 +27,165 @@
         align-items: center;
         width: 100%;
         height: 206px;
-        border: 1px solid;
 
-        .goStart {
-            width: 300px;
-            height: 50px;
-            font-family: $manropeRegular;
-            font-weight: 600;
-            font-size: 24px;
-            text-decoration: none;
+        .ganaralSubscribe {
+            width: 91.84vw;
+            height: 176px;
+            border-radius: 16px;
+
+            .headSubscribe {
+                display: flex;
+                align-items: center;
+                width: 91.84vw;
+                height: 38px;
+                background-color: #6855AF;
+                border-radius: 16px 16px 0px 0px;
+
+                .titleSubscribe {
+                    margin: 0px 0px 0px 16px;
+                    font-family: $manropeRegular;
+                    font-size: 16px;
+                    font-weight: $font-400;
+                    color: #FFFFFF;
+                }
+            }
+
+            .bodySubscribe {
+                padding-top: 16px;
+                width: 91.84vw;
+                height: 138px;
+                background: radial-gradient(circle farthest-corner at 100px 40px, rgba(120, 59, 255, 0.19), rgba(120, 59, 255, 0.53), rgba(120, 59, 255, 1));
+                border-radius: 0px 0px 16px 16px;
+
+                .subTitle {
+                    margin: 0px 0px 0px 16px;
+                    font-family: $manropeRegular;
+                    font-size: 18px;
+                    font-weight: $font-600;
+                    color: #0E1117;
+                }
+
+                .description {
+                    margin: 8px 0px 0px 16px;
+                    font-family: $manropeRegular;
+                    font-size: 14px;
+                    font-weight: $font-400;
+                    color: #445371;
+                }
+
+                .wrapperButtonSaturn {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .button {
+                        margin: 15px 0px 0px 16px;
+                        width: 108px;
+                        height: 24px;
+                        font-family: $interRegular;
+                        font-size: 12px;
+                        font-weight: $font-400;
+                        color: #0E1117;
+                        background-color: #E5DAFF;
+                        border-radius: 16px;
+                        border: none;
+                    }
+    
+                    .saturnSvg {
+                        margin: -25px -10px 0px 0px;
+                    }
+                }
+            }
         }
     }
 
     .collabaWeekWrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
         width: 100%;
         height: 216px;
-        border: 1px solid;
+
+        .generalCollabaWeek {
+            width: 100%;
+            height: 216px;
+            width: 91.84vw;
+            padding: 0px 0px 0px 6px;
+
+            .titlCollabaWeek {
+                margin: 0px 0px 20px 0px;
+                font-family: $manropeRegular;
+                font-weight: $font-600;
+                font-size: 20px;
+                color: #0E1117;
+            }
+        }
     }
 
     .goTestWrapper {
+        margin-top: 66px;
+        display: flex;
+        justify-content: center;
         width: 100%;
         height: 141px;
-        border: 1px solid;
+
+        .generalGoTest {
+            width: 91.84vw;
+            height: 141px;
+            border-radius: 16px;
+            background: radial-gradient(circle farthest-corner at 100px 40px, rgba(182, 219, 251, 0.62), rgba(59, 161, 255, 0.53), rgba(59, 67, 255, 1));
+
+            .wrapperButtonClock {
+                display: flex;
+                justify-content: space-between;
+                height: 24px;
+
+                .buttonTest {
+                    font-family: $interRegular;
+                    font-size: 12px;
+                    font-weight: $font-400;
+                    margin: 16px 0px 0px 16px;
+                    width: 82px;
+                    height: 24px;
+                    border: none;
+                    background-color: #E5DAFF;
+                    color: #0E1117;
+                    border-radius: 16px;
+                }
+
+                .clock {
+                    margin: -25px -15px 0px 0px;
+                }
+            }
+
+            .titleTest {
+                margin: 35px 0px 0px 16px;
+                font-family: $manropeRegular;
+                font-weight: $font-600;
+                font-size: 18px;
+                color: #0E1117;
+            }
+
+            .positionHowMinutes {
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+                margin-left: 16px;
+
+                .howMinutes {
+                    margin-top: 8px;
+                    font-family: $manropeRegular;
+                    font-size: 14px;
+                    font-weight: $font-400;
+                    color: #445371;
+                }
+            }
+        }
     }
 
     .sliderArticleWrapper {
         width: 100%;
         height: 245px;
         border: 1px solid;
-    
     }
 
     .getBookWrapper{
