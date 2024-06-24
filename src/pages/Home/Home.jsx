@@ -96,7 +96,7 @@ const Home = () => {
                         <div className={styles.iconFooter}><HomeIconSvg/></div>
                         <div className={styles.iconFooter}><EventIconSvg/></div>
                         <div className={styles.iconFooter}><BrandIconSvg/></div>
-                        <div className={styles.iconFooter}><ChatIconSvg/></div>
+                        <div className={styles.iconFooter}><Link to='/chatRoom'><ChatIconSvg/></Link></div>
                         <div className={styles.iconFooter}><ProfileIconSvg/></div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ import Home from '../src/pages/Home/Home';
 //import Card from '../src/pages/Card/Card';
 import SignUpCreate from './pages/SignUpCreate/SignUpCreate';
 import SignIn from './pages/SignIn/SignIn';
-//import Chat from './pages/Chat/Chat';
+import ChatRoom from './pages/ChatRoom/ChatRoom';
 import UserAgreements from './pages/UserAgreements/UserAgreements';
 import PolicyProcessingPersonalDataDocument from './pages/PolicyProcessingPersonalDataDocument/PolicyProcessingPersonalDataDocument';
 import ConfirmPhone from './pages/ConfirmPhone/ConfirmPhone';
@@ -26,6 +26,7 @@ import TheBrandQuestionnireThird from './pages/TheBrandQuestionnireThird/TheBran
 import TheBrandQuestionnireFouth from './pages/TheBrandQuestionnireFouth/TheBrandQuestionnireFouth';
 import StartPage from './pages/StartPage/StartPage';
 import StartPageLight from './pages/StartPageLight/StartPageLight';
+/* import ChatRoom from './pages/ChatRoom/ChatRoom'; */
 
 
 
@@ -66,8 +67,8 @@ function App() {
         theBrandQuestionnireThird: "/brand-choice/brand-questionnire-third",
         theBrandQuestionnireFouth: "/brand-choice/brand-questionnire-fouth",
         home: "/",
+        chatRoom: "/chatRoom"
         //card: "/card",
-        //chat: "/websocket"
     };
 
     const routes = [
@@ -90,8 +91,8 @@ function App() {
         { path: paths.theBrandQuestionnireSecond, element: <TheBrandQuestionnireSecond /> },
         { path: paths.theBrandQuestionnireThird, element: <TheBrandQuestionnireThird /> },
         { path: paths.theBrandQuestionnireFouth, element: <TheBrandQuestionnireFouth /> },
+        { path: paths.chatRoom, element: <ChatRoom /> },
         //{ path: paths.card, element: <Card /> },
-        //{ path: paths.chat, element: <Chat /> },
     ];
 
     return (
