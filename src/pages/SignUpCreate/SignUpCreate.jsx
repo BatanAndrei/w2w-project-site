@@ -54,7 +54,7 @@ const SignUpCreate = () => {
         <div className={styles.containerPage}>
             <BasicModalPersonalDataDocument open={isActiveModal} />
             <div className={styles.titleWrapper}>
-                <Link to='/start-pageLight' className={styles.arrowLeft}><ArrowLeft/></Link>
+                <Link to='/start-page' className={styles.arrowLeft}><ArrowLeft/></Link>
                 <h2 className={styles.titleText}>Регистрация</h2>
                 <div className={styles.hiddenBlockForPosition}></div>
             </div>

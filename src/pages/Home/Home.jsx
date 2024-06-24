@@ -15,7 +15,7 @@ const Home = () => {
                     <BellHeaderSvg/>
                 </div>
                 <div className={styles.subscribeWrapper}>
-                    <Link to='/start-pageLight' className={styles.goStart}>{'<== НА ГЛАВНУЮ'}</Link>
+                    <Link to='/start-page' className={styles.goStart}>{'<== НА ГЛАВНУЮ'}</Link>
                 </div>
                 <div className={styles.collabaWeekWrapper}>
                     

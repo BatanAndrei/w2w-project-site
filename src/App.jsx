@@ -37,7 +37,7 @@ function App() {
         if(false)
         navigate('/brand-choice/brand-questionnire-first');
         if(true)
-            navigate('/start-pageLight'); 
+            navigate('/start-page'); 
         if(false)
             navigate('/brand-choice'); 
         if(false)
