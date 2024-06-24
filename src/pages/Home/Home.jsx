@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import LogoSvg from '../../components/Svg/LogoSvg';
 import BellHeaderSvg from '../../components/Svg/BellHeaderSvg';
 import Button from '../../components/Button/Button';
-import { nameButtonCollabNow, nameButtonKnowYourself } from '../../datas/datas';
+import { nameButtonCollabNow, nameButtonKnowYourself, nameButtonGetFast } from '../../datas/datas';
 import SaturnSvg from '../../components/Svg/SaturnSvg';
 import CollabWeekSvg from '../../components/Svg/CollabWeekSvg';
 import ClockSvg from '../../components/Svg/ClockSvg';
 import SmallClockSvg from '../../components/Svg/SmallClockSvg';
+import ArticleSlider from '../../components/ArticleSlider/ArticleSlider';
+import GroupCardToro from '../../components/Svg/GroupCardToroSvg';
 
 
 const Home = () => {
@@ -38,7 +40,7 @@ const Home = () => {
                 <div className={styles.collabaWeekWrapper}>
                     <div className={styles.generalCollabaWeek}>
                         <h2 className={styles.titlCollabaWeek}>Коллаба недели</h2>
-                        <CollabWeekSvg/>
+                        <div className={styles.positionSvg}><CollabWeekSvg/></div>
                     </div>
                 </div>
                 <div className={styles.goTestWrapper}>
@@ -52,10 +54,19 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.sliderArticleWrapper}>
-
+                    <div className={styles.generalSliderArticle}>
+                        <h2 className={styles.titleSlider}>Полезные статьи</h2>
+                        <div className={styles.wrapperSlider}>
+                            <ArticleSlider classNameWrapperCard={styles.wrapperCard} classNameSizeCard={styles.sizeCard} classNameImage={styles.image} classNameDescription={styles.description}/>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.getBookWrapper}>
-                    
+                    <div className={styles.generalGetBook}>
+                        <div className={styles.positionCardToro}><GroupCardToro/></div>
+                        <h2 className={styles.titleGetBook}>Получи Idea Book Collaboration и вдохновляйся на коллабу</h2>
+                        <Button className={styles.buttonGetBoook} name={nameButtonGetFast}/>
+                    </div>
                 </div>
                 <div className={styles.sliderBrandWrapper}>
 

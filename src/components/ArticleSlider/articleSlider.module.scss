@@ -1,0 +1,25 @@
+@import '../../scss/variables.scss';
+
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .slick_prev {
+        opacity: 0;
+        left: 90px;
+    }
+    
+    .slick_next {
+        opacity: 0;
+        right: 5px;
+    }
+
+    .text {
+        margin: 0px;
+        width: 262px;
+        height: 41px;
+        font-family: $manropeRegular;
+        font-size: 14px;
+        font-weight: $font-400;
+        color: white;
+    }
+}

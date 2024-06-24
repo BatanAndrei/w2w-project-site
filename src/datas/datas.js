@@ -10,6 +10,7 @@ export let nameButtonSend = 'Отправить';
 export let nameButtonSaveAndExit = 'Сохранить и выйти';
 export let nameButtonCollabNow = 'Заколлабимся?';
 export let nameButtonKnowYourself = 'Узнай себя';
+export let nameButtonGetFast = 'Забрать скорее';
 
 export const communicationSpikingAnswerData = [
     {id: 1, checked: false, title: 'Активный образ жизни'},
