@@ -11,6 +11,13 @@ import SmallClockSvg from '../../components/Svg/SmallClockSvg';
 import ArticleSlider from '../../components/ArticleSlider/ArticleSlider';
 import BrandSlider from '../../components/BrandSlider/BrandSlider';
 import GroupCardToro from '../../components/Svg/GroupCardToroSvg';
+import SmallCalendar from '../../components/Svg/SmallCalendar';
+import ProgressLine from '../../components/Svg/ProgressLine';
+import HomeIconSvg from '../../components/Svg/HomeIconSvg';
+import EventIconSvg from '../../components/Svg/EventIconSvg';
+import BrandIconSvg from '../../components/Svg/BrandIconSvg';
+import ChatIconSvg from '../../components/Svg/ChatIconSvg';
+import ProfileIconSvg from '../../components/Svg/ProfileIconSvg';
 
 
 const Home = () => {
@@ -78,11 +85,22 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.connectCommunityWrapper}>
-                    
+                    <div className={styles.generalConnectCommunity}>
+                        <h2 className={styles.titleCommunity}>Присоединяйся к сообществу<br/> и находи лучших партнеров</h2>
+                        <div className={styles.progressLine}><ProgressLine/></div>
+                        <div className={styles.positionProgress}><SmallCalendar/><h2 className={styles.textProgress}>Прогресс заполнения анкеты</h2></div>
+                    </div>
                 </div>
                 <div className={styles.footerWrapper}>
-                    
+                    <div className={styles.generalFooter}>
+                        <div className={styles.iconFooter}><HomeIconSvg/></div>
+                        <div className={styles.iconFooter}><EventIconSvg/></div>
+                        <div className={styles.iconFooter}><BrandIconSvg/></div>
+                        <div className={styles.iconFooter}><ChatIconSvg/></div>
+                        <div className={styles.iconFooter}><ProfileIconSvg/></div>
+                    </div>
                 </div>
+                <div className={styles.psevdoBlock}></div>
             </div>
         </>
     )

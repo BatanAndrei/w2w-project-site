@@ -326,17 +326,71 @@
     }
 
     .connectCommunityWrapper {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
         width: 100%;
         height: 152px;
         margin-bottom: 30px;
-        border: 1px solid;
+
+        .generalConnectCommunity {
+            width: 91.84vw;
+            height: 152px;
+            border-radius: 16px;
+            background: radial-gradient(circle farthest-corner at 100px 40px, rgba(173, 217, 255, 0.62), rgba(59, 161, 255, 0.53), rgba(59, 67, 255, 1));
+
+            .titleCommunity {
+                margin: 18px 0px 0px 16px;
+                font-family: $manropeRegular;
+                font-size: 18px;
+                font-weight: $font-600;
+                color: #0E1117;
+            }
+
+            .progressLine {
+                margin: 20px 0px 0px 16px;
+            }
+
+            .positionProgress {
+                margin: 10px 0px 0px 16px;
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+
+                .textProgress {
+                    margin: 0px;
+                    font-family: $manropeRegular;
+                    font-size: 14px;
+                    font-weight: $font-400;
+                    color: #445371;
+                }
+            }
+        }
     }
 
     .footerWrapper {
+        display: flex;
+        justify-content: center;
         width: 100%;
-        height: 43px;
-        margin-bottom: 30px;
-        border: 1px solid;
+        height: 51px;
+        box-shadow: 0px -1px 3px 0px rgba(47, 43, 67, 0.1);
+
+        .generalFooter {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            width: 94.08vw;
+            height: 43px;
+
+            .iconFooter {
+                width: 48px;
+                height: 43px;
+            }
+        }
+    }
+
+    .psevdoBlock {
+        height: 30px;
     }
 }
 }
