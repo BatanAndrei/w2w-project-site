@@ -39,7 +39,7 @@ const Home = () => {
                             <h3 className={styles.subTitle}>Управляй своей судьбой</h3>
                             <h3 className={styles.description}>Присоединяйся к сообществу<br/> и находи лучших партнеров</h3>
                             <div className={styles.wrapperButtonSaturn}>
-                                <Button className={styles.button} name={nameButtonCollabNow}/>
+                                <Button click={() => alert('Заколлабиться?')} className={styles.button} name={nameButtonCollabNow}/>
                                 <div className={styles.saturnSvg}><SaturnSvg/></div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const Home = () => {
                 <div className={styles.goTestWrapper}>
                     <div className={styles.generalGoTest}>
                         <div className={styles.wrapperButtonClock}>
-                            <Button className={styles.buttonTest} name={nameButtonKnowYourself}/>
+                            <Button click={() => alert('Узнай себя')} className={styles.buttonTest} name={nameButtonKnowYourself}/>
                             <div className={styles.clock}><ClockSvg/></div>
                         </div>
                         <h2 className={styles.titleTest}>Пройди тест на тип личности</h2>
@@ -73,7 +73,7 @@ const Home = () => {
                     <div className={styles.generalGetBook}>
                         <div className={styles.positionCardToro}><GroupCardToro/></div>
                         <h2 className={styles.titleGetBook}>Получи Idea Book Collaboration и вдохновляйся на коллабу</h2>
-                        <Button className={styles.buttonGetBoook} name={nameButtonGetFast}/>
+                        <Button click={() => alert('Забрать скорее')} className={styles.buttonGetBoook} name={nameButtonGetFast}/>
                     </div>
                 </div>
                 <div className={styles.sliderBrandWrapper}>
