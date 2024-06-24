@@ -9,6 +9,7 @@ import CollabWeekSvg from '../../components/Svg/CollabWeekSvg';
 import ClockSvg from '../../components/Svg/ClockSvg';
 import SmallClockSvg from '../../components/Svg/SmallClockSvg';
 import ArticleSlider from '../../components/ArticleSlider/ArticleSlider';
+import BrandSlider from '../../components/BrandSlider/BrandSlider';
 import GroupCardToro from '../../components/Svg/GroupCardToroSvg';
 
 
@@ -69,7 +70,12 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.sliderBrandWrapper}>
-
+                    <div className={styles.generalSliderBrand}>
+                        <h2 className={styles.titleSlider}>Популярные бренды</h2>
+                        <div className={styles.wrapperSliderBrand}>
+                            <BrandSlider classNameWrapperCard={styles.wrapperCard} classNameSizeCard={styles.sizeCard}/>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.connectCommunityWrapper}>
                     
