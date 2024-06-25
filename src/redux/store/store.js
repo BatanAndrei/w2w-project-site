@@ -6,6 +6,8 @@ import { authRegistrationSlice } from '../slices/authRegistrationSlice';
 import { signInSlice } from '../slices/signInSlice';
 import { avatarUserSlice } from '../slices/avatarUserSlice';
 import { questionnireSlice } from '../slices/questionnireSlise';
+import { summarySlice } from '../slices/summarySlice';
+import { getLogoSlice } from '../slices/getLogoSlice';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
 
@@ -33,6 +35,8 @@ const reducer = combineReducers({
     getDataFromQuestionnireSecond: questionnireSlice.reducer,
     getDataFromQuestionnireYhird: questionnireSlice.reducer,
     getDataFromQuestionnireFouth: questionnireSlice.reducer,
+    summaryExtraReducer: summarySlice.reducer,
+    getLogoExtraReducer: getLogoSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

@@ -7,10 +7,34 @@ import BrandIconSvg from '../../components/Svg/BrandIconSvg';
 import ProfileIconSvg from '../../components/Svg/ProfileIconSvg';
 import HomeIconSvg from '../../components/Svg/HomeIconSvg';
 import ChatIconSvg from '../../components/Svg/ChatIconSvg';
+import { useEffect } from 'react';
+import { getSummary } from '../../api/getSummary';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectResponseStatusSummary, selectStatusLoadSummary } from '../../redux/selectors/selectors';
+import { getLogo } from '../../api/getLogo';
 
 
 const MyChats = () => {
 
+    const dispatch = useDispatch();
+    const responseStatusSummary = useSelector(selectResponseStatusSummary);
+    const statusLoadSummary = useSelector(selectStatusLoadSummary);
+    const chats = responseStatusSummary.data;
+
+    useEffect(() => {
+        dispatch(getSummary());
+    }, []);
+
+    useEffect(() => {
+        if(responseStatusSummary.status === 200 && statusLoadSummary === 'resolved') {
+            responseStatusSummary.data.forEach(element => {
+                dispatch(getLogo(element.chatRoom.id))
+            });
+        }
+        }, [statusLoadSummary]);
+//console.log(responseStatusSummary.status);
+//console.log(statusLoadSummary)
+//console.log(responseStatusSummary.data[0].chatRoom.id)
     return (
         <div className={styles.container}>
             <div className={styles.headChatPage}>
@@ -24,7 +48,9 @@ const MyChats = () => {
                 
             </div>
             <div className={styles.wrapperChatsArea}>
-                <Link to='/chatRoom'><div className={styles.chat}></div></Link>
+                {chats?.map((item, index) => 
+                    <Link to='/chatRoom'><div key={index} className={styles.chat}>{item.chatRoom.id}</div></Link>
+                )}
             </div>
             <div className={styles.wrapperFooter}>
                 <div className={styles.iconFooter}><Link to='/'><HomeIconSvg/></Link></div>

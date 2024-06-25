@@ -36,7 +36,7 @@ function App() {
     useEffect(() => {
         if(false)
         navigate('/brand-choice/brand-questionnire-first');
-        if(false)
+        if(true)
             navigate('/start-page'); 
         if(false)
             navigate('/brand-choice'); 
@@ -44,7 +44,7 @@ function App() {
             navigate('/onboarding-start');
         if(false)
             navigate('/');
-        if(true)
+        if(false)
             navigate('/myChats')
     }, [])
 
