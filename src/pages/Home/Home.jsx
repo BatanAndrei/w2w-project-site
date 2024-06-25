@@ -93,7 +93,7 @@ const Home = () => {
                 </div>
                 <div className={styles.footerWrapper}>
                     <div className={styles.generalFooter}>
-                        <div className={styles.iconFooter}><Link to='#'><HomeIconSvg/></Link></div>
+                        <div className={styles.iconFooter}><Link to='#'><HomeIconSvg checked={true}/></Link></div>
                         <div className={styles.iconFooter}><Link to='#'><EventIconSvg/></Link></div>
                         <div className={styles.iconFooter}><Link to='#'><BrandIconSvg/></Link></div>
                         <div className={styles.iconFooter}><Link to='/myChats'><ChatIconSvg/></Link></div>
