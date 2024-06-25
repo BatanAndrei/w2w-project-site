@@ -21,10 +21,10 @@ const MyChats = () => {
                 </div>
             </div>
             <div className={styles.wrapperInfoAllChats}>
-
+                
             </div>
             <div className={styles.wrapperChatsArea}>
-
+                <Link to='/chatRoom'><div className={styles.chat}></div></Link>
             </div>
             <div className={styles.wrapperFooter}>
                 <div className={styles.iconFooter}><Link to='/'><HomeIconSvg/></Link></div>

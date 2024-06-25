@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import { store, persistor } from '../src/redux/store/store';
 import Home from '../src/pages/Home/Home';
-//import Card from '../src/pages/Card/Card';
 import SignUpCreate from './pages/SignUpCreate/SignUpCreate';
 import SignIn from './pages/SignIn/SignIn';
 import MyChats from './pages/MyChats/MyChats';
@@ -26,7 +25,7 @@ import TheBrandQuestionnireThird from './pages/TheBrandQuestionnireThird/TheBran
 import TheBrandQuestionnireFouth from './pages/TheBrandQuestionnireFouth/TheBrandQuestionnireFouth';
 import StartPage from './pages/StartPage/StartPage';
 import StartPageLight from './pages/StartPageLight/StartPageLight';
-/* import ChatRoom from './pages/ChatRoom/ChatRoom'; */
+import ChatRoom from './pages/ChatRoom/ChatRoom';
 
 
 
@@ -69,8 +68,8 @@ function App() {
         theBrandQuestionnireThird: "/brand-choice/brand-questionnire-third",
         theBrandQuestionnireFouth: "/brand-choice/brand-questionnire-fouth",
         home: "/",
-        myChats: "/myChats"
-        //card: "/card",
+        myChats: "/myChats",
+        chatRoom: "/chatRoom"
     };
 
     const routes = [
@@ -94,7 +93,7 @@ function App() {
         { path: paths.theBrandQuestionnireThird, element: <TheBrandQuestionnireThird /> },
         { path: paths.theBrandQuestionnireFouth, element: <TheBrandQuestionnireFouth /> },
         { path: paths.myChats, element: <MyChats /> },
-        //{ path: paths.card, element: <Card /> },
+        { path: paths.chatRoom, element: <ChatRoom /> },
     ];
 
     return (

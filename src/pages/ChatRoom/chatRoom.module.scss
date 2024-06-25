@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+@media (min-width: 359px) and (max-width: 1235px) {
+
+    .positionButton {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .button {
+            width: 200px;
+            height: 50px;
+            border-radius: 16px;
+        }
+    }
+}
