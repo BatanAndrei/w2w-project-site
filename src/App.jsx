@@ -7,7 +7,7 @@ import Home from '../src/pages/Home/Home';
 //import Card from '../src/pages/Card/Card';
 import SignUpCreate from './pages/SignUpCreate/SignUpCreate';
 import SignIn from './pages/SignIn/SignIn';
-import ChatRoom from './pages/ChatRoom/ChatRoom';
+import MyChats from './pages/MyChats/MyChats';
 import UserAgreements from './pages/UserAgreements/UserAgreements';
 import PolicyProcessingPersonalDataDocument from './pages/PolicyProcessingPersonalDataDocument/PolicyProcessingPersonalDataDocument';
 import ConfirmPhone from './pages/ConfirmPhone/ConfirmPhone';
@@ -37,7 +37,7 @@ function App() {
     useEffect(() => {
         if(false)
         navigate('/brand-choice/brand-questionnire-first');
-        if(true)
+        if(false)
             navigate('/start-page'); 
         if(false)
             navigate('/brand-choice'); 
@@ -45,6 +45,8 @@ function App() {
             navigate('/onboarding-start');
         if(false)
             navigate('/');
+        if(true)
+            navigate('/myChats')
     }, [])
 
     const paths = {
@@ -67,7 +69,7 @@ function App() {
         theBrandQuestionnireThird: "/brand-choice/brand-questionnire-third",
         theBrandQuestionnireFouth: "/brand-choice/brand-questionnire-fouth",
         home: "/",
-        chatRoom: "/chatRoom"
+        myChats: "/myChats"
         //card: "/card",
     };
 
@@ -91,7 +93,7 @@ function App() {
         { path: paths.theBrandQuestionnireSecond, element: <TheBrandQuestionnireSecond /> },
         { path: paths.theBrandQuestionnireThird, element: <TheBrandQuestionnireThird /> },
         { path: paths.theBrandQuestionnireFouth, element: <TheBrandQuestionnireFouth /> },
-        { path: paths.chatRoom, element: <ChatRoom /> },
+        { path: paths.myChats, element: <MyChats /> },
         //{ path: paths.card, element: <Card /> },
     ];
 
