@@ -28,7 +28,7 @@ const MyChats = () => {
     useEffect(() => {
         if(responseStatusSummary.status === 200 && statusLoadSummary === 'resolved') {
             responseStatusSummary.data.forEach(element => {
-                dispatch(getLogo(element.chatRoom.id))
+                dispatch(getLogo(element.logoImage.id))
             });
         }
         }, [statusLoadSummary]);
