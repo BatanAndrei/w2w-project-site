@@ -12,7 +12,7 @@ const Chat = () => {
 
     const client = new Client({
 
-        brokerURL: 'wss://localhost:15674/ws',
+        brokerURL: 'wss://dipdeepcode.ru/ws',
         onConnect: () => {
 
             client.subscribe('/topic/test01', message =>

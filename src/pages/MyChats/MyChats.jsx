@@ -10,31 +10,29 @@ import ChatIconSvg from '../../components/Svg/ChatIconSvg';
 import { useEffect } from 'react';
 import { getSummary } from '../../api/getSummary';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectResponseStatusSummary, selectStatusLoadSummary } from '../../redux/selectors/selectors';
+import { selectResponseSummary, selectStatusLoadSummary } from '../../redux/selectors/selectors';
 import { getLogo } from '../../api/getLogo';
 
 
 const MyChats = () => {
 
     const dispatch = useDispatch();
-    const responseStatusSummary = useSelector(selectResponseStatusSummary);
+    const responseSummary = useSelector(selectResponseSummary);
     const statusLoadSummary = useSelector(selectStatusLoadSummary);
-    const chats = responseStatusSummary.data;
-
+    const dataChats = responseSummary.data;
+    const responseStatusSummary = responseSummary.status;
     useEffect(() => {
         dispatch(getSummary());
     }, []);
 
     useEffect(() => {
-        if(responseStatusSummary.status === 200 && statusLoadSummary === 'resolved') {
-            responseStatusSummary.data.forEach(element => {
+        if(responseStatusSummary === 200 && statusLoadSummary === 'resolved') {
+            dataChats.forEach(element => {
                 dispatch(getLogo(element.logoImage.id))
             });
         }
         }, [statusLoadSummary]);
-//console.log(responseStatusSummary.status);
-//console.log(statusLoadSummary)
-//console.log(responseStatusSummary.data[0].chatRoom.id)
+        
     return (
         <div className={styles.container}>
             <div className={styles.headChatPage}>
@@ -48,8 +46,8 @@ const MyChats = () => {
                 
             </div>
             <div className={styles.wrapperChatsArea}>
-                {chats?.map((item, index) => 
-                    <Link to='/chatRoom'><div key={index} className={styles.chat}>{item.chatRoom.id}</div></Link>
+                {dataChats?.map((item, index) => 
+                    <Link key={index} to='/chatRoom'><div className={styles.wrapperLogo} ><img className={styles.logoChat} src={`https://dipdeepcode.ru/api/image/${item.logoImage.id}`}/></div></Link>
                 )}
             </div>
             <div className={styles.wrapperFooter}>

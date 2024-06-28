@@ -3,7 +3,7 @@ import { getSummary } from '../../api/getSummary';
 
 
 export const initialState = {
-    responseStatusSummary: '',
+    responseSummary: '',
     statusLoadSummary: null,
     errorLoadSummary: null,
     
@@ -28,7 +28,7 @@ export const summarySlice = createSlice({
             (state, action) => { 
             state.statusLoadSummary = "resolved";
             state.errorLoadSummary = null;
-            state.responseStatusSummary = action.payload;
+            state.responseSummary = action.payload;
     });
 
         builder

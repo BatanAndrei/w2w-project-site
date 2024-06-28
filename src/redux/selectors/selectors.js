@@ -14,7 +14,7 @@ export const selectActiveModal = (state) => state.modalPersonalDatalReducer.isAc
 export const selectActiveModalFillLeter = (state) => state.modalFillLeterlReducer.isActiveModalFillLeter;
 export const selectActiveModalSentCheck = (state) => state.modalSentChecklReducer.isActiveModalSentCheck;
 
-export const selectResponseStatusSummary = (state) => state.summaryExtraReducer.responseStatusSummary;
+export const selectResponseSummary = (state) => state.summaryExtraReducer.responseSummary;
 export const selectStatusLoadSummary = (state) => state.summaryExtraReducer.statusLoadSummary;
 
 
