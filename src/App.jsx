@@ -48,7 +48,6 @@ function App() {
             navigate('/myChats')
     }, [])
     
-
     const paths = {
         startPage: "/start-page",
         startPageLight: "/start-pageLight",
