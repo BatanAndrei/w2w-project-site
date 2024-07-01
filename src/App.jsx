@@ -47,6 +47,7 @@ function App() {
         if(false)
             navigate('/myChats')
     }, [])
+    
 
     const paths = {
         startPage: "/start-page",
