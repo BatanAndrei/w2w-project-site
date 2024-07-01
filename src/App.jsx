@@ -35,7 +35,7 @@ function App() {
 
     useEffect(() => {
         if(false)
-        navigate('/brand-choice/brand-questionnire-first');
+            navigate('/brand-choice/brand-questionnire-first');
         if(true)
             navigate('/start-page'); 
         if(false)
