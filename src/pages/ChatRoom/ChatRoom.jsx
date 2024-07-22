@@ -1,4 +1,4 @@
-import { Client, Message  } from '@stomp/stompjs';
+import { Client } from '@stomp/stompjs';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './chatRoom.module.scss';
@@ -9,17 +9,23 @@ import Button from '../../components/Button/Button';
 const Chat = () => {
 
     const navigate = useNavigate();
+    const chatRoomId =1;
 
     const client = new Client({
 
         brokerURL: 'wss://dipdeepcode.ru/ws',
+        heartbeatIncoming: 30000,
+        heartbeatOutgoing: 0,
         onConnect: () => {
 
-            client.subscribe('/topic/test01', message =>
-            console.log(`Received: ${message.body}`)
-            );
+            client.subscribe('/topic/tech', techMessage => {
+                console.log(`Received tech message: ${techMessage.body}`)
+            });
 
-            client.publish({ destination: '/topic/test01', body: 'First Message' });
+            client.subscribe('/topic/messages/' + chatRoomId, (chatMessage) => {
+                console.log(`Received chat message: ${chatMessage.body}`);
+            })
+
         },
     });
 
@@ -27,14 +33,14 @@ const Chat = () => {
         client.activate();
     }, []);
 
-    const backToMyChatsPageAndDisconectChat = () => {
+    const backToMyChatsPageAndDisconnectChat = () => {
         client.deactivate();
         navigate('/myChats');
     };
 
     return (
         <div className={styles.positionButton}>
-            <Button className={styles.button} click={backToMyChatsPageAndDisconectChat} name={'НАЗАД В МОИ ЧАТЫ'}/>
+            <Button className={styles.button} click={backToMyChatsPageAndDisconnectChat} name={'НАЗАД В МОИ ЧАТЫ'}/>
         </div>
     )
 };
