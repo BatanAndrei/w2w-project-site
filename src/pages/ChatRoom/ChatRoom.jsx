@@ -1,6 +1,5 @@
 import { Client } from '@stomp/stompjs';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './chatRoom.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button/Button';
